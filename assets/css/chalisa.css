@@ -1,0 +1,132 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #ff5722;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Container for the sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hanuman Chalisa Section */
+.chalisa {
+    background-color: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+}
+
+.chalisa h2 {
+    color: #ff5722;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.chalisa p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center; /* Center each verse */
+}
+
+/* Significance Section */
+.significance {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.significance h2 {
+    color: #ff5722;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.significance p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .chalisa h2, .significance h2 {
+        font-size: 1.5rem;
+    }
+
+    .chalisa p, .significance p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Desktop Responsive Design */
+@media (min-width: 768px) {
+    .chalisa, .significance {
+        padding: 40px;
+        margin: 40px 0;
+    }
+}

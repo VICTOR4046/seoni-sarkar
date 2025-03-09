@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री सुन्दरकाण्ड</title>
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 100%;
+            margin: 0 auto;
+            /* padding: 20px; */
+            background-color: #f4f4f9;
+        }
+        .my-new-style {
+            /* background-color: rgb(241, 242, 245); */
+            color: rgb(202, 35, 37);
+            font-family: "Tiro Devanagari Marathi", serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 16px 0px;
+            border: 0px none rgb(229, 229, 231);
+            display: block;
+            text-align: center;
+            line-height: 24px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        .my-new-style:hover {
+            background-color: rgb(229, 229, 231);
+        }
+
+        .main-head {
+            /* background-color: rgb(241, 242, 245); */
+            color: rgb(202, 35, 37);
+            font-family: "Tiro Devanagari Marathi", serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 16px 0px;
+            border: 0px none rgb(229, 229, 231);
+            display: block;
+            text-align: center;
+            line-height: 24px;
+            /* cursor: pointer; */
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        .mantra-explanation {
+            /* background-color: rgb(241, 242, 245); */
+            color: #414141;
+            font-family: "Tiro Devanagari Marathi", serif;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0px;
+            /* margin: 16px 0px; */
+            /* border: 0px none rgb(202, 35, 37); */
+            /* display: block; */
+            text-align: center;
+            line-height: 24px;
+            /* cursor: pointer; */
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        p.my-new-style.accordion.active {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .collapsible-header {
+            color: #ff0000;
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ffcccc;
+            background-color: #fff0f0;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .collapsible-header:hover {
+            background-color: #cdcbcb;
+        }
+
+        p.shloka.accordion{
+            cursor: pointer;
+        }
+        p.shloka.accordion:hover {
+            background-color: rgb(229, 229, 231);
+        }
+        
+        .panel {
+            display: none;
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+            margin-top: 0px;
+            color: #414141;
+            font-family: "Tiro Devanagari Marathi", serif;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0px;
+            /* margin: 16px 0px; */
+            /* border: 0px none rgb(202, 35, 37); */
+            /* display: block; */
+            text-align: center;
+            line-height: 24px;
+            /* cursor: pointer; */
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        .accordion.active + .panel {
+            display: block;
+        }
+        
+        .active {
+            border-radius: 4px 4px 0 0;
+            background-color: rgb(229, 229, 231);
+        }
+        
+        .show-content {
+            max-height: 500px;
+            padding: 15px;
+        }
+        
+        .title {
+            text-align: center;
+            color: #d00;
+            margin-bottom: 20px;
+        }
+
+        .h1 {
+            font-family: "Tiro Devanagari Marathi", serif;
+            color: #CA2325;
+            font-size: 32px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 42px 0px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        .h3 {
+            font-family: "Tiro Devanagari Marathi", serif;
+            color: #CA2325;
+            font-size: 18.72px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 22px 0px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        .h2 {
+            font-family: "Tiro Devanagari Marathi", serif;
+            color: #CA2325;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 20px 0px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+
+        /* div#container > p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        } */
+
+        p.shloka {
+            color: #CA2325;
+            font-family: "Tiro Devanagari Marathi", serif;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px;
+            margin: 16px 0px;
+            border: 0px none rgb(229, 229, 231);
+            display: block;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 4px;
+            transition: 0.4s;
+            user-select: none;
+        }
+        hr.divider {
+            border: 0;
+            height: 1px;
+            margin: 30px 0;
+            background-image: -webkit-linear-gradient(left, #f0f0f0, #ca2325, #f0f0f0);
+            background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        }
+        span {
+            color: dimgrey;
+        }
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 42px;
+        }
+        /*.footer-logo*/
+        /* Style for the footer logo container */
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Style for the image container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the circular image */
+        .circle-image {
+            width: 80px; /* Adjust size as needed */
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensures the image fills the circle without distortion */
+            border: 3px solid #007bff; /* Optional: adds a border around the image */
+        }
+        /* Header Section */
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .play {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the audio player */
+        #audioPlayer {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the switch button */
+        #switchButton {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for the switch button */
+        #switchButton:hover {
+            background-color: #ea3700;
+        }
+
+        /* Styling for the error message when audio is not supported */
+        audio {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="image-container">
+                    <img src="assets/logo/favicon.png" alt="Profile Picture" class="circle-image">
+                </div>
+            </div>
+            <h1>श्री सुन्दरकाण्ड</h1>
+            <p>Hanuman’s Triumph in Service to Lord Rama</p>
+        </div>
+    </header>
+    <br>
+
+    <div class="play">
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="assets/music/Sunderkand.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <button id="switchButton" onclick="toggleAudio()">Play</button>
+        
+        <script>
+            function toggleAudio() {
+            var audioPlayer = document.getElementById("audioPlayer");
+            var switchButton = document.getElementById("switchButton");
+
+            if (audioPlayer.paused) {
+                // If audio is paused, play it and change button text to "Pause"
+                audioPlayer.play();
+                switchButton.textContent = "Pause";
+            } else {
+                // If audio is playing, pause it and change button text to "Play"
+                audioPlayer.pause();
+                switchButton.textContent = "Play";
+            }
+        }
+        </script>
+    </div>
+    <br>
+    
+    <div id="container" class="content">
+        <p class="main-head">॥ ॐ श्रीपरमात्मने नमः ॥</p>
+        <p class="my-new-style accordion">प्रनवउँ पवनकुमार खल बन पावक ग्यानघन।<br>जासु हृदय आगार बसहिं राम सर चाप धर ॥
+            <div class="panel">
+                <p class="mantra-explanation">मैं पवनकुमार श्री हनुमान्‌जी को प्रणाम करता हूँ, <br>जो दुष्ट रूपी वन को भस्म करने के लिए अग्निरूप हैं, जो ज्ञान की घनमूर्ति हैं <br>और जिनके हृदय रूपी भवन में धनुष-बाण धारण किए श्री रामजी निवास करते हैं॥</p>
+            </div>
+        </p>
+        <h1 class="h1">किष्किन्धाकाण्ड</h1>
+        <p class="shloka "><b>[ दोहा २९ ]</b></p>
+        <p class="shloka accordion">बलि बाँधत प्रभु बाढ़ेउ सो तनु बरनि न जाइ।<br>उभय घरी महँ दीन्हीं सात प्रदच्छिन धाइ ॥
+            <div class="panel">
+                <p class="mantra-explanation">बलि के बाँधते समय प्रभु इतने बढ़े कि उस शरीर का वर्णन नहीं हो सकता, <br>किंतु मैंने दो ही घड़ी में दौड़कर (उस शरीर की) सात प्रदक्षिणाएँ कर लीं॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">अंगद कहइ जाउँ मैं पारा ।<br>जियँ संसय कछु फिरती बारा ॥
+            <div class="panel">
+                <p class="mantra-explanation"><span>अंगद ने कहा-</span> मैं पार तो चला जाऊँगा, <br>परंतु लौटते समय के लिए हृदय में कुछ संदेह है। </p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">जामवंत कह तुम्ह सब लायक ।<br>पठइअ किमि सबही कर नायक ॥</p>
+            <div class="panel">
+                <p class="mantra-explanation"><span>जाम्बवान् ने कहा- </span> तुम सब प्रकार से योग्य हो,<br> परंतु तुम सबके नेता हो, तुम्हे कैसे भेजा जाए?॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">कहइ रीछपति सुनु हनुमाना ।<br>का चुप साधि रहेहु बलवाना ॥</p>
+            <div class="panel">
+                <p class="mantra-explanation"><span>ऋक्षराज जाम्बवान् ने श्री हनुमानजी से कहा - </span> हे हनुमान्! <br>हे बलवान्! सुनो, तुमने यह क्या चुप साध रखी है?</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">पवन तनय बल पवन समाना ।<br>बुधि बिबेक बिग्यान निधाना ॥
+            <div class="panel">
+                <p class="mantra-explanation">तुम पवन के पुत्र हो और बल में पवन के समान हो। <br>तुम बुद्धि-विवेक और विज्ञान की खान हो॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">कवन सो काज कठिन जग माहीं ।<br>जो नहिं होइ तात तुम्ह पाहीं ॥
+            <div class="panel">
+                <p class="mantra-explanation">जगत् में कौन सा ऐसा कठिन काम है<br> जो हे तात! तुमसे न हो सके। </p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">राम काज लगि तव अवतारा ।<br>सुनतहिं भयउ पर्बताकारा ॥
+            <div class="panel">
+                <p class="mantra-explanation">श्री रामजी के कार्य के लिए ही तो तुम्हारा अवतार हुआ है। <br>यह सुनते ही हनुमान्जी पर्वत के आकार के (अत्यंत विशालकाय) हो गए॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">कनक बरन तन तेज बिराजा।<br>मानहुँ अपर गिरिन्ह कर राजा ॥
+            <div class="panel">
+                <p class="mantra-explanation">उनका सोने का सा रंग है, शरीर पर तेज सुशोभित है, <br>मानो दूसरा पर्वतों का राजा सुमेरु हो।</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">सिंहनाद करि बारहिं बारा ।<br>लीलहिं नाघउँ जलनिधि खारा ॥
+            <div class="panel">
+                <p class="mantra-explanation"><span>हनुमान्जी ने बार-बार सिंहनाद करके कहा-</span><br> मैं इस खारे समुद्र को खेल में ही लाँघ सकता हूँ॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">सहित सहाय रावनहि मारी।<br>आनउँ इहाँ त्रिकूट उपारी॥
+            <div class="panel">
+                <p class="mantra-explanation">और सहायकों सहित रावण को मारकर<br> त्रिकूट पर्वत को उखाड़कर यहाँ ला सकता हूँ।</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">जामवंत मैं  पूँछउँ तोही।<br>उचित सिखावनु दीजहु मोही ॥
+            <div class="panel">
+                <p class="mantra-explanation">हे जाम्बवान्! मैं तुमसे पूछता हूँ,<br> तुम मुझे उचित सीख देना (कि मुझे क्या करना चाहिए)॥</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">एतना करहु तात तुम्ह जाई ।<br>सीतहि देखि कहहु सुधि आई ॥</p>
+            <div class="panel">
+                <p class="mantra-explanation"><span>जाम्बवान् ने कहा-</span>  हे तात! तुम जाकर इतना ही करो कि<br> सीताजी को देखकर लौट आओ और उनकी खबर कह दो।</p>
+            </div>
+        </p>
+        <p class="my-new-style accordion">तब निज भुज बल राजिवनैना ।<br>कौतुक लागि संग कपि सेना ॥
+            <div class="panel">
+                <p class="mantra-explanation">फिर कमलनयन श्री रामजी अपने बाहुबल से (ही राक्षसों का संहार कर सीताजी को ले आएँगे, केवल)<br>खेल के लिए ही वे वानरों की सेना साथ लेंगे॥</p>
+            </div>
+        </p>
+        <p class="shloka accordion"><b>छं० –</b> कपि सेन संग सँघारि निसिचर,<br>रामु सीतहि आनिहैं।
+            <div class="panel">
+                <p class="mantra-explanation">वानरों की सेना साथ लेकर राक्षसों का संहार करके <br>श्री रामजी सीताजी को ले आएँगे।</p>
+            </div>
+        </p>
+        <p class="shloka accordion">त्रैलोक पावन सुजसु सुर मुनि,<br>नारदादि बखानिहैं ॥
+            <div class="panel">
+                <p class="mantra-explanation">तब देवता और नारदादि मुनि भगवान् के तीनों लोकों को<br> पवित्र करने वाले सुंदर यश का बखान करेंगे </p>
+            </div>
+        </p>
+        <p class="shloka accordion">जो सुनत गावत कहत समुझत<br>परम पद नर पावई ।
+            <div class="panel">
+                <p class="mantra-explanation">जिसे सुनने, गाने, कहने और समझने से <br>मनुष्य परमपद पाते हैं </p>
+            </div>
+        </p>
+        <p class="shloka accordion">रघुबीर पद पाथोज मधुकर<br>दास तुलसी गावई ॥
+            <div class="panel">
+                <p class="mantra-explanation">और जिसे श्री रघुवीर के चरणकमल का मधुकर (भ्रमर) <br>तुलसीदास गाता है।</p>
+            </div>
+        </p>
+        <br>
+        <p class="shloka"><b>[ दोहा ३० (क) ]</b></p>
+        <p class="shloka accordion">भव भेषज रघुनाथ जसु सुनहिं जे नर अरु नारि ।<br>तिन्ह कर सकल मनोरथ सिद्ध करहिं त्रिसिरारि ॥
+            <div class="panel">
+                <p class="mantra-explanation">श्री रघुवीर का यश भव (जन्म-मरण) रूपी रोग की (अचूक) दवा है।<br> जो पुरुष और स्त्री इसे सुनेंगे, त्रिशिरा के शत्रु श्री रामजी उनके सब मनोरथों को सिद्ध करेंगे॥</p>
+            </div>
+        </p>
+        <br>
+        <p class="shloka"><b>[ सोरठा ३० (ख) ]</b></p>
+        <p class="shloka accordion">नीलोत्पल तन स्याम काम कोटि सोभा अधिक।<br>सुनिअ तासु गुन ग्राम जासु नाम अघ खग बधिक ॥
+            <div class="panel">
+                <p class="mantra-explanation">जिनका नीले कमल के समान श्याम शरीर है, जिनकी शोभा करोड़ों कामदेवों से भी अधिक है <br>और जिनका नाम पापरूपी पक्षियों को मारने के लिए बधिक (व्याधा) के समान है, उन श्री राम के गुणों के समूह (लीला) को अवश्य सुनना चाहिए॥</p>
+            </div>
+        </p>
+        <break>
+        <hr class="divider">
+        <p class="my-new-style">॥ श्रीगणेशाय नमः ॥</p>
+        <p class="my-new-style">श्रीजानकीवल्लभो विजयते</p>
+        <h1 class="h1">श्रीरामचरितमानस</h1>
+        <h3 class="h3">पञ्चम सोपान</h3>
+        <h2 class="h2">सुन्दरकाण्ड</h2>
+        <span class="anchor" id="s1"></span>
+        <h3 class="h3">श्लोक</h3>
+        <p class="shloka accordion">शान्तं शाश्वतमप्रमेयमनघं निर्वाणशान्तिप्रदं<br>ब्रह्माशम्भुफणीन्द्रसेव्यमनिशं वेदान्तवेद्यं विभुम् ।</p>
+        <div class="panel">शान्त, सनातन, अप्रमेय (प्रमाणों से परे), निष्पाप, मोक्षरूप परमशान्ति देने वाले,<br> ब्रह्मा, शम्भु और शेषजी से निरंतर सेवित, वेदान्त के द्वारा जानने योग्य,</div>
+        <p class="shloka accordion">रामाख्यं जगदीश्वरं सुरगुरुं मायामनुष्यं हरिं<br>वन्देऽहं करुणाकरं रघुवरं भूपालचूडामणिम् ॥ १॥</p>
+        <div class="panel">सर्वव्यापक, देवताओं में सबसे बड़े, माया से मनुष्य रूप में दिखने वाले समस्त पापों को हरने वाले,<br>करुणा की खान, रघुकुल में श्रेष्ठ तथा राजाओं के शिरोमणि राम कहलाने वाले जगदीश्वर की में वंदना करता हूँ ॥ १॥</div>
+        <p class="shloka accordion">नान्या स्पृहा रघुपते हृदयेऽस्मदीये<br>सत्यं वदामि च भवानखिलान्तरात्मा।</p>
+        <div class="panel">हे रघुनाथजी में सत्य कहता हूँ और फिर आप सबके अंतरात्मा ही है (सब जानते ही है) कि मेरे हृदय में दूसरी कोई इच्छा नहीं है।</div>
+        <p class="shloka accordion">भक्तिं प्रयच्छ रघुपुङ्गव निर्भरां मे<br>कामादिदोषरहितं कुरु मानसं च ॥ २ ॥</p>
+        <div class="panel">हे रघुकृतश्रेष्ठ! मुझे अपनी निर्भरा (पूर्ण) भक्ति दीजिए और मेरे मन को काम आदि दोषों से रहित कीजिए ॥ २ ॥</div>
+        <p class="shloka accordion">अतुलितबलधामं हेमशैलाभदेहं<br>दनुजवनकृशानुं ज्ञानिनामग्रगण्यम् ।</p>
+        <div class="panel">अतुत बल के धाम सोने के पर्वत (सुमेरु) के समान कान्तियुक्त शरीर वाले दैत्य रूपी वन (को ध्वंस करने) के लिए अग्नि रूप, ज्ञानियों में अग्रगण्य </div>
+        <p class="shloka accordion">सकलगुणनिधानं वानराणामधीशं<br>रघुपतिप्रियभक्तं वातजातं नमामि ॥ ३ ॥</p>
+        <div class="panel">संपूर्ण गुणों के निधान, वानरों के स्वामी श्री रघुनाथजी के प्रिय भक्त पवनपुत्र श्री हनुमानजी को मै प्रणाम करता हूँ ॥ ३ ॥</div>
+        <p class="my-new-style accordion">जामवंत के बचन सुहाए। <br>सुनि हनुमंत हृदय अति भाए।।</p>
+        <div class="panel">जाम्बवान के (सुन्दर, सुहावने) वचन सुनकर हनुमानजी को अपने मन में वे वचन बहुत अच्छे लगे॥</div>
+        <p class="my-new-style accordion">तब लगि मोहि परिखेहु तुम्ह भाई। <br>सहि दुख कंद मूल फल खाई।।</p>
+        <div class="panel"><span>और हनुमानजी ने कहा की –</span>हे भाइयो! आप लोग कन्द, मूल व फल खाकर समय बिताना, <br>और तब तक मेरी राह देखना, जब तक कि मैं सीताजी का पता लगाकर लौट ना आऊँ, (जब तक मै सीताजी को देखकर लौट न आऊँ)॥</div>
+        <p class="my-new-style accordion">जब लगि आवौं सीतहि देखी। <br>होइहि काजु मोहि हरष बिसेषी।।</p>
+        <div class="panel">जब मै सीताजीको देखकर लौट आऊंगा, <br>तब कार्य सिद्ध होने पर मन को बड़ा हर्ष होगा॥</div>
+        <p class="my-new-style accordion">यह कहि नाइ सबन्हि कहुँ माथा। <br>चलेउ हरषि हियँ धरि रघुनाथा।।</p>
+        <div class="panel">यह कहकर और सबको नमस्कार करके, रामचन्द्रजी का ह्रदय में ध्यान धरकर, <br>प्रसन्न होकर हनुमानजी लंका जाने के लिए चले॥</div>
+        <p class="my-new-style accordion">सिंधु तीर एक भूधर सुंदर। <br>कौतुक कूदि चढ़ेउ ता ऊपर।।</p>
+        <div class="panel">समुद्र के तीर पर एक सुन्दर पहाड़ था।<br>हनुमान् जी खेल से ही (अनायास ही, कौतुकी से) कूदकर उसके ऊपर चढ़ गए॥</div>
+        <p class="my-new-style accordion">बार बार रघुबीर सँभारी। <br>तरकेउ पवनतनय बल भारी।।</p>
+        <div class="panel">फिर वारंवार रामचन्द्रजी का स्मरण करके,<br>बड़े पराक्रम के साथ हनुमानजी ने गर्जना की॥</div>
+        <p class="my-new-style accordion">जेहिं गिरि चरन देइ हनुमंता। <br>चलेउ सो गा पाताल तुरंता।।</p>
+        <div class="panel">जिस पहाड़ पर हनुमानजी ने पाँव रखे थे (जिस पर से वे उछले), <br>वह पहाड़ तुरंत पाताल के अन्दर चला गया॥</div>
+        <p class="my-new-style accordion">जिमि अमोघ रघुपति कर बाना। <br>एही भाँति चलेउ हनुमाना।।</p>
+        <div class="panel">और जैसे श्रीरामचंद्रजी का अमोघ बाण जाता है,<br>ऐसे हनुमानजी वहा से लंका की ओर चले॥</div>
+        <p class="my-new-style accordion">जलनिधि रघुपति दूत बिचारी। <br>तैं मैनाक होहि श्रमहारी।।</p>
+        <div class="panel"><span>समुद्र ने हनुमानजी को श्रीराम का दूत जानकर मैनाक नाम पर्वत से कहा की –</span><br>हे मैनाक, तू इनकी थकावट दूर करने वाला हो, इनको ठहरा कर श्रम मिटानेवाला हो, (अर्थात् अपने ऊपर इन्हे विश्राम दे)॥</div>
+        <span class="anchor" id="d1"></span>
+        <p class="shloka"><b>[ दोहा १ ]</b></p>
+        <p class="shloka accordion">हनूमान तेहि परसा कर पुनि कीन्ह प्रनाम।<br>राम काजु कीन्हें बिनु मोहि कहाँ बिश्राम।।</p>
+        <div class="panel">हनुमानजी ने उसको अपने हाथसे छुआ, फिर उसको प्रणाम किया, <span>और कहा की –</span><br>रामचन्द्रजीका का कार्य किये बिना मुझको विश्राम कहाँ? ॥</div>
+        <p class="my-new-style accordion">जात पवनसुत देवन्ह देखा। <br>जानैं कहुँ बल बुद्धि बिसेषा।।</p>
+        <div class="panel">देवताओ ने पवनपुत्र हनुमान् जी को जाते हुए देखा और<br>उनके बल और बुद्धि के वैभव को जानने के लिए॥</div>
+        <p class="my-new-style accordion">सुरसा नाम अहिन्ह कै माता। <br>पठइन्हि आइ कही तेहिं बाता।।</p>
+        <div class="panel">देवताओं ने नाग माता सुरसा को भेजा।<br>उस नागमाताने आकर हनुमानजी से यह बात कही॥</div>
+        <p class="my-new-style accordion">आजु सुरन्ह मोहि दीन्ह अहारा। <br>सुनत बचन कह पवनकुमारा।।</p>
+        <div class="panel">आज तो मुझको देवताओं ने यह अच्छा आहार दिया।<br>यह बात सुन, हँस कर हनुमानजी बोले॥</div>
+        <p class="my-new-style accordion">राम काजु करि फिरि मैं आवौं। <br>सीता कइ सुधि प्रभुहि सुनावौं।।</p>
+        <div class="panel">मैं रामचन्द्रजी का काम करके लौट आऊँ और<br>सीताजी की खबर रामचन्द्रजी को सुना दूं॥</div>
+        <p class="my-new-style accordion">तब तव बदन पैठिहउँ आई। <br>सत्य कहउँ मोहि जान दे माई।।</p>
+        <div class="panel">फिर हे माता! मै आकर आपके मुँह में प्रवेश करूंगा।<br>अभी तू मुझे जाने दे। इसमें कुछ भी फर्क नहीं पड़ेगा। मै तुझे सत्य कहता हूँ॥</div>
+        <p class="my-new-style accordion">कबनेहुँ जतन देइ नहिं जाना। <br>ग्रससि न मोहि कहेउ हनुमाना।।</p>
+        <div class="panel">जब सुरसा ने किसी उपायसे उनको जाने नहीं दिया,<br>तब हनुमानजी ने कहा कि, तू क्यों देरी करती है? तू मुझको नही खा सकती॥</div>
+        <p class="my-new-style accordion">जोजन भरि तेहिं बदनु पसारा। <br>कपि तनु कीन्ह दुगुन बिस्तारा।।</p>
+        <div class="panel">सुरसाने अपना मुंह, एक योजनभरमें (चार कोस मे) फैलाया।<br>हनुमानजी ने अपना शरीर, उससे दूना यानी दो योजन विस्तारवाला किया॥</div>
+        <p class="my-new-style accordion">सोरह जोजन मुख तेहिं ठयऊ। <br>तुरत पवनसुत बत्तिस भयऊ।।</p>
+        <div class="panel">सुरसा ने अपना मुँह सोलह (१६) योजनमें फैलाया।<br>हनुमानजीने अपना शरीर तुरंत बत्तीस (३२) योजन बड़ा किया॥</div>
+        <p class="my-new-style accordion">जस जस सुरसा बदनु बढ़ावा। <br>तासु दून कपि रूप देखावा।।</p>
+        <div class="panel">सुरसा ने जैसे-जैसे मुख का विस्तार बढ़ाया, जैसा जैसा मुंह फैलाया,<br>हनुमानजी ने वैसे ही अपना स्वरुप उससे दुगना दिखाया॥</div>
+        <p class="my-new-style accordion">सत जोजन तेहिं आनन कीन्हा। <br>अति लघु रूप पवनसुत लीन्हा।।</p>
+        <div class="panel">जब सुरसा ने अपना मुंह सौ योजन (चार सौ कोस का) में फैलाया,<br>तब हनुमानजी तुरंत बहुत छोटा स्वरुप धारण कर लिया॥</div>
+        <p class="my-new-style accordion">बदन पइठि पुनि बाहेर आवा। <br>मागा बिदा ताहि सिरु नावा।।</p>
+        <div class="panel">छोटा स्वरुप धारण कर हनुमानजी,<br>सुरसाके मुंहमें घुसकर तुरन्त बाहर निकल आए।<br>फिर सुरसा से विदा मांग कर हनुमानजी ने प्रणाम किया॥</div>
+        <p class="my-new-style accordion">मोहि सुरन्ह जेहि लागि पठावा। <br>बुधि बल मरमु तोर मै पावा।।</p>
+        <div class="panel"><span>उस वक़्त सुरसा ने हनुमानजी से कहा की –</span><br>हे हनुमान! देवताओंने मुझको जिसके लिए भेजा था,<br>वह तुम्हारे बल और बुद्धि का भेद, मैंने अच्छी तरह पा लिया है॥</div>
+        <span class="anchor" id="d2"></span>
+        <p class="shloka"><b>[ दोहा २ ]</b></p>
+        <p class="shloka accordion">राम काजु सबु करिहहु तुम्ह बल बुद्धि निधान।<br>आसिष देह गई सो हरषि चलेउ हनुमान।।</p>
+        <div class="panel">तुम बल और बुद्धि के भण्डार हो,<br>सो श्रीरामचंद्रजी के सब कार्य सिद्ध करोगे।<br>ऐसे आशीर्वाद देकर, सुरसा तो अपने घर को चली,<br>और हनुमानजी प्रसन्न होकर, लंकाकी ओर चले ॥</div>
+        <p class="my-new-style accordion">निसिचरि एक सिंधु महुँ रहई। <br>करि माया नभु के खग गहई।।</p>
+        <div class="panel">समुद्र के अन्दर एक राक्षस रहता था।<br>वह माया करके आकाश मे उड़ते हुए पक्षी और जंतुओको पकड़ लिया करता था॥</div>
+        <p class="my-new-style accordion">जीव जंतु जे गगन उड़ाहीं। <br>जल बिलोकि तिन्ह कै परिछाहीं।।</p>
+        <div class="panel">जो जीवजन्तु आकाश में उड़कर जाता,<br>उसकी परछाई जल में देखकर परछाई को जल में पकड़ लेता॥</div>
+        <p class="my-new-style accordion">गहइ छाहँ सक सो न उड़ाई। <br>एहि बिधि सदा गगनचर खाई।।</p>
+        <div class="panel">परछाई को जल में पकड़ लेता, जिससे वह जिव जंतु फिर वहा से सरक नहीं सकता।<br>इस तरह वह हमेशा, आकाश मे उड़ने वाले जिवजन्तुओ को खाया करता था॥</div>
+        <p class="my-new-style accordion">सोइ छल हनूमान कहँ कीन्हा। <br>तासु कपटु कपि तुरतहिं चीन्हा।।</p>
+        <div class="panel">उसने वही कपट हनुमान् जी से किया।<br>हनुमान् जी ने उसका वह छल तुरंत पहचान लिया॥</div>
+        <p class="my-new-style accordion">ताहि मारि मारुतसुत बीरा। <br>बारिधि पार गयउ मतिधीरा।।</p>
+        <div class="panel">धीर बुद्धिवाले पवनपुत्र वीर हनुमानजी<br>उसे मारकर समुद्र के पार उतर गए॥</div>
+        <p class="my-new-style accordion">तहाँ जाइ देखी बन सोभा। <br>गुंजत चंचरीक मधु लोभा।।</p>
+        <div class="panel">वहा जाकर हनुमानजी वन की शोभा देखते है कि<br>भँवरे मधु (पुष्प रस) के लोभसे गुंजार कर रहे है॥</div>
+        <p class="my-new-style accordion">नाना तरु फल फूल सुहाए। <br>खग मृग बृंद देखि मन भाए।।</p>
+        <div class="panel">अनेक प्रकार के वृक्ष, फल और फूलोसे शोभायमान हो रहे है।<br>पक्षी और हिरणोंका झुंड देखकर तो वे मन मे बहुत ही प्रसन्न हुए॥</div>
+        <p class="my-new-style accordion">सैल बिसाल देखि एक आगें। <br>ता पर धाइ चढेउ भय त्यागें।।</p>
+        <div class="panel">वहां सामने हनुमानजी एक बड़ा विशाल पर्वत देखकर,<br>निर्भय होकर उस पहाड़पर कूदकर चढ़ बैठे॥</div>
+        <p class="my-new-style accordion">उमा न कछु कपि कै अधिकाई। <br>प्रभु प्रताप जो कालहि खाई।।</p>
+        <div class="panel">भगवान् शंकर पार्वतीजी से कहते है कि<br>हे पार्वती! इसमें हनुमान की कुछ भी अधिकता नहीं है।<br>यह तो केवल रामचन्द्रजीके ही प्रताप का प्रभाव है कि,<br>जो काल को भी खा जाता है॥</div>
+        <p class="my-new-style accordion">गिरि पर चढि लंका तेहिं देखी। <br>कहि न जाइ अति दुर्ग बिसेषी।।</p>
+        <div class="panel">पर्वत पर चढ़कर हनुमानजी ने लंका को देखा,<br>तो वह ऐसी बड़ी दुर्गम है की,<br>जिसके विषय में कुछ कहा नहीं जा सकता॥</div>
+        <p class="my-new-style accordion">अति उतंग जलनिधि चहु पासा। <br>कनक कोट कर परम प्रकासा।।</p>
+        <div class="panel">पहले तो वह बहुत ऊँची है,<br>फिर उसके चारो ओर समुद्र की खाई।<br>उसपर भी ससोने के परकोटे (चार दीवारी) का तेज प्रकाश<br>कि जिससे नेत्र चकाचौंध हो जाए॥</div>
+        <p class="shloka accordion"><b>छं० –</b> कनक कोट बिचित्र मनि कृत <br>सुंदरायतना घना। </p>
+        <div class="panel">उस नगरीका रत्नों से जड़ा हुआ, सुवर्ण का कोट, अतिव सुन्दर बना हुआ है।</div>
+        <p class="shloka accordion">चउहट्ट हट्ट सुबट्ट बीथीं <br>चारु पुर बहु बिधि बना।।</p>
+        <div class="panel">चौहटे, दुकाने व सुन्दर गलियों के बहार, उस सुन्दर नगरी के अन्दर बनी है॥</div>
+        <p class="shloka accordion">गज बाजि खच्चर निकर पदचर <br>रथ बरूथिन्ह को गनै।।</p>
+        <div class="panel">जहा हाथी, घोड़े, खच्चर, पैदल व रथोकी गिनती कोई नहीं कर सकता॥</div>
+        <p class="shloka accordion">बहुरूप निसिचर जूथ अतिबल <br>सेन बरनत नहिं बनै।। १ ।।</p>
+        <div class="panel">और जहा महाबली, अद्भुत रूपवाले राक्षसोके सेनाके झुंड इतने है कि जिसका वर्णन किया नहीं जा सकता॥१॥</div>
+        <p class="shloka accordion">बन बाग उपबन बाटिका <br>सर कूप बापीं सोहहीं।</p>
+        <div class="panel">जहा वन, बाग़, बागीचे, बावडिया, तालाब, कुएँ, बावलिया शोभायमान हो रही है।</div>
+        <p class="shloka accordion">नर नाग सुर गंधर्ब कन्या <br>रूप मुनि मन मोहहीं।।</p>
+        <div class="panel">जहां मनुष्यकन्या, नागकन्या, देवकन्या और गन्धर्वकन्याये विराजमान हो रही है – जिनका रूप देखकर, मुनिलोगोका मन मोहित हुआ जाता है॥</div>
+        <p class="shloka accordion">कहुँ माल देह बिसाल सैल <br>समान अतिबल गर्जहीं।</p>
+        <div class="panel">कही पर्वत के समान बड़े विशाल देहवाले महाबलिष्ट, मल्ल गर्जना करते है और</div>
+        <p class="shloka accordion">नाना अखारेन्ह भिरहिं बहुबिधि <br>एक एकन्ह तर्जहीं।। २ ।।</p>
+        <div class="panel">अनेक अखाड़ों में अनेक प्रकारसे भिड रहे है और एक एकको आपस में पटक पटक कर गर्जना कर रहे है॥ २ ।।</div>
+        <p class="shloka accordion">करि जतन भट कोटिन्ह बिकट तन <br>नगर चहुँ दिसि रच्छहीं।</p>
+        <div class="panel">जहां कही विकट शरीर वाले करोडो भट, चारो तरफसे नगरकी रक्षा करते है और</div>
+        <p class="shloka accordion">कहुँ महिष मानषु धेनु खर अज <br>खल निसाचर भच्छहीं।।</p>
+        <div class="panel">कही वे राक्षस लोग, भैंसे, मनुष्य, गौ, गधे, बकरे और पक्षीयोंको खा रहे है॥ <br><span>राक्षस लोगो का आचरण बहुत बुरा है।</span></div>
+        <p class="shloka accordion">एहि लागि तुलसीदास इन्ह की <br>कथा कछु एक है कही।</p>
+        <div class="panel">इसीलिए तुलसीदासजी कहते है कि मैंने इनकी कथा बहुत संक्षेपसे कही है।</div>
+        <p class="shloka accordion">रघुबीर सर तीरथ सरीरन्हि <br>त्यागि गति पैहहिं सही।। ३ ।।</p>
+        <div class="panel">ये महादुष्ट है, परन्तु रामचन्द्रजीके बानरूप पवित्र तीर्थनदीके अन्दर अपना शरीर त्यागकर, गति अर्थात मोक्षको प्राप्त होंगे॥३ ॥</div>
+        <span class="anchor" id="d3"></span>
+        <p class="shloka"><b>[ दोहा ३ ]</b></p>
+        <p class="shloka accordion">पुर रखवारे देखि बहु कपि मन कीन्ह बिचार। <br>अति लघु रूप धरौं निसि नगर करौं पइसार।।</p>
+        <div class="panel">हनुमानजी ने बहुत से रखवालो को देखकर मन में विचार किया की<br>मै छोटा रूप धारण करके नगर में प्रवेश करूँ ॥</div>
+        <p class="my-new-style accordion">मसक समान रूप कपि धरी। <br>लंकहि चलेउ सुमिरि नरहरी।।</p>
+        <div class="panel">हनुमानजी मच्छर के समान छोटा-सा रूप धारण कर,<br>प्रभु श्री रामचन्द्रजी के नाम का सुमिरन करते हुए लंका में प्रवेश करते है॥</div>
+        <p class="my-new-style accordion">नाम लंकिनी एक निसिचरी। <br>सो कह चलेसि मोहि निंदरी।।</p>
+        <div class="panel"><span>लंकिनी, हनुमानजी का रास्ता रोकती है</span><br>लंका के द्वार पर लंकिनी नाम की एक राक्षसी रहती थी। हनुमानजी की भेंट, उस लंकिनी राक्षसी से होती है। वह पूछती है कि,<br>मेरा निरादर करके (बिना मुझसे पूछे) कहा जा रहे हो?</div>
+        <p class="my-new-style accordion">जानेहि नहीं मरमु सठ मोरा। <br>मोर अहार जहाँ लगि चोरा।।</p>
+        <div class="panel">तूने मेरा भेद नहीं जाना?<br>जहाँ तक चोर हैं, वे सब मेरे आहार हैं॥</div>
+        <p class="my-new-style accordion">मुठिका एक महा कपि हनी। <br>रुधिर बमत धरनीं ढनमनी।।</p>
+        <div class="panel">महाकपि हनुमानजी उसे एक घूँसा मारते है,<br>जिससे वह पृथ्वी पर लुढक पड़ती है॥</div>
+        <p class="my-new-style accordion">पुनि संभारि उठि सो लंका। <br>जोरि पानि कर बिनय संसका।।</p>
+        <div class="panel">वह राक्षसी लंकिनी, अपने को सँभालकर फिर उठती है।<br>और डर के मारे हाथ जोड़कर हनुमानजी से कहती है॥</div>
+        <p class="my-new-style accordion">जब रावनहि ब्रह्म बर दीन्हा। <br>चलत बिरंचि कहा मोहि चीन्हा।।</p>
+        <div class="panel"><span>लंकिनी, हनुमानजी को, ब्रह्माजी के वरदान के बारे में बताती है</span><br>जब ब्रह्मा ने रावण को वर दिया था,<br>तब चलते समय उन्होंने राक्षसों के विनाश की यह पहचान मुझे बता दी थी कि॥</div>
+        <p class="my-new-style accordion">बिकल होसि तैं कपि कें मारे। <br>तब जानेसु निसिचर संघारे।।</p>
+        <div class="panel">जब तू बंदर के मारने से व्याकुल हो जाए,<br>तब तू राक्षसों का संहार हुआ जान लेना।</div>
+        <p class="my-new-style accordion">तात मोर अति पुन्य बहूता। <br>देखेउँ नयन राम कर दूता।।</p>
+        <div class="panel"><span>हनुमानजी के दर्शन होने के कारण, लंकिनी खुदको भाग्यशाली समझती है</span><br>हे तात! मेरे बड़े पुण्य हैं,<br>जो मैं श्री रामजी के दूत को अपनी आँखों से देख पाई॥</div>
+        <span class="anchor" id="d4"></span>
+        <p class="shloka"><b>[ दोहा ४ ]</b></p>
+        <p class="shloka accordion">तात स्वर्ग अपबर्ग सुख धरिअ तुला एक अंग।<br>तूल न ताहि सकल मिलि जो सुख लव सतसंग।।</p>
+        <div class="panel">हे तात!, स्वर्ग और मोक्ष के सब सुखों को<br>तराजू के एक पलड़े में रखा जाए,<br>तो भी वे सब मिलकर (दूसरे पलड़े पर रखे हुए)<br>उस सुख के बराबर नहीं हो सकते,<br>जो क्षण मात्र के सत्संग से होता है॥</div>
+        <p class="my-new-style accordion">प्रबिसि नगर कीजे सब काजा। <br>हृदयँ राखि कौसलपुर राजा।।</p>
+        <div class="panel">अयोध्यापुरी के राजा रघुनाथ को हृदय में रखे हुए<br>नगर में प्रवेश करके सब काम कीजिए॥</div>
+        <p class="my-new-style accordion">गरल सुधा रिपु करहिं मिताई। <br>गोपद सिंधु अनल सितलाई।।</p>
+        <div class="panel">उसके लिए, अर्थात, जिसके मन में श्री राम का स्मरण रहता है,<br>विष अमृत हो जाता है,<br>शत्रु मित्रता करने लगते हैं,<br>समुद्र गाय के खुर के बराबर हो जाता है,<br>अग्नि में शीतलता आ जाती है॥</div>
+        <p class="my-new-style accordion">गरुड़ सुमेरु रेनू सम ताही। <br>राम कृपा करि चितवा जाही।।</p>
+        <div class="panel">और हे गरूड़जी! जिसे राम ने एक बार कृपा करके देख लिया,<br>उसके लिए सुमेरु पर्वत रज के समान हो जाता है॥</div>
+        <p class="my-new-style accordion">अति लघु रूप धरेउ हनुमाना। <br>पैठा नगर सुमिरि भगवाना।।</p>
+        <div class="panel">तब हनुमानजी ने बहुत ही छोटा रूप धारण किया,<br>और भगवान का स्मरण करके नगर में प्रवेश किया॥</div>
+        <p class="my-new-style accordion">मंदिर मंदिर प्रति करि सोधा। <br>देखे जहँ तहँ अगनित जोधा।।</p>
+        <div class="panel">उन्होंने एक-एक (प्रत्येक) महल की खोज की।<br>जहाँ-तहाँ असंख्य योद्धा देखे॥</div>
+        <p class="my-new-style accordion">गयउ दसानन मंदिर माहीं। <br>अति बिचित्र कहि जात सो नाहीं।।</p>
+        <div class="panel">फिर वे रावण के महल में गए।<br>वह अत्यंत विचित्र था, जिसका वर्णन नहीं हो सकता॥</div>
+        <p class="my-new-style accordion">सयन किए देखा कपि तेही। <br>मंदिर महुँ न दीखि बैदेही।।</p>
+        <div class="panel">हनुमानजी ने, महल में रावण को सोया हुआ देखा।<br>वहां भी हनुमानजी ने सीताजी की खोज की,<br>परन्तु सीताजी उस महल में कही भी दिखाई नहीं दीं॥</div>
+        <p class="my-new-style accordion">भवन एक पुनि दीख सुहावा। <br>हरि मंदिर तहँ भिन्न बनावा।।</p>
+        <div class="panel">फिर उन्हें एक सुंदर महल दिखाई दिया।<br>उस महल में भगवान का एक मंदिर बना हुआ था॥</div>
+        <span class="anchor" id="d5"></span>
+        <p class="shloka"><b>[ दोहा ५ ]</b></p>
+        <p class="shloka accordion">रामायुध अंकित गृह सोभा बरनि न जाइ।<br>नव तुलसिका बृंद तहँ देखि हरषि कपिराइ।।</p>
+        <div class="panel">वह महल श्री राम के आयुध (धनुष-बाण) के चिह्नों से अंकित था,<br>उसकी शोभा वर्णन नहीं की जा सकती॥<br>वहाँ नवीन-नवीन तुलसी के वृक्ष-समूहों को देखकर<br>कपिराज हनुमान हर्षित हुए॥</div>
+        <p class="my-new-style accordion">लंका निसिचर निकर निवासा। <br>इहाँ कहाँ सज्जन कर बासा।।</p>
+        <div class="panel">और उन्हीने सोचा की यह लंका नगरी तो राक्षसोंके कुलकी निवासभूमी है,<br>राक्षसो के समूह का निवास स्थान है।<br>यहाँ सत्पुरुषो के रहने का क्या काम॥</div>
+        <p class="my-new-style accordion">मन महुँ तरक करै कपि लागा। <br>तेहीं समय बिभीषनु जागा।।</p>
+        <div class="panel">इस तरह हनुमानजी मन ही मन में विचार करने लगे।<br>इतने में विभीषण की आँख खुली॥</div>
+        <p class="my-new-style accordion">राम राम तेहिं सुमिरन कीन्हा। <br>हृदयँ हरष कपि सज्जन चीन्हा।।</p>
+        <div class="panel">और जागते ही उन्होंने – राम! राम! – ऐसा स्मरण किया,<br>तो हनुमानजीने जाना की यह कोई सत्पुरुष है।<br>इस बात से हनुमानजीको बड़ा आनंद हुआ॥</div>
+        <p class="my-new-style accordion">एहि सन हठि करिहउँ पहिचानी। <br>साधु ते होइ न कारज हानी।।</p>
+        <div class="panel"><span>सत्पुरुषों से क्यों पहचान करनी चाहिये?</span>हनुमानजीने विचार किया कि<br>इनसे जरूर पहचान करनी चहिये,<br>क्योंकि सत्पुरुषोके हाथ कभी कार्यकी हानि नहीं होती,<br>बल्कि लाभ ही होता है॥</div>
+        <p class="my-new-style accordion">बिप्र रुप धरि बचन सुनाए। <br>सुनत बिभीषण उठि तहँ आए।।</p>
+        <div class="panel">फिर हनुमानजीने ब्राम्हणका रूप धरकर वचन सुनाया,<br>तो वह वचन सुनतेही विभीषण उठकर उनके पास आया॥</div>
+        <p class="my-new-style accordion">करि प्रनाम पूँछी कुसलाई। <br>बिप्र कहहु निज कथा बुझाई।।</p>
+        <div class="panel">और प्रणाम करके कुशल पूँछा कि,<br>हे ब्राह्मणदेव!, जो आपकी बात हो सो हमें समझाकर कहो<br>(अपनी कथा समझाकर कहिए)॥</div>
+        <p class="my-new-style accordion">की तुम्ह हरि दासन्ह महँ कोई। <br>मोरें हृदय प्रीति अति होई।।</p>
+        <div class="panel">विभीषणने कहा कि, क्या आप हरिभक्तो मे से कोई है?<br>क्योंकि मेरे मनमें आपकी ओर बहुत प्रीती बढती जाती है,<br>आपको देखकर मेरे हृदय मे अत्यंत प्रेम उमड़ रहा है॥</div>
+        <p class="my-new-style accordion">की तुम्ह रामु दीन अनुरागी। <br>आयहु मोहि करन बड़भागी।।</p>
+        <div class="panel">अथवा मुझको बडभागी करने के वास्ते,<br>भक्तोपर अनुराग रखनेवाले आप साक्षात दिनबन्धु ही तो नहीं पधार गए हो॥<br><span>(अथवा क्या आप दीनो से प्रेम करने वाले स्वयं श्री राम जी ही है, जो मुझे बड़भागी बनाने, घर-बैठे दर्शन देकर कृतार्थ करने आए है?)</span></div>
+        <span class="anchor" id="d6"></span>
+        <p class="shloka"><b>[ दोहा ६ ]</b></p>
+        <p class="shloka accordion">तब हनुमंत कही सब राम कथा निज नाम।<br>सुनत जुगल तन पुलक मन मगन सुमिरि गुन ग्राम।।</p>
+        <div class="panel">विभिषणके ये वचन सुनकर<br>हनुमानजीने रामचन्द्रजीकी सब कथा विभीषणसे कही,<br>और अपना नाम बताया।<br><span>प्रभु राम के नाम स्मरण से, दोनों के मन आनंदित हो जाते है</span><br>परस्परकी बाते सुनतेही दोनोंके शरीर रोमांचित हो गए और श्री रामचन्द्रजीका स्मरण आ जानेसे दोनों आनंदमग्न हो गए ॥</div>
+        <p class="my-new-style accordion">सुनहु पवनसुत रहनि हमारी। <br>जिमि दसनन्हि महुँ जीभ बिचारी।।</p>
+        <div class="panel"><span>विभीषण कहते है की –</span>हे हनुमानजी! हमारी रहनी हम कहते है सो सुनो। <br>जैसे दांतों के बिचमें बिचारी जीभ रहती है, ऐसे हम इन राक्षसोंके बिच में रहते है॥</div>
+        <p class="my-new-style accordion">तात कबहुँ मोहि जानि अनाथा। <br>करिहहिं कृपा भानुकुल नाथा।।</p>
+        <div class="panel">हे तात! वे सूर्यकुल के नाथ (रघुनाथ),<br>मुझको अनाथ जानकर कभी कृपा करेंगे?</div>
+        <p class="my-new-style accordion">तामस तनु कछु साधन नाहीं। <br>प्रीति न पद सरोज मन माहीं।।</p>
+        <div class="panel">मेरा तामसी (राक्षस) शरीर होने से साधन तो कुछ बनता नहीं <br>और न मन में श्री रामचंद्रजी के चरणकमलों में प्रेम ही है॥</div>
+        <p class="my-new-style accordion">अब मोहि भा भरोस हनुमंता। <br>बिनु हरिकृपा मिलहिं नहिं संता।।</p>
+        <div class="panel">परंतु हे हनुमान् ! अब मुझे विश्वास हो गया कि श्री रामजी की मुझ पर कृपा है,<br>क्योंकि हरि की कृपा के बिना संत नहीं मिलते॥</div>
+        <p class="my-new-style accordion">जौ रघुबीर अनुग्रह कीन्हा। <br>तौ तुम्ह मोहि दरसु हठि दीन्हा।।</p>
+        <div class="panel">जब श्री रघुवीर ने कृपा की है,<br>तभी तो आपने मुझे हठ करके (अपनी ओर से) दर्शन दिए हैं॥</div>
+        <p class="my-new-style accordion">सुनहु बिभीषन प्रभु कै रीती। <br>करहिं सदा सेवक पर प्रीती।।</p>
+        <div class="panel"><span>हनुमान् जी ने कहा-</span>हे विभीषणजी! सुनिए, प्रभु की यही रीति है कि<br>वे सेवक पर सदा ही प्रेम किया करते हैं॥</div>
+        <p class="my-new-style accordion">कहहु कवन मैं परम कुलीना। <br>कपि चंचल सबहीं बिधि हीना।।</p>
+        <div class="panel">भला कहिए, मैं ही कौन बड़ा कुलीन हूँ?<br> (जाति का) चंचल वानर हूँ और सब प्रकार से नीच हूँ॥</div>
+        <p class="my-new-style accordion">प्रात लेइ जो नाम हमारा। <br>तेहि दिन ताहि न मिलै अहारा।।</p>
+        <div class="panel">प्रातःकाल जो हम लोगों (बंदरों) का नाम ले ले<br>तो उस दिन उसे भोजन न मिले॥</div>
+        <span class="anchor" id="d7"></span>
+        <p class="shloka"><b>[ दोहा ७ ]</b></p>
+        <p class="shloka accordion">अस मैं अधम सखा सुनु मोहू पर रघुबीर। <br>कीन्ही कृपा सुमिरि गुन भरे बिलोचन नीर।।</p>
+        <div class="panel">हे सखा! सुनिए, मैं ऐसा अधम हूँ, पर श्री रामचंद्रजी ने तो मुझ पर भी कृपा ही की है।<br>भगवान् के गुणों का स्मरण करके हनुमान् जी के दोनों नेत्रों में (प्रेमाश्रुओं का) जल भर आया॥</div>
+        <p class="my-new-style accordion">जानतहूँ अस स्वामि बिसारी। <br>फिरहिं ते काहे न होहिं दुखारी।।</p>
+        <div class="panel">जो जानते हुए भी ऐसे स्वामी (श्री रघुनाथजी) को भुलाकर<br>(विषयों के पीछे) भटकते फिरते हैं, वे दुःखी क्यों न हों?</div>
+        <p class="my-new-style accordion">एहि बिधि कहत राम गुन ग्रामा। <br>पावा अनिर्बाच्य बिश्रामा।।</p>
+        <div class="panel">इस प्रकार श्री रामजी के गुण समूहों को कहते हुए <br>उन्होंने अनिर्वचनीय (परम) शांति प्राप्त की॥</div>
+        <p class="my-new-style accordion">पुनि सब कथा बिभीषन कही। <br>जेहि बिधि जनकसुता तहँ रही।।</p>
+        <div class="panel">फिर विभीषण ने हनुमानजी से वह सब कथा कही कि <br>श्री जानकीजी जिस प्रकार वहाँ (लंका में) रहती थीं।</div>
+        <p class="my-new-style accordion">तब हनुमंत कहा सुनु भ्राता। <br>देखी चहउँ जानकी माता।।</p>
+        <div class="panel"><span>तब हनुमान् जी ने कहा-</span> हे भाई सुनो, <br>मैं जानकी माता को देखता चाहता हूँ॥</div>
+        <p class="my-new-style accordion">जुगुति बिभीषन सकल सुनाई। <br>चलेउ पवनसुत बिदा कराई।।</p>
+        <div class="panel"> विभीषणजी ने (माता के दर्शन की) सब युक्तियाँ (उपाय) कह सुनाईं।<br>तब हनुमान् जी विदा लेकर चले।</div>
+        <p class="my-new-style accordion">करि सोइ रूप गयउ पुनि तहवाँ। <br>बन असोक सीता रह जहवाँ।।</p>
+        <div class="panel">फिर वही (पहले का मसक सरीखा) रूप धरकर वहाँ गए,<br>जहाँ अशोक वन में (वन के जिस भाग में) सीताजी रहती थीं॥</div>
+        <p class="my-new-style accordion">देखि मनहि महुँ कीन्ह प्रनामा। <br>बैठेहिं बीति जात निसि जामा।।</p>
+        <div class="panel">सीताजी को देखकर हनुमान् जी ने उन्हें मन ही में प्रणाम किया।<br>उन्हें बैठे ही बैठे रात्रि के चारों पहर बीत जाते हैं।</div>
+        <p class="my-new-style accordion">कृस तन सीस जटा एक बेनी। <br>जपति हृदयँ रघुपति गुन श्रेनी।।</p>
+        <div class="panel"><span>हनुमानजी सीताजी को देखते है, </span>उनका शरीर तो दुबला हो गया है, सिर पर जटाओं की एक वेणी (लट) है।<br>हृदय में श्री रघुनाथजी के गुण समूहों का जाप (स्मरण) करती रहती हैं॥</div>
+        <span class="anchor" id="d8"></span>
+        <p class="shloka"><b>[ दोहा ८ ]</b></p>
+        <p class="shloka accordion">निज पद नयन दिएँ मन राम पद कमल लीन।<br>परम दुखी भा पवनसुत देखि जानकी दीन।।</p>
+        <div class="panel">श्री जानकीजी नेत्रों को अपने चरणों में लगाए हुए हैं (नीचे की ओर देख रही हैं) और मन श्री रामजी के चरण कमलों में लीन है।<br>जानकीजी को दीन (दुःखी) देखकर पवनपुत्र हनुमान् जी बहुत ही दुःखी हुए॥</div>
+        <p class="my-new-style accordion">तरु पल्लव महुँ रहा लुकाई। <br>करइ बिचार करौं का भाई।।</p>
+        <div class="panel">हनुमान् जी वृक्ष के पत्तों में छिप रहे <br>और विचार करने लगे कि हे भाई! क्या करूँ (इनका दुःख कैसे दूर करूँ)?</div>
+        <p class="my-new-style accordion">तेहि अवसर रावनु तहँ आवा। <br>संग नारि बहु किएँ बनावा।।</p>
+        <div class="panel">उसी समय बहुतसी स्त्रियोंको संग लिए रावण वहाँ आया।<br>जो स्त्रिया रावणके संग थी, वे बहुत प्रकार के गहनों से बनी ठनी थी॥</div>
+        <p class="my-new-style accordion">बहु बिधि खल सीतहि समुझावा। <br>साम दान भय भेद देखावा।।</p>
+        <div class="panel">उस दुष्ट ने सीताजी को बहुत प्रकार से समझाया।<br>साम, दान, भय और भेद दिखलाया॥</div>
+        <p class="my-new-style accordion">कह रावनु सुनु सुमुखि सयानी। <br>मंदोदरी आदि सब रानी।।</p>
+        <div class="panel"><span>रावण ने कहा- </span>हे सुमुखि! हे सयानी! सुनो! मंदोदरी आदि सब रानियों को-॥</div>
+        <p class="my-new-style accordion">तव अनुचरीं करउँ पन मोरा। <br>एक बार बिलोकु मम ओरा।।</p>
+        <div class="panel">मैं तुम्हारी दासी बना दूँगा, यह मेरा प्रण है।<br>तुम एक बार मेरी ओर देखो तो सही! </div>
+        <p class="my-new-style accordion">तृन धरि ओट कहति बैदेही। <br>सुमिरि अवधपति परम सनेही।।</p>
+        <div class="panel">पने परम स्नेही कोसलाधीश श्री रामचंद्रजी का स्मरण करके <br><span>जानकीजी तिनके की आड़ (परदा) करके कहने लगीं-</span>॥</div>
+        <p class="my-new-style accordion">सुनु दसमुख खद्योत प्रकासा। <br>कबहुँ कि नलिनी करइ बिकासा।।</p>
+        <div class="panel">हे दशमुख! सुन, जुगनू के प्रकाश से<br>कभी कमलिनी खिल सकती है? </div>
+        <p class="my-new-style accordion">अस मन समुझु कहति जानकी। <br>खल सुधि नहिं रघुबीर बान की।।</p>
+        <div class="panel"><span>जानकीजी फिर कहती हैं- </span>तू (अपने लिए भी) ऐसा ही मन में समझ ले।<br> रे दुष्ट! तुझे श्री रघुवीर के बाण की खबर नहीं है॥</div>
+        <p class="my-new-style accordion">सठ सूने हरि आनेहि मोहि। <br>अधम निलज्ज लाज नहिं तोही।।</p>
+        <div class="panel">रे पापी! तू मुझे सूने में हर लाया है।<br>रे अधम! निर्लज्ज! तुझे लज्जा नहीं आती?॥</div>
+        <span class="anchor" id="d9"></span>
+        <p class="shloka"><b>[ दोहा ९ ]</b></p>
+        <p class="shloka accordion">आपुहि सुनि खद्योत सम रामहि भानु समान। <br>परुष बचन सुनि काढ़ि असि बोला अति खिसिआन।।</p>
+        <div class="panel">अपने को जुगनू के समान और रामचंद्रजी को सूर्य के समान सुनकर<br> और सीताजी के कठोर वचनों को सुनकर <span>रावण तलवार निकालकर बड़े गुस्से में आकर बोला-</span>॥</div>
+        <p class="my-new-style accordion">सीता तैं मम कृत अपमाना। <br>कटिहउँ तव सिर कठिन कृपाना।।</p>
+        <div class="panel">सीता! तूने मेरा अपनाम किया है।<br> मैं तेरा सिर इस कठोर कृपाण से काट डालूँगा।</div>
+        <p class="my-new-style accordion">नाहिं त सपदि मानु मम बानी। <br>सुमुखि होति न त जीवन हानी।।</p>
+        <div class="panel">नहीं तो (अब भी) जल्दी मेरी बात मान ले।<br> हे सुमुखि! नहीं तो जीवन से हाथ धोना पड़ेगा॥</div>
+        <p class="my-new-style accordion">स्याम सरोज दाम सम सुंदर। <br>प्रभु भुज करि कर सम दसकंधर।।</p>
+        <div class="panel"><span>सीताजी ने कहा- </span> हे दशग्रीव! प्रभु की भुजा जो श्याम कमल की माला के समान सुंदर<br> और हाथी की सूँड के समान (पुष्ट तथा विशाल) है,</div>
+        <p class="my-new-style accordion">सो भुज कंठ कि तव असि घोरा। <br>सुनु सठ अस प्रवान पन मोरा।।</p>
+        <div class="panel">या तो वह भुजा ही मेरे कंठ में पड़ेगी या तेरी भयानक तलवार ही। <br> रे शठ! सुन, यही मेरा सच्चा प्रण है॥</div>
+        <p class="my-new-style accordion">चंद्रहास हरु मम परितापं। <br>रघुपति बिरह अनल संजातं।।</p>
+        <div class="panel"><span> सीताजी कहती हैं- </span>हे चंद्रहास (तलवार)! <br>श्री रघुनाथजी के विरह की अग्नि से उत्पन्न मेरी बड़ी भारी जलन को तू हर ले, </div>
+        <p class="my-new-style accordion">सीतल निसित बहसि बर धारा। <br>कह सीता हरु मम दुख भारा।।</p>
+        <div class="panel">हे तलवार! तू शीतल, तीव्र और श्रेष्ठ धारा बहाती है (अर्थात्‌ तेरी धारा ठंडी और तेज है),<br>तू मेरे दुःख के बोझ को हर ले॥</div>
+        <p class="my-new-style accordion">सुनत बचन पुनि मारन धावा। <br>मयतनयाँ कहि नीति बुझावा।।</p>
+        <div class="panel">सीताजी के ये वचन सुनते ही वह मारने दौड़ा। <br>तब मय दानव की पुत्री मन्दोदरी ने नीति कहकर उसे समझाया।</div>
+        <p class="my-new-style accordion">कहेसि सकल निसिचरिन्ह बोलाई। <br>सीतहि बहु बिधि त्रासहु जाई।।</p>
+        <div class="panel"> तब रावण ने सब दासियों को बुलाकर कहा कि <br>जाकर सीता को बहुत प्रकार से भय दिखलाओ॥</div>
+        <p class="my-new-style accordion">मास दिवस महुँ कहा न माना। <br>तौ मैं मारबि काढ़ि कृपाना।।</p>
+        <div class="panel">यदि महीने भर में यह कहा न माने <br>तो मैं इसे तलवार निकालकर मार डालूँगा॥</div>
+        <span class="anchor" id="d10"></span>
+        <p class="shloka"><b>[ दोहा १० ]</b></p>
+        <p class="shloka accordion">भवन गयउ दसकंधर इहाँ पिसाचिनि बृंद।<br>सीतहि त्रास देखावहि धरहिं रूप बहु मंद।।</p>
+        <div class="panel">(यों कहकर) रावण घर चला गया। <br>यहाँ राक्षसियों के समूह बहुत से बुरे रूप धरकर सीताजी को भय दिखलाने लगे॥</div>
+        <p class="my-new-style accordion">त्रिजटा नाम राच्छसी एका। <br>राम चरन रति निपुन बिबेका।।</p>
+        <div class="panel">उनमें एक त्रिजटा नाम की राक्षसी थी।<br> उसकी श्री रामचंद्रजी के चरणों में प्रीति थी और वह विवेक (ज्ञान) में निपुण थी।</div>
+        <p class="my-new-style accordion">सबन्हौ बोलि सुनाएसि सपना। <br>सीतहि सेइ करहु हित अपना।।</p>
+        <div class="panel"><span>सने सबों को बुलाकर अपना स्वप्न सुनाया और कहा-</span><br> सीताजी की सेवा करके अपना कल्याण कर लो॥</div>
+        <p class="my-new-style accordion">सपनें बानर लंका जारी। <br>जातुधान सेना सब मारी।।</p>
+        <div class="panel">स्वप्न (मैंने देखा कि) एक बंदर ने लंका जला दी। <br>राक्षसों की सारी सेना मार डाली गई।</div>
+        <p class="my-new-style accordion">खर आरूढ़ नगन दससीसा। <br>मुंडित सिर खंडित भुज बीसा।।</p>
+        <div class="panel">रावण नंगा है और गदहे पर सवार है। <br>उसके सिर मुँडे हुए हैं, बीसों भुजाएँ कटी हुई हैं॥</div>
+        <p class="my-new-style accordion">एहि बिधि सो दच्छिन दिसि जाई। <br>लंका मनहुँ बिभीषन पाई।।</p>
+        <div class="panel">इस प्रकार से वह दक्षिण (यमपुरी की) दिशा को जा रहा है <br>और मानो लंका विभीषण ने पाई है।</div>
+        <p class="my-new-style accordion">नगर फिरी रघुबीर दोहाई। <br>तब प्रभु सीता बोलि पठाई।।</p>
+        <div class="panel">नगर में श्री रामचंद्रजी की दुहाई फिर गई।<br> तब प्रभु ने सीताजी को बुला भेजा॥</div>
+        <p class="my-new-style accordion">यह सपना में कहउँ पुकारी। <br>होइहि सत्य गएँ दिन चारी।।</p>
+        <div class="panel">मैं पुकारकर (निश्चय के साथ) कहती हूँ कि <br> यह स्वप्न चार (कुछ ही) दिनों बाद सत्य होकर रहेगा॥</div>
+        <p class="my-new-style accordion">तासु बचन सुनि ते सब डरीं। <br>जनकसुता के चरनन्हि परीं।।</p>
+        <div class="panel">उसके वचन सुनकर वे सब राक्षसियाँ डर गईं <br>और जानकीजी के चरणों पर गिर पड़ीं॥</div>
+        <span class="anchor" id="d11"></span>
+        <p class="shloka"><b>[ दोहा ११ ]</b></p>
+        <p class="shloka accordion">जहँ तहँ गईं सकल तब सीता कर मन सोच।<br>मास दिवस बीतें मोहि मारिहि निसिचर पोच।।</p>
+        <div class="panel">तब (इसके बाद) वे सब जहाँ-तहाँ चली गईं। सीताजी मन में सोच करने लगीं कि<br> एक महीना बीत जाने पर नीच राक्षस रावण मुझे मारेगा॥</div>
+        <p class="my-new-style accordion">त्रिजटा सन बोली कर जोरी। <br>मातु बिपति संगिनि तैं मोरी।।</p>
+        <div class="panel"><span> सीताजी हाथ जोड़कर त्रिजटा से बोलीं- </span><br>हे माता! तू मेरी विपत्ति की संगिनी है।</div>
+        <p class="my-new-style accordion">तजौं देह करु बेगि उपाई। <br>दुसहु बिरहु अब नहिं सहि जाई।।</p>
+        <div class="panel"> जल्दी कोई ऐसा उपाय कर जिससे मैं शरीर छोड़ सकूँ।<br> विरह असह्म हो चला है, अब यह सहा नहीं जाता॥</div>
+        <p class="my-new-style accordion">आनि काठ रचु चिता बनाई। <br>मातु अनल पुनि देहि लगाई।।</p>
+        <div class="panel"> काठ लाकर चिता बनाकर सजा दे। <br>हे माता! फिर उसमें आग लगा दे।</div>
+        <p class="my-new-style accordion">सत्य करहि मम प्रीति सयानी। <br>सुनै को श्रवन सूल सम बानी।।</p>
+        <div class="panel">हे सयानी! तू मेरी प्रीति को सत्य कर दे। <br>रावण की शूल के समान दुःख देने वाली वाणी कानों से कौन सुने?</div>
+        <p class="my-new-style accordion">सुनत बचन पद गहि समुझाएसि। <br>प्रभु प्रताप बल सुजसु सुनाएसि।।</p>
+        <div class="panel">सीताजी के वचन सुनकर त्रिजटा ने चरण पकड़कर उन्हें समझाया <br>और प्रभु का प्रताप, बल और सुयश सुनाया।</div>
+        <p class="my-new-style accordion">निसि न अनल मिल सुनु सुकुमारी। <br>अस कहि सो निज भवन सिधारी।।</p>
+        <div class="panel"><span>उसने कहा-</span> हे सुकुमारी! सुनो रात्रि के समय आग नहीं मिलेगी। <br>ऐसा कहकर वह अपने घर चली गई॥</div>
+        <p class="my-new-style accordion">कह सीता बिधि भा प्रतिकूला। <br>मिलहि न पावक मिटिहि न सूला।।</p>
+        <div class="panel"><span> सीताजी (मन ही मन) कहने लगीं-</span> (क्या करूँ) विधाता ही विपरीत हो गया। <br>न आग मिलेगी, न पीड़ा मिटेगी।</div>
+        <p class="my-new-style accordion">देखिअत प्रगट गगन अंगारा। <br>अवनि न आवत एकउ तारा।।</p>
+        <div class="panel">आकाश में अंगारे प्रकट दिखाई दे रहे हैं,<br> पर पृथ्वी पर एक भी तारा नहीं आता॥</div>
+        <p class="my-new-style accordion">पावकमय ससि स्त्रवत न आगी। <br>मानहुँ मोहि जानि हतभागी।।</p>
+        <div class="panel">चंद्रमा अग्निमय है, <br>किंतु वह भी मानो मुझे हतभागिनी जानकर आग नहीं बरसाता।</div>
+        <p class="my-new-style accordion">सुनहि बिनय मम बिटप असोका। <br>सत्य नाम करु हरु मम सोका।।</p>
+        <div class="panel">हे अशोक वृक्ष! मेरी विनती सुन। <br>मेरा शोक हर ले और अपना (अशोक) नाम सत्य कर॥</div>
+        <p class="my-new-style accordion">नूतन किसलय अनल समाना। <br>देहि अगिनि जनि करहि निदाना।।</p>
+        <div class="panel">तेरे नए-नए कोमल पत्ते अग्नि के समान हैं।<br> अग्नि दे, विरह रोग का अंत मत कर (अर्थात्‌ विरह रोग को बढ़ाकर सीमा तक न पहुँचा)</div>
+        <p class="my-new-style accordion">देखि परम बिरहाकुल सीता। <br>सो छन कपिहि कलप सम बीता।।</p>
+        <div class="panel">सीताजी को विरह से परम व्याकुल देखकर <br>वह क्षण हनुमान्‌जी को कल्प के समान बीता॥</div>
+        <span class="anchor" id="d12"></span>
+        <p class="shloka"><b>[सोरठा १२ ]</b></p>
+        <p class="shloka accordion">कपि करि हृदयँ बिचार दीन्हि मुद्रिका डारी तब।<br>जनु असोक अंगार दीन्हि हरषि उठि कर गहेउ।।</p>
+        <div class="panel">तब हनुमान्‌जी ने हदय में विचार कर (सीताजी के सामने) अँगूठी डाल दी, <br>मानो अशोक ने अंगारा दे दिया।<br> (यह समझकर) सीताजी ने हर्षित होकर उठकर उसे हाथ में ले लिया॥</div>
+        <p class="my-new-style accordion">तब देखी मुद्रिका मनोहर। <br>राम नाम अंकित अति सुंदर।।</p>
+        <div class="panel">तब उन्होंने राम-नाम से अंकित अत्यंत सुंदर <br>एवं मनोहर अँगूठी देखी। </div>
+        <p class="my-new-style accordion">चकित चितव मुदरी पहिचानी। <br>हरष बिषाद हृदयँ अकुलानी।।</p>
+        <div class="panel">अँगूठी को पहचानकर सीताजी आश्चर्यचकित होकर उसे देखने लगीं <br>और हर्ष तथा विषाद से हृदय में अकुला उठीं॥</div>
+        <p class="my-new-style accordion">जीति को सकइ अजय रघुराई। <br>माया तें असि रचि नहिं जाई।।</p>
+        <div class="panel"><span>वे सोचने लगीं- </span>श्री रघुनाथजी तो सर्वथा अजेय हैं, उन्हें कौन जीत सकता है?<br> और माया से ऐसी (माया के उपादान से सर्वथा रहित दिव्य, चिन्मय) अँगूठी बनाई नहीं जा सकती।</div>
+        <p class="my-new-style accordion">सीता मन बिचार कर नाना। <br>मधुर बचन बोलेउ हनुमाना।।</p>
+        <div class="panel">सीताजी मन में अनेक प्रकार के विचार कर रही थीं।<br> <span>इसी समय हनुमान्‌जी मधुर वचन बोले-</span>॥</div>
+        <p class="my-new-style accordion">रामचंद्र गुन बरनैं लागा। <br>सुनतहिं सीता कर दुख भागा।।</p>
+        <div class="panel">वे श्री रामचंद्रजी के गुणों का वर्णन करने लगे,<br> (जिनके) सुनते ही सीताजी का दुःख भाग गया।</div>
+        <p class="my-new-style accordion">लागीं सुनैं श्रवन मन लाई। <br>आदिहु तें सब कथा सुनाई।।</p>
+        <div class="panel">वे कान और मन लगाकर उन्हें सुनने लगीं।<br> हनुमान्‌जी ने आदि से लेकर अब तक की सारी कथा कह सुनाई॥</div>
+        <p class="my-new-style accordion">श्रवनामृत जेहिं कथा सुहाई। <br>कहि सो प्रगट होति किन भाई।।</p>
+        <div class="panel"><span>सीताजी बोलीं- </span> जिसने कानों के लिए अमृत रूप यह सुंदर कथा कही, <br> वह हे भाई! प्रकट क्यों नहीं होता?</div>
+        <p class="my-new-style accordion">तब हनुमंत निकट चलि गयऊ। <br>फिरि बैंठीं मन बिसमय भयऊ।।</p>
+        <div class="panel">तब हनुमान्‌जी पास चले गए। <br> उन्हें देखकर सीताजी फिरकर (मुख फेरकर) बैठ गईं?<br> उनके मन में आश्चर्य हुआ॥</div>
+        <p class="my-new-style accordion">राम दूत मैं मातु जानकी। <br>सत्य सपथ करुनानिधान की।।</p>
+        <div class="panel"> <span>हनुमान्‌जी ने कहा- </span>  हे माता जानकी मैं श्री रामजी का दूत हूँ।<br>करुणानिधान की सच्ची शपथ करता हूँ,</div>
+        <p class="my-new-style accordion">यह मुद्रिका मातु मैं आनी। <br>दीन्हि राम तुम्ह कहँ सहिदानी।।</p>
+        <div class="panel">हे माता! यह अँगूठी मैं ही लाया हूँ।<br> श्री रामजी ने मुझे आपके लिए यह सहिदानी (निशानी या पहिचान) दी है॥</div>
+        <p class="my-new-style accordion">नर बानरहि संग कहु कैसें। <br>कहि कथा भइ संगति जैसें।।</p>
+        <div class="panel"><span> सीताजी ने पूछा- </span> नर और वानर का संग कहो कैसे हुआ?<br> तब हनुमानजी ने जैसे संग हुआ था, वह सब कथा कही॥</div>
+        <span class="anchor" id="d13"></span>
+        <p class="shloka"><b>[ दोहा १३ ]</b></p>
+        <p class="shloka accordion">कपि के बचन सप्रेम सुनि उपजा मन बिस्वास।<br>जाना मन क्रम बचन यह कृपासिंधु कर दास।।</p>
+        <div class="panel">हनुमान्‌जी के प्रेमयक्त वचन सुनकर सीताजी के मन में विश्वास उत्पन्न हो गया,<br> उन्होंने जान लिया कि यह मन, वचन और कर्म से कृपासागर श्री रघुनाथजी का दास है॥</div>
+        <p class="my-new-style accordion">हरिजन जानि प्रीति अति गाढ़ी। <br>सजल नयन पुलकावलि बाढ़ी।।</p>
+        <div class="panel">भगवान का जन (सेवक) जानकर अत्यंत गाढ़ी प्रीति हो गई।<br>नेत्रों में (प्रेमाश्रुओं का) जल भर आया और शरीर अत्यंत पुलकित हो गया</div>
+        <p class="my-new-style accordion">बूड़त बिरह जलधि हनुमाना। <br>भयउ तात मों कहुँ जलजाना।।</p>
+        <div class="panel"><span> सीताजी ने कहा - </span> हे तात हनुमान्‌! विरहसागर में डूबती हुई <br>मुझको तुम जहाज हुए॥</div>
+        <p class="my-new-style accordion">अब कहु कुसल जाउँ बलिहारी। <br>अनुज सहित सुख भवन खरारी।।</p>
+        <div class="panel">मैं बलिहारी जाती हूँ,<br>अब छोटे भाई लक्ष्मणजी सहित खर के शत्रु सुखधाम प्रभु का कुशल-मंगल कहो।</div>
+        <p class="my-new-style accordion">कोमलचित कृपाल रघुराई। <br>कपि केहि हेतु धरी निठुराई।।</p>
+        <div class="panel">श्री रघुनाथजी तो कोमल हृदय और कृपालु हैं।<br> फिर हे हनुमान्‌! उन्होंने किस कारण यह निष्ठुरता धारण कर ली है?॥</div>
+        <p class="my-new-style accordion">सहज बानि सेवक सुख दायक। <br>कबहुँक सुरति करत रघुनायक।।</p>
+        <div class="panel">सेवक को सुख देना उनकी स्वाभाविक बान है।<br> वे श्री रघुनाथजी क्या कभी मेरी भी याद करते हैं?</div>
+        <p class="my-new-style accordion">कबहुँ नयन मम सीतल ताता। <br>होइहहि निरखि स्याम मृदु गाता।।</p>
+        <div class="panel">हे तात! क्या कभी उनके कोमल साँवले अंगों को देखकर<br> मेरे नेत्र शीतल होंगे?॥</div>
+        <p class="my-new-style accordion">बचनु न आव नयन भरे बारी। <br>अहह नाथ हौं निपट बिसारी।।</p>
+        <div class="panel">(मुँह से) वचन नहीं निकलता, नेत्रों में (विरह के आँसुओं का) जल भर आया।<br> <span>(बड़े दुःख से वे बोलीं-) </span> हा नाथ! आपने मुझे बिलकुल ही भुला दिया!</div>
+        <p class="my-new-style accordion">देखि परम बिरहाकुल सीता। <br>बोला कपि मृदु बचन बिनीता।।</p>
+        <div class="panel">सीताजी को विरह से परम व्याकुल देखकर<br> <span> हनुमान्‌जी कोमल और विनीत वचन बोले- </span>॥</div>
+        <p class="my-new-style accordion">मातु कुसल प्रभु अनुज समेता। <br>तव दुख दुखी सुकृपा निकेता।।</p>
+        <div class="panel">हे माता! सुंदर कृपा के धाम प्रभु भाई लक्ष्मणजी के सहित (शरीर से) कुशल हैं, <br>परंतु आपके दुःख से दुःखी हैं।</div>
+        <p class="my-new-style accordion">जनि जननी मानहु जियँ ऊना। <br>तुम्ह ते प्रेमु राम कें दूना।।</p>
+        <div class="panel">हे माता! मन में ग्लानि न मानिए (मन छोटा करके दुःख न कीजिए)।<br> श्री रामचंद्रजी के हृदय में आपसे दूना प्रेम है॥</div>
+        <span class="anchor" id="d14"></span>
+        <p class="shloka"><b>[ दोहा १४ ]</b></p>
+        <p class="shloka accordion">रघुपति कर संदेसु अब सुनु जननी धरि धीर।<br>अस कहि कपि गद गद भयउ भरे बिलोचन नीर।।</p>
+        <div class="panel">हे माता! अब धीरज धरकर श्री रघुनाथजी का संदेश सुनिए।<br> ऐसा कहकर हनुमान्‌जी प्रेम से गद्गद हो गए। उनके नेत्रों में (प्रेमाश्रुओं का) जल भर आया॥</div>
+        <p class="my-new-style accordion">कहेउ राम बियोग तव सीता। <br>मो कहुँ सकल भए बिपरीता।।</p>
+        <div class="panel"><span>हनुमान्‌जी बोले-</span>श्री रामचंद्रजी ने कहा है कि हे सीते! तुम्हारे वियोग में <br>मेरे लिए सभी पदार्थ प्रतिकूल हो गए हैं।</div>
+        <p class="my-new-style accordion">नव तरु किसलय मनहुँ कृसानू। <br>कालनिसा सम निसि ससि भानू।।</p>
+        <div class="panel">वृक्षों के नए-नए कोमल पत्ते मानो अग्नि के समान,<br>रात्रि कालरात्रि के समान, चंद्रमा सूर्य के समान॥</div>
+        <p class="my-new-style accordion">कुबलय बिपिन कुंत बन सरिसा। <br>बारिद तपत तेल जनु बरिसा।।</p>
+        <div class="panel">और कमलों के वन भालों के वन के समान हो गए हैं।<br>मेघ मानो खौलता हुआ तेल बरसाते हैं।</div>
+        <p class="my-new-style accordion">जे हित रहे करत तेइ पीरा। <br>उरग स्वास सम त्रिबिध समीरा।।</p>
+        <div class="panel">जो हित करने वाले थे, वे ही अब पीड़ा देने लगे हैं।<br> त्रिविध (शीतल, मंद, सुगंध) वायु साँप के श्वास के समान (जहरीली और गरम) हो गई है॥</div>
+        <p class="my-new-style accordion">कहेहू तें कछु दुख घटि होई। <br>काहि कहौं यह जान न कोई।।</p>
+        <div class="panel">मन का दुःख कह डालने से भी कुछ घट जाता है।<br> पर कहूँ किससे? यह दुःख कोई जानता नहीं।</div>
+        <p class="my-new-style accordion">तत्व प्रेम कर मम अरु तोरा। <br>जानत प्रिया एकु मनु मोरा।।</p>
+        <div class="panel">हे प्रिये! मेरे और तेरे प्रेम का तत्त्व (रहस्य)<br>एक मेरा मन ही जानता है॥</div>
+        <p class="my-new-style accordion">सो मनु सदा रहत तोहि पाहीं। <br>जानु प्रीति रसु एतेनहि माहीं।।</p>
+        <div class="panel">और वह मन सदा तेरे ही पास रहता है।<br>बस, मेरे प्रेम का सार इतने में ही समझ ले।</div>
+        <p class="my-new-style accordion">प्रभु संदेसु सुनत बैदेही। <br>मगन प्रेम तन सुधि नहिं तेही।।</p>
+        <div class="panel">प्रभु का संदेश सुनते ही जानकीजी प्रेम में मग्न हो गईं।<br> उन्हें शरीर की सुध न रही॥</div>
+        <p class="my-new-style accordion">कह कपि हृदयँ धीर धरु माता। <br>सुमिरु राम सेवक सुखदाता।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>हे माता! हृदय में धैर्य धारण करो<br>और सेवकों को सुख देने वाले श्री रामजी का स्मरण करो।</div>
+        <p class="my-new-style accordion">उर आनहु रघुपति प्रभुताई। <br>सुनि मम बचन तजहु कदराई।।</p>
+        <div class="panel">श्री रघुनाथजी की प्रभुता को हृदय में लाओ<br>और मेरे वचन सुनकर कायरता छोड़ दो॥</div>
+        <span class="anchor" id="d15"></span>
+        <p class="shloka"><b>[ दोहा १५ ]</b></p>
+        <p class="shloka accordion">निसिचर निकर पतंग सम रघुपति बान कृसानु।<br>जननी हृदयँ धीर धरु जरे निसाचर जानु।।</p>
+        <div class="panel">राक्षसों के समूह पतंगों के समान और श्री रघुनाथजी के बाण अग्नि के समान हैं।<br>हे माता! हृदय में धैर्य धारण करो और राक्षसों को जला ही समझो॥</div>
+        <p class="my-new-style accordion">जौं रघुबीर होति सुधि पाई। <br>करते नहिं बिलंबु रघुराई।।</p>
+        <div class="panel">श्री रामचंद्रजी ने यदि खबर पाई होती<br>तो वे बिलंब न करते।</div>
+        <p class="my-new-style accordion">रामबान रबि उएँ जानकी। <br>तम बरूथ कहँ जातुधान की।।</p>
+        <div class="panel">हे जानकीजी! रामबाण रूपी सूर्य के उदय होने पर<br>राक्षसों की सेना रूपी अंधकार कहाँ रह सकता है?॥</div>
+        <p class="my-new-style accordion">अबहिं मातु मैं जाउँ लवाई। <br>प्रभु आयसु नहिं राम दोहाई।।</p>
+        <div class="panel">हे माता! मैं आपको अभी यहाँ से लिवा जाऊँ,<br> पर श्री रामचंद्रजी की शपथ है, मुझे प्रभु (उन) की आज्ञा नहीं है।</div>
+        <p class="my-new-style accordion">कछुक दिवस जननी धरु धीरा। <br>कपिन्ह सहित अइहहिं रघुबीरा।।</p>
+        <div class="panel"> (अतः) हे माता! कुछ दिन और धीरज धरो।<br>श्री रामचंद्रजी वानरों सहित यहाँ आएँगे॥</div>
+        <p class="my-new-style accordion">निसिचर मारि तोहि लै जैहहिं। <br>तिहुँ पुर नारदादि जसु गैहहिं।।</p>
+        <div class="panel">और राक्षसों को मारकर आपको ले जाएँगे। <br>नारद आदि (ऋषि-मुनि) तीनों लोकों में उनका यश गाएँगे।</div>
+        <p class="my-new-style accordion">हैं सुत कपि सब तुम्हहि समाना। <br>जातुधान अति भट बलवाना।।</p>
+        <div class="panel"><span>सीताजी ने कहा-</span> हे पुत्र! सब वानर तुम्हारे ही समान (नन्हें-नन्हें से) होंगे,<br> राक्षस तो बड़े बलवान, योद्धा हैं॥</div>
+        <p class="my-new-style accordion">मोरें हृदय परम संदेहा। <br>सुनि कपि प्रगट कीन्ह निज देहा।।</p>
+        <div class="panel">अतः मेरे हृदय में बड़ा भारी संदेह होता है (कि तुम जैसे बंदर राक्षसों को कैसे जीतेंगे!)।<br> यह सुनकर हनुमान्‌जी ने अपना शरीर प्रकट किया।</div>
+        <p class="my-new-style accordion">कनक भूधराकार सरीरा। <br>समर भयंकर अतिबल बीरा।।</p>
+        <div class="panel">सोने के पर्वत (सुमेरु) के आकार का (अत्यंत विशाल) शरीर था, <br>जो युद्ध में शत्रुओं के हृदय में भय उत्पन्न करने वाला, अत्यंत बलवान्‌ और वीर था॥</div>
+        <p class="my-new-style accordion">सीता मन भरोस तब भयऊ। <br>पुनि लघु रूप पवनसुत लयऊ।।</p>
+        <div class="panel">तब (उसे देखकर) सीताजी के मन में विश्वास हुआ।<br> हनुमान्‌जी ने फिर छोटा रूप धारण कर लिया॥</div>
+        <span class="anchor" id="d16"></span>
+        <p class="shloka"><b>[ दोहा १६ ]</b></p>
+        <p class="shloka accordion">सुनु माता साखामृग नहिं बल बुद्धि बिसाल।<br>प्रभु प्रताप तें गरुड़हि खाइ परम लघु ब्याल।।</p>
+        <div class="panel">हे माता! सुनो, वानरों में बहुत बल-बुद्धि नहीं होती,<br> परंतु प्रभु के प्रताप से बहुत छोटा सर्प भी गरुड़ को खा सकता है। <br>(अत्यंत निर्बल भी महान्‌ बलवान्‌ को मार सकता है)॥</div>
+        <p class="my-new-style accordion">मन संतोष सुनत कपि बानी। <br>भगति प्रताप तेज बल सानी।।</p>
+        <div class="panel">भक्ति, प्रताप, तेज और बल से सनी हुई हनुमान्‌जी की वाणी सुनकर<br> सीताजी के मन में संतोष हुआ।</div>
+        <p class="my-new-style accordion">आसिष दीन्हि रामप्रिय जाना। <br>होहु तात बल सील निधाना।।</p>
+        <div class="panel">उन्होंने श्री रामजी के प्रिय जानकर हनुमान्‌जी को आशीर्वाद दिया कि<br> हे तात! तुम बल और शील के निधान होओ॥</div>
+        <p class="my-new-style accordion">अजर अमर गुननिधि सुत होहू। <br>करहुँ बहुत रघुनायक छोहू।।</p>
+        <div class="panel">हे पुत्र! तुम अजर (बुढ़ापे से रहित), अमर और गुणों के खजाने होओ।<br> श्री रघुनाथजी तुम पर बहुत कृपा करें।</div>
+        <p class="my-new-style accordion">करहुँ कृपा प्रभु अस सुनि काना। <br>निर्भर प्रेम मगन हनुमाना।।</p>
+        <div class="panel">'प्रभु कृपा करें' ऐसा कानों से सुनते ही <br>हनुमान्‌जी पूर्ण प्रेम में मग्न हो गए॥</div>
+        <p class="my-new-style accordion">बार बार नाएसि पद सीसा। <br>बोला बचन जोरि कर कीसा।।</p>
+        <div class="panel">हनुमान्‌जी ने बार-बार सीताजी के चरणों में सिर नवाया<br> <span>और फिर हाथ जोड़कर कहा-</span></div> 
+        <p class="my-new-style accordion">अब कृतकृत्य भयउँ मैं माता। <br>आसिष तव अमोघ बिख्याता।।</p>
+        <div class="panel">हे माता! अब मैं कृतार्थ हो गया।<br>आपका आशीर्वाद अमोघ (अचूक) है, यह बात प्रसिद्ध है॥</div>
+        <p class="my-new-style accordion">सुनहु मातु मोहि अतिसय भूखा। <br>लागि देखि सुंदर फल रूखा।।</p>
+        <div class="panel">हे माता! सुनो, सुंदर फल वाले वृक्षों को देखकर <br>मुझे बड़ी ही भूख लग आई है।</div>
+        <p class="my-new-style accordion">सुनु सुत करहिं बिपिन रखवारी। <br>परम सुभट रजनीचर भारी।।</p>
+        <div class="panel"><span>सीताजी ने कहा-</span>हे बेटा! सुनो, बड़े भारी योद्धा राक्षस <br>इस वन की रखवाली करते हैं॥</div>
+        <p class="my-new-style accordion">तिन्ह कर भय माता मोहि नाहीं। <br>जौं तुम्ह सुख मानहु मन माहीं।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>हे माता! यदि आप मन में सुख मानें (प्रसन्न होकर) आज्ञा दें <br>तो मुझे उनका भय तो बिलकुल नहीं है॥</div>
+        <span class="anchor" id="d17"></span>
+        <p class="shloka"><b>[ दोहा १७ ]</b></p>
+        <p class="shloka accordion">देखि बुद्धि बल निपुन कपि कहेउ जानकीं जाहु।<br>रघुपति चरन हृदयँ धरि तात मधुर फल खाहु।।</p>
+        <div class="panel"><span>हनुमान्‌जी को बुद्धि और बल में निपुण देखकर जानकीजी ने कहा- </span>जाओ।<br> हे तात! श्री रघुनाथजी के चरणों को हृदय में धारण करके मीठे फल खाओ॥</div>
+        <p class="my-new-style accordion">चलेउ नाइ सिरु पैठेउ बागा। <br>फल खाएसि तरु तोरैं लागा।।</p>
+        <div class="panel">वे सीताजी को सिर नवाकर चले और बाग में घुस गए।<br>फल खाए और वृक्षों को तोड़ने लगे।</div>
+        <p class="my-new-style accordion">रहे तहाँ बहु भट रखवारे। <br>कछु मारेसि कछु जाइ पुकारे।।</p>
+        <div class="panel">वहाँ बहुत से योद्धा रखवाले थे।<br> उनमें से कुछ को मार डाला और कुछ ने जाकर रावण से पुकार की-॥</div>
+        <p class="my-new-style accordion">नाथ एक आवा कपि भारी। <br>तेहिं असोक बाटिका उजारी।।</p>
+        <div class="panel"><span>और कहा-</span>हे नाथ! एक बड़ा भारी बंदर आया है।<br> उसने अशोक वाटिका उजाड़ डाली। </div>
+        <p class="my-new-style accordion">खाएसि फल अरु बिटप उपारे। <br>रच्छक मर्दि मर्दि महि डारे।।</p>
+        <div class="panel">फल खाए, वृक्षों को उखाड़ डाला<br> और रखवालों को मसल-मसलकर जमीन पर डाल दिया॥</div>
+        <p class="my-new-style accordion">सुनि रावन पठए भट नाना। <br>तिन्हहि देखि गर्जेउ हनुमाना।।</p>
+        <div class="panel">यह सुनकर रावण ने बहुत से योद्धा भेजे।<br> उन्हें देखकर हनुमान्‌जी ने गर्जना की।</div>
+        <p class="my-new-style accordion">सब रजनीचर कपि संघारे। <br>गए पुकारत कछु अधमारे।।</p>
+        <div class="panel">हनुमान्‌जी ने सब राक्षसों को मार डाला,<br> कुछ जो अधमरे थे, चिल्लाते हुए गए॥</div>
+        <p class="my-new-style accordion">पुनि पठयउ तेहिं अच्छकुमारा। <br>चला संग लै सुभट अपारा।।</p>
+        <div class="panel">फिर रावण ने अक्षयकुमार को भेजा।<br>वह असंख्य श्रेष्ठ योद्धाओं को साथ लेकर चला।</div>
+        <p class="my-new-style accordion">आवत देखि बिटप गहि तर्जा। <br>ताहि निपाति महाधुनि गर्जा।।</p>
+        <div class="panel">उसे आते देखकर हनुमान्‌जी ने एक वृक्ष (हाथ में) लेकर ललकारा<br> और उसे मारकर महाध्वनि (बड़े जोर) से गर्जना की॥</div>
+        <span class="anchor" id="d18"></span>
+        <p class="shloka"><b>[ दोहा १८ ]</b></p>
+        <p class="shloka accordion">कछु मारेसि कछु मर्देसि कछु मिलएसि धरि धूरि।<br>कछु पुनि जाइ पुकारे प्रभु मर्कट बल भूरि।।</p>
+        <div class="panel">उन्होंने सेना में से कुछ को मार डाला और कुछ को मसल डाला और कुछ को पकड़-पकड़कर धूल में मिला दिया।<br> कुछ ने फिर जाकर पुकार की कि हे प्रभु! बंदर बहुत ही बलवान्‌ है॥</div>
+        <p class="my-new-style accordion">सुनि सुत बध लंकेस रिसाना। <br>पठएसि मेघनाद बलवाना।।</p>
+        <div class="panel">पुत्र का वध सुनकर रावण क्रोधित हो उठा<br> और उसने (अपने जेठे पुत्र) बलवान्‌ मेघनाद को भेजा।</div>
+        <p class="my-new-style accordion">मारसि जनि सुत बांधेसु ताही। <br>देखिअ कपिहि कहाँ कर आही।।</p>
+        <div class="panel"><span>उससे कहा कि-</span>हे पुत्र! मारना नहीं उसे बाँध लाना<br>उस बंदर को देखा जाए कि कहाँ का है॥</div>
+        <p class="my-new-style accordion">चला इंद्रजित अतुलित जोधा। <br>बंधु निधन सुनि उपजा क्रोधा।।</p>
+        <div class="panel">इंद्र को जीतने वाला अतुलनीय योद्धा मेघनाद चला।<br> भाई का मारा जाना सुन उसे क्रोध हो आया।</div>
+        <p class="my-new-style accordion">कपि देखा दारुन भट आवा। <br>कटकटाइ गर्जा अरु धावा।।</p>
+        <div class="panel">हनुमान्‌जी ने देखा कि अबकी भयानक योद्धा आया है।<br> तब वे कटकटाकर गर्जे और दौड़े॥</div>
+        <p class="my-new-style accordion">अति बिसाल तरु एक उपारा। <br>बिरथ कीन्ह लंकेस कुमारा।।</p>
+        <div class="panel">उन्होंने एक बहुत बड़ा वृक्ष उखाड़ लिया <br>और (उसके प्रहार से) लंकेश्वर रावण के पुत्र मेघनाद को बिना रथ का कर दिया। (रथ को तोड़कर उसे नीचे पटक दिया)।</div>
+        <p class="my-new-style accordion">रहे महाभट ताके संगा। <br>गहि गहि कपि मर्दइ निज अंगा।।</p>
+        <div class="panel">उसके साथ जो बड़े-बड़े योद्धा थे,<br>उनको पकड़-पकड़कर हनुमान्‌जी अपने शरीर से मसलने लगे॥</div>
+        <p class="my-new-style accordion">तिन्हहि निपाति ताहि सन बाजा। <br>भिरे जुगल मानहुँ गजराजा।</p>
+        <div class="panel">उन सबको मारकर फिर मेघनाद से लड़ने लगे।<br> (लड़ते हुए वे ऐसे मालूम होते थे) मानो दो गजराज (श्रेष्ठ हाथी) भिड़ गए हों।</div>
+        <p class="my-new-style accordion">मुठिका मारि चढ़ा तरु जाई। <br>ताहि एक छन मुरुछा आई।।</p>
+        <div class="panel">हनुमान्‌जी उसे एक घूँसा मारकर वृक्ष पर जा चढ़े।<br>उसको क्षणभर के लिए मूर्च्छा आ गई॥</div>
+        <p class="my-new-style accordion">उठि बहोरि कीन्हिसि बहु माया। <br>जीति न जाइ प्रभंजन जाया।।</p>
+        <div class="panel">फिर उठकर उसने बहुत माया रची,<br> परंतु पवन के पुत्र उससे जीते नहीं जाते॥</div>
+        <span class="anchor" id="d19"></span>
+        <p class="shloka"><b>[ दोहा १९ ]</b></p>
+        <p class="shloka accordion">ब्रह्म अस्त्र तेहिं साँधा कपि मन कीन्ह बिचार।<br>जौं न ब्रह्मसर मानउँ महिमा मिटइ अपार।।</p>
+        <div class="panel">अअंत में उसने ब्रह्मास्त्र का संधान (प्रयोग) किया, तब हनुमान्‌जी ने मन में विचार किया कि<br> यदि ब्रह्मास्त्र को नहीं मानता हूँ तो उसकी अपार महिमा मिट जाएगी॥</div>
+        <p class="my-new-style accordion">ब्रह्मबान कपि कहुँ तेहि मारा। <br>परतिहुँ बार कटकु संघारा।।</p>
+        <div class="panel">उसने हनुमान्‌जी को ब्रह्मबाण मारा, (जिसके लगते ही वे वृक्ष से नीचे गिर पड़े),<br>परंतु गिरते समय भी उन्होंने बहुत सी सेना मार डाली।</div>
+        <p class="my-new-style accordion">तेहि देखा कपि मुरुछित भयऊ। <br>नागपास बाँधेसि लै गयऊ।।</p>
+        <div class="panel">जब उसने देखा कि हनुमान्‌जी मूर्छित हो गए हैं,<br> तब वह उनको नागपाश से बाँधकर ले गया॥</div>
+        <p class="my-new-style accordion">जासु नाम जपि सुनहु भवानी। <br>भव बंधन काटहिं नर ग्यानी।।</p>
+        <div class="panel"><span>शिवजी कहते हैं-</span>हे भवानी सुनो, जिनका नाम जपकर<br> ज्ञानी (विवेकी) मनुष्य संसार (जन्म-मरण) के बंधन को काट डालते हैं,</div>
+        <p class="my-new-style accordion">तासु दूत कि बंध तरु आवा। <br>प्रभु कारज लगि कपिहिं बँधावा।।</p>
+        <div class="panel">उनका दूत कहीं बंधन में आ सकता है?<br>किंतु प्रभु के कार्य के लिए हनुमान्‌जी ने स्वयं अपने को बँधा लिया॥</div>
+        <p class="my-new-style accordion">कपि बंधन सुनि निसिचर धाए। <br>कौतुक लागि सभाँ सब आए।।</p>
+        <div class="panel">बंदर का बाँधा जाना सुनकर राक्षस दौड़े <br>और कौतुक के लिए (तमाशा देखने के लिए) सब सभा में आए।</div>
+        <p class="my-new-style accordion">दसमुख सभा दीखि कपि जाई। <br>कहि न जाइ कछु अति प्रभुताई।।</p>
+        <div class="panel">हनुमान्‌जी ने जाकर रावण की सभा देखी।<br>उसकी अत्यंत प्रभुता (ऐश्वर्य) कुछ कही नहीं जाती॥</div>
+        <p class="my-new-style accordion">कर जोरें सुर दिसिप बिनीता। <br>भृकुटि बिलोकत सकल सभीता।।</p>
+        <div class="panel">देवता और दिक्पाल हाथ जोड़े बड़ी नम्रता के साथ <br>भयभीत हुए सब रावण की भौं ताक रहे हैं।</div> 
+        <p class="my-new-style accordion">देखि प्रताप न कपि मन संका। <br>जिमि अहिगन महुँ गरुड़ असंका।।</p>
+        <div class="panel">(उसका रुख देख रहे हैं) उसका ऐसा प्रताप देखकर भी हनुमान्‌जी के मन में जरा भी डर नहीं हुआ।<br>वे ऐसे निःशंख खड़े रहे, जैसे सर्पों के समूह में गरुड़ निःशंख निर्भय) रहते हैं॥</div> 
+        <span class="anchor" id="d20"></span>
+        <p class="shloka"><b>[ दोहा २० ]</b></p>
+        <p class="shloka accordion">कपिहि बिलोकि दसानन बिहसा कहि दुर्बाद।<br>सुत बध सुरति कीन्हि पुनि उपजा हृदयँ बिषाद।।</p>
+        <div class="panel">हनुमान्‌जी को देखकर रावण दुर्वचन कहता हुआ खूब हँसा।<br> फिर पुत्र वध का स्मरण किया तो उसके हृदय में विषाद उत्पन्न हो गया॥</div>
+        <p class="my-new-style accordion"> कह लंकेस कवन तैं कीसा। <br>केहिं के बल घालेहि बन खीसा।।</p>
+        <div class="panel"><span>लंकापति रावण ने कहा-</span>रे वानर! तू कौन है?<br> किसके बल पर तूने वन को उजाड़कर नष्ट कर डाला? </div>
+        <p class="my-new-style accordion">की धौं श्रवन सुनेहि नहिं मोही। <br>देखउँ अति असंक सठ तोही।।</p>
+        <div class="panel">क्या तूने कभी मुझे (मेरा नाम और यश) कानों से नहीं सुना?<br> रे शठ! मैं तुझे अत्यंत निःशंख देख रहा हूँ॥</div>
+        <p class="my-new-style accordion">मारे निसिचर केहिं अपराधा। <br>कहु सठ तोहि न प्रान कइ बाधा।।</p>
+        <div class="panel">तूने किस अपराध से राक्षसों को मारा?<br> रे मूर्ख! बता, क्या तुझे प्राण जाने का भय नहीं है?</div>
+        <p class="my-new-style accordion">सुन रावन ब्रह्मांड निकाया। <br>पाइ जासु बल बिरचित माया।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>हे रावण! सुन, जिनका बल पाकर <br>माया संपूर्ण ब्रह्मांडों के समूहों की रचना करती है,</div>
+        <p class="my-new-style accordion">जाकें बल बिरंचि हरि ईसा। <br>पालत सृजत हरत दससीसा।</p>
+        <div class="panel">जिनके बल से हे दशशीश! ब्रह्मा, विष्णु, महेश (क्रमशः) <br>सृष्टि का सृजन, पालन और संहार करते हैं, </div>
+        <p class="my-new-style accordion">जा बल सीस धरत सहसानन। <br>अंडकोस समेत गिरि कानन।।</p>
+        <div class="panel"> जिनके बल से सहस्रमुख (फणों) वाले शेषजी पर्वत <br>और वनसहित समस्त ब्रह्मांड को सिर पर धारण करते हैं,</div>
+        <p class="my-new-style accordion">धरइ जो बिबिध देह सुरत्राता। <br>तुम्ह ते सठन्ह सिखावनु दाता।</p>
+        <div class="panel">जो देवताओं की रक्षा के लिए नाना प्रकार की देह धारण करते हैं<br> और जो तुम्हारे जैसे मूर्खों को शिक्षा देने वाले हैं,</div>
+        <p class="my-new-style accordion">हर कोदंड कठिन जेहि भंजा। <br>तेहि समेत नृप दल मद गंजा।।</p>
+        <div class="panel">जिन्होंने शिवजी के कठोर धनुष को तोड़ डाला <br>और उसी के साथ राजाओं के समूह का गर्व चूर्ण कर दिया॥</div>
+        <p class="my-new-style accordion">खर दूषन त्रिसिरा अरु बाली। <br>बधे सकल अतुलित बलसाली।।</p>
+        <div class="panel">जिन्होंने खर, दूषण, त्रिशिरा और बालि को मार डाला,<br> जो सब के सब अतुलनीय बलवान्‌ थे॥</div>
+        <span class="anchor" id="d21"></span>
+        <p class="shloka"><b>[ दोहा २१ ]</b></p>
+        <p class="shloka accordion">जाके बल लवलेस तें जितेहु चराचर झारि।<br>तासु दूत मैं जा करि हरि आनेहु प्रिय नारि।।</p>
+        <div class="panel">जिनके लेशमात्र बल से तुमने समस्त चराचर जगत्‌ को जीत लिया<br>और जिनकी प्रिय पत्नी को तुम (चोरी से) हर लाए हो, मैं उन्हीं का दूत हूँ॥</div>
+        <p class="my-new-style accordion">जानउँ मैं तुम्हारि प्रभुताई। <br>सहसबाहु सन परी लराई।।</p>
+        <div class="panel">मैं तुम्हारी प्रभुता को खूब जानता हूँ <br>सहस्रबाहु से तुम्हारी लड़ाई हुई थी </div>
+        <p class="my-new-style accordion">समर बालि सन करि जसु पावा। <br>सुनि कपि बचन बिहसि बिहरावा।।</p>
+        <div class="panel">और बालि से युद्ध करके तुमने यश प्राप्त किया था।<br>हनुमान्‌जी के (मार्मिक) वचन सुनकर रावण ने हँसकर बात टाल दी॥</div>
+        <p class="my-new-style accordion">खायउँ फल प्रभु लागी भूँखा। <br>कपि सुभाव तें तोरेउँ रूखा।।</p>
+        <div class="panel">हे (राक्षसों के) स्वामी मुझे भूख लगी थी, <br>(इसलिए) मैंने फल खाए और वानर स्वभाव के कारण वृक्ष तोड़े।</div>
+        <p class="my-new-style accordion">सब कें देह परम प्रिय स्वामी। <br>मारहिं मोहि कुमारग गामी।।</p>
+        <div class="panel">हे (निशाचरों के) मालिक! देह सबको परम प्रिय है।<br> कुमार्ग पर चलने वाले (दुष्ट) राक्षस जब मुझे मारने लगे॥</div>
+        <p class="my-new-style accordion">जिन्ह मोहि मारा ते मैं मारे। <br>तेहि पर बाँधेउ तनयँ तुम्हारे।।</p>
+        <div class="panel">तब जिन्होंने मुझे मारा, उनको मैंने भी मारा।<br> उस पर तुम्हारे पुत्र ने मुझको बाँध लिया (किंतु),</div>
+        <p class="my-new-style accordion">मोहि न कछु बाँधे कइ लाजा। <br>कीन्ह चहउँ निज प्रभु कर काजा।।</p>
+        <div class="panel">मुझे अपने बाँधे जाने की कुछ भी लज्जा नहीं है।<br>मैं तो अपने प्रभु का कार्य करना चाहता हूँ॥</div>
+        <p class="my-new-style accordion">बिनती करउँ जोरि कर रावन। <br>सुनहु मान तजि मोर सिखावन।।</p>
+        <div class="panel">हे रावण! मैं हाथ जोड़कर तुमसे विनती करता हूँ,<br>तुम अभिमान छोड़कर मेरी सीख सुनो।</div>
+        <p class="my-new-style accordion">देखहु तुम्ह निज कुलहि बिचारी। <br>भ्रम तजि भजहु भगत भय हारी।।</p>
+        <div class="panel">तुम अपने पवित्र कुल का विचार करके देखो <br>और भ्रम को छोड़कर भक्त भयहारी भगवान्‌ को भजो॥</div>
+        <p class="my-new-style accordion">जाकें डर अति काल डेराई। <br>जो सुर असुर चराचर खाई।।</p>
+        <div class="panel">जो देवता, राक्षस और समस्त चराचर को खा जाता है,<br> वह काल भी जिनके डर से अत्यंत डरता है,</div>
+        <p class="my-new-style accordion">तासों बयरु कबहुँ नहिं कीजै। <br>मोरे कहें जानकी दीजै।।</p>
+        <div class="panel">उनसे कदापि वैर न करो<br> और मेरे कहने से जानकीजी को दे दो॥</div>
+        <span class="anchor" id="d22"></span>
+        <p class="shloka"><b>[ दोहा २२ ]</b></p>
+        <p class="shloka accordion">प्रनतपाल रघुनायक करुना सिंधु खरारि।<br>गएँ सरन प्रभु राखिहैं तव अपराध बिसारि।।</p>
+        <div class="panel">खर के शत्रु श्री रघुनाथजी शरणागतों के रक्षक और दया के समुद्र हैं।<br> शरण जाने पर प्रभु तुम्हारा अपराध भुलाकर तुम्हें अपनी शरण में रख लेंगे॥</div>
+        <p class="my-new-style accordion">राम चरन पंकज उर धरहू। <br>लंका अचल राज तुम्ह करहू।।</p>
+        <div class="panel">तुम श्री रामजी के चरण कमलों को हृदय में धारण करो <br>और लंका का अचल राज्य करो।</div>
+        <p class="my-new-style accordion">रिषि पुलिस्त जसु बिमल मंयका। <br>तेहि ससि महुँ जनि होहु कलंका।।</p>
+        <div class="panel">ऋषि पुलस्त्यजी का यश निर्मल चंद्रमा के समान है।<br> उस चंद्रमा में तुम कलंक न बनो॥</div>
+        <p class="my-new-style accordion">राम नाम बिनु गिरा न सोहा। <br>देखु बिचारि त्यागि मद मोहा।।</p>
+        <div class="panel">राम नाम के बिना वाणी शोभा नहीं पाती,<br> मद-मोह को छोड़, विचारकर देखो।</div>
+        <p class="my-new-style accordion">बसन हीन नहिं सोह सुरारी। <br>सब भूषण भूषित बर नारी।।</p>
+        <div class="panel">हे देवताओं के शत्रु! सब गहनों से सजी हुई सुंदरी स्त्री भी<br> कपड़ों के बिना (नंगी) शोभा नहीं पाती॥</div>
+        <p class="my-new-style accordion">राम बिमुख संपति प्रभुताई। <br>जाइ रही पाई बिनु पाई।।</p>
+        <div class="panel">रामविमुख पुरुष की संपत्ति और प्रभुता रही हुई भी चली जाती है<br> और उसका पाना न पाने के समान है।</div>
+        <p class="my-new-style accordion">सजल मूल जिन्ह सरितन्ह नाहीं। <br>बरषि गए पुनि तबहिं सुखाहीं।।</p>
+        <div class="panel">जिन नदियों के मूल में कोई जलस्रोत नहीं है।<br> (अर्थात्‌ जिन्हें केवल बरसात ही आसरा है) वे वर्षा बीत जाने पर फिर तुरंत ही सूख जाती हैं॥</div>
+        <p class="my-new-style accordion">सुनु दसकंठ कहउँ पन रोपी। <br>बिमुख राम त्राता नहिं कोपी।।</p>
+        <div class="panel">हे रावण! सुनो, मैं प्रतिज्ञा करके कहता हूँ कि<br> रामविमुख की रक्षा करने वाला कोई भी नहीं है। </div>
+        <p class="my-new-style accordion">संकर सहस बिष्नु अज तोही। <br>सकहिं न राखि राम कर द्रोही।।</p>
+        <div class="panel">हजारों शंकर, विष्णु और ब्रह्मा भी<br> श्री रामजी के साथ द्रोह करने वाले तुमको नहीं बचा सकते॥</div>
+        <span class="anchor" id="d23"></span>
+        <p class="shloka"><b>[ दोहा २३ ]</b></p>
+        <p class="shloka accordion">मोहमूल बहु सूल प्रद त्यागहु तम अभिमान।<br>भजहु राम रघुनायक कृपा सिंधु भगवान।।</p>
+        <div class="panel">मोह ही जिनका मूल है ऐसे (अज्ञानजनित), बहुत पीड़ा देने वाले, तमरूप अभिमान का त्याग कर दो <br>और रघुकुल के स्वामी, कृपा के समुद्र भगवान्‌ श्री रामचंद्रजी का भजन करो॥</div>
+        <p class="my-new-style accordion">जदपि कहि कपि अति हित बानी। <br>भगति बिबेक बिरति नय सानी।।</p>
+        <div class="panel">यद्यपि हनुमान्‌जी ने भक्ति, ज्ञान, वैराग्य <br>और नीति से सनी हुई बहुत ही हित की वाणी कही,</div>
+        <p class="my-new-style accordion">बोला बिहसि महा अभिमानी। <br>मिला हमहि कपि गुर बड़ ग्यानी।।</p>
+        <div class="panel">तो भी वह महान्‌ अभिमानी रावण बहुत हँसकर (व्यंग्य से) बोला कि<br> हमें यह बंदर बड़ा ज्ञानी गुरु मिला!॥</div>
+        <p class="my-new-style accordion">मृत्यु निकट आई खल तोही। <br>लागेसि अधम सिखावन मोही।।</p>
+        <div class="panel">रे दुष्ट! तेरी मृत्यु निकट आ गई है।<br> अधम! मुझे शिक्षा देने चला है।</div>
+        <p class="my-new-style accordion">उलटा होइहि कह हनुमाना। <br>मतिभ्रम तोर प्रगट मैं जाना।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span> इससे उलटा ही होगा (अर्थात्‌ मृत्यु तेरी निकट आई है, मेरी नहीं)।<br> यह तेरा मतिभ्रम (बुद्धि का फेर) है, मैंने प्रत्यक्ष जान लिया है॥</div>
+        <p class="my-new-style accordion">सुनि कपि बचन बहुत खिसिआना। <br>बेगि न हरहुँ मूढ़ कर प्राना।।</p>
+        <div class="panel">हनुमान्‌जी के वचन सुनकर वह बहुत ही कुपित हो गया।<br><span>और बोला-</span>अरे! इस मूर्ख का प्राण शीघ्र ही क्यों नहीं हर लेते?</div>
+        <p class="my-new-style accordion">सुनत निसाचर मारन धाए। <br>सचिवन्ह सहित बिभीषनु आए।</p>
+        <div class="panel">सुनते ही राक्षस उन्हें मारने दौड़े <br>उसी समय मंत्रियों के साथ विभीषणजी वहाँ आ पहुँचे॥</div>
+        <p class="my-new-style accordion">नाइ सीस करि बिनय बहूता। <br>नीति बिरोध न मारिअ दूता।।</p>
+        <div class="panel">उन्होंने सिर नवाकर और बहुत विनय करके रावण से कहा कि<br> दूत को मारना नहीं चाहिए, यह नीति के विरुद्ध है।</div>
+        <p class="my-new-style accordion">आन दंड कछु करिअ गोसाँई। <br>सबहीं कहा मंत्र भल भाई।।</p>
+        <div class="panel">हे गोसाईं। कोई दूसरा दंड दिया जाए।<br><span> सबने कहा- </span>भाई! यह सलाह उत्तम है॥</div>
+        <p class="my-new-style accordion">सुनत बिहसि बोला दसकंधर। <br>अंग भंग करि पठइअ बंदर।।</p>
+        <div class="panel"><span>यह सुनते ही रावण हँसकर बोला-</span><br>अच्छा तो, बंदर को अंग-भंग करके भेज (लौटा) दिया जाए॥</div>
+        <span class="anchor" id="d24"></span>
+        <p class="shloka"><b>[ दोहा २४ ]</b></p>
+        <p class="shloka accordion">कपि कें ममता पूँछ पर सबहि कहउँ समुझाइ।<br>तेल बोरि पट बाँधि पुनि पावक देहु लगाइ।।</p>
+        <div class="panel">मैं सबको समझाकर कहता हूँ कि बंदर की ममता पूँछ पर होती है।<br>अतः तेल में कपड़ा डुबोकर उसे इसकी पूँछ में बाँधकर फिर आग लगा दो॥</div>
+        <p class="my-new-style accordion">पूँछहीन बानर तहँ जाइहि। <br>तब सठ निज नाथहि लइ आइहि।।</p>
+        <div class="panel">जब बिना पूँछ का यह बंदर वहाँ (अपने स्वामी के पास) जाएगा,<br> तब यह मूर्ख अपने मालिक को साथ ले आएगा।</div>
+        <p class="my-new-style accordion">जिन्ह कै कीन्हसि बहुत बड़ाई। <br>देखउँ मैं तिन्ह कै प्रभुताई।।</p>
+        <div class="panel">जिनकी इसने बहुत बड़ाई की है,<br> मैं जरा उनकी प्रभुता (सामर्थ्य) तो देखूँ!॥</div>
+        <p class="my-new-style accordion">बचन सुनत कपि मन मुसुकाना। <br>भइ सहाय सारद मैं जाना।।</p>
+        <div class="panel">यह वचन सुनते ही हनुमान्‌जी मन में मुस्कुराए <br>(और मन ही मन बोले कि) मैं जान गया, सरस्वतीजी (इसे ऐसी बुद्धि देने में) सहायक हुई हैं।</div>
+        <p class="my-new-style accordion">जातुधान सुनि रावन बचना। <br>लागे रचैं मूढ़ सोइ रचना।।</p>
+        <div class="panel">रावण के वचन सुनकर मूर्ख राक्षस <br>वही (पूँछ में आग लगाने की) तैयारी करने लगे॥</div>
+        <p class="my-new-style accordion">रहा न नगर बसन घृत तेला। <br>बाढ़ी पूँछ कीन्ह कपि खेला।।</p>
+        <div class="panel">(पूँछ के लपेटने में इतना कपड़ा और घी-तेल लगा कि) नगर में कपड़ा, घी और तेल नहीं रह गया।<br>हनुमान्‌जी ने ऐसा खेल किया कि पूँछ बढ़ गई (लंबी हो गई)।</div>
+        <p class="my-new-style accordion">कौतुक कहँ आए पुरबासी। <br>मारहिं चरन करहिं बहु हाँसी।।</p>
+        <div class="panel">नगरवासी लोग तमाशा देखने आए।<br> वे हनुमान्‌जी को पैर से ठोकर मारते हैं और उनकी हँसी करते हैं॥</div>
+        <p class="my-new-style accordion">बाजहिं ढोल देहिं सब तारी। <br>नगर फेरि पुनि पूँछ प्रजारी।।</p>
+        <div class="panel">ढोल बजते हैं, सब लोग तालियाँ पीटते हैं।<br>हनुमान्‌जी को नगर में फिराकर, फिर पूँछ में आग लगा दी। </div>
+        <p class="my-new-style accordion">पावक जरत देखि हनुमंता। <br>भयउ परम लघु रुप तुरंता।।</p>
+        <div class="panel">अग्नि को जलते हुए देखकर हनुमान्‌जी <br>तुरंत ही बहुत छोटे रूप में हो गए॥</div>
+        <p class="my-new-style accordion">निबुकि चढ़ेउ कपि कनक अटारीं। <br>भई सभीत निसाचर नारीं।।</p>
+        <div class="panel">बंधन से निकलकर वे सोने की अटारियों पर जा चढ़े।<br> उनको देखकर राक्षसों की स्त्रियाँ भयभीत हो गईं॥</div>
+        <span class="anchor" id="d25"></span>
+        <p class="shloka"><b>[ दोहा २५ ]</b></p>
+        <p class="shloka accordion">हरि प्रेरित तेहि अवसर चले मरुत उनचास।<br>अट्टहास करि गर्जा कपि बढ़ि लाग अकास।।</p>
+        <div class="panel">उस समय भगवान्‌ की प्रेरणा से उनचासों पवन चलने लगे।<br>हनुमान्‌जी अट्टहास करके गर्जे और बढ़कर आकाश से जा लगे॥</div>
+        <p class="my-new-style accordion">देह बिसाल परम हरुआई। <br>मंदिर तें मंदिर चढ़ धाई।।</p>
+        <div class="panel">देह बड़ी विशाल, परंतु बहुत ही हल्की (फुर्तीली) है।<br> वे दौड़कर एक महल से दूसरे महल पर चढ़ जाते हैं।</div>
+        <p class="my-new-style accordion">जरइ नगर भा लोग बिहाला। <br>झपट लपट बहु कोटि कराला।।</p>
+        <div class="panel">नगर जल रहा है लोग बेहाल हो गए हैं।<br> आग की करोड़ों भयंकर लपटें झपट रही हैं॥</div>
+        <p class="my-new-style accordion">तात मातु हा सुनिअ पुकारा। <br>एहि अवसर को हमहि उबारा।।</p>
+        <div class="panel">हाय बप्पा! हाय मैया! इस अवसर पर हमें कौन बचाएगा? <br>(चारों ओर) यही पुकार सुनाई पड़ रही है।</div>
+        <p class="my-new-style accordion">हम जो कहा यह कपि नहिं होई। <br>बानर रूप धरें सुर कोई।।</p>
+        <div class="panel">हमने तो पहले ही कहा था कि यह वानर नहीं है,<br> वानर का रूप धरे कोई देवता है!॥</div>
+        <p class="my-new-style accordion">साधु अवग्या कर फलु ऐसा। <br>जरइ नगर अनाथ कर जैसा।।</p>
+        <div class="panel">साधु के अपमान का यह फल है कि नगर, <br>अनाथ के नगर की तरह जल रहा है।</div>
+        <p class="my-new-style accordion">जारा नगरु निमिष एक माहीं। <br>एक बिभीषन कर गृह नाहीं।।</p>
+        <div class="panel">हनुमान्‌जी ने एक ही क्षण में सारा नगर जला डाला। <br> एक विभीषण का घर नहीं जलाया॥</div>
+        <p class="my-new-style accordion">ता कर दूत अनल जेहिं सिरिजा। <br>जरा न सो तेहि कारन गिरिजा।।</p>
+        <div class="panel"><span>शिवजी कहते हैं-</span>हे पार्वती! जिन्होंने अग्नि को बनाया, हनुमान्‌जी उन्हीं के दूत हैं।<br> इसी कारण वे अग्नि से नहीं जले।</div>
+        <p class="my-new-style accordion">उलटि पलटि लंका सब जारी। <br>कूदि परा पुनि सिंधु मझारी।।</p>
+        <div class="panel">हनुमान्‌जी ने उलट-पलटकर (एक ओर से दूसरी ओर तक) सारी लंका जला दी।<br> फिर वे समुद्र में कूद पड़े॥</div>
+        <span class="anchor" id="d26"></span>
+        <p class="shloka"><b>[ दोहा २६ ]</b></p>
+        <p class="shloka accordion">पूँछ बुझाइ खोइ श्रम धरि लघु रूप बहोरि।<br>जनकसुता के आगें ठाढ़ भयउ कर जोरि।।</p>
+        <div class="panel">पूँछ बुझाकर, थकावट दूर करके और फिर छोटा सा रूप धारण कर <br>हनुमान्‌जी श्री जानकीजी के सामने हाथ जोड़कर जा खड़े हुए॥</div>
+        <p class="my-new-style accordion">मातु मोहि दीजे कछु चीन्हा। <br>जैसें रघुनायक मोहि दीन्हा।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>हे माता! मुझे कोई चिह्न (पहचान) दीजिए, <br>जैसे श्री रघुनाथजी ने मुझे दिया था।</div> 
+        <p class="my-new-style accordion">चूड़ामनि उतारि तब दयऊ।<br>हरष समेत पवनसुत लयऊ।।</p>
+        <div class="panel">तब सीताजी ने चूड़ामणि उतारकर दी।<br> हनुमान्‌जी ने उसको हर्षपूर्वक ले लिया॥</div>
+        <p class="my-new-style accordion">कहेहु तात अस मोर प्रनामा। <br>सब प्रकार प्रभु पूरनकामा।।</p>
+        <div class="panel"><span>जानकीजी ने कहा-</span> हे तात! मेरा प्रणाम निवेदन करना और इस प्रकार कहना-<br> हे प्रभु! यद्यपि आप सब प्रकार से पूर्ण काम हैं (आपको किसी प्रकार की कामना नहीं है)॥</div> 
+        <p class="my-new-style accordion">दीन दयाल बिरिदु संभारी। <br>हरहु नाथ मम संकट भारी।।</p>
+        <div class="panel">तथापि दीनों (दुःखियों) पर दया करना आपका विरद है (और मैं दीन हूँ) <br>अतः उस विरद को याद करके, हे नाथ! मेरे भारी संकट को दूर कीजिए॥</div>
+        <p class="my-new-style accordion">तात सक्रसुत कथा सुनाएहु। <br>बान प्रताप प्रभुहि समुझाएहु।।</p>
+        <div class="panel">हे तात! इंद्रपुत्र जयंत की कथा (घटना) सुनाना<br>और प्रभु को उनके बाण का प्रताप समझाना (स्मरण कराना)।</div>
+        <p class="my-new-style accordion">मास दिवस महुँ नाथु न आवा। <br>तौ पुनि मोहि जिअत नहिं पावा।।</p>
+        <div class="panel">यदि महीने भर में नाथ न आए<br> तो फिर मुझे जीती न पाएँगे॥</div>
+        <p class="my-new-style accordion">कहु कपि केहि बिधि राखौं प्राना। <br>तुम्हहू तात कहत अब जाना।।</p>
+        <div class="panel">हे हनुमान्‌! कहो, मैं किस प्रकार प्राण रखूँ! <br>हे तात! तुम भी अब जाने को कह रहे हो।</div> 
+        <p class="my-new-style accordion">तोहि देखि सीतलि भइ छाती। <br>पुनि मो कहुँ सोइ दिनु सो राती।।</p>
+        <div class="panel">तुमको देखकर छाती ठंडी हुई थी।<br> फिर मुझे वही दिन और वही रात!॥</div>
+        <span class="anchor" id="d27"></span>
+        <p class="shloka"><b>[ दोहा २७ ]</b></p>
+        <p class="shloka accordion">जनकसुतहि समुझाइ करि बहु बिधि धीरजु दीन्ह।<br>चरन कमल सिरु नाइ कपि गवनु राम पहिं कीन्ह।।</p>
+        <div class="panel">हनुमान्‌जी ने जानकीजी को समझाकर बहुत प्रकार से धीरज दिया<br> और उनके चरणकमलों में सिर नवाकर श्री रामजी के पास गमन किया॥</div>
+        <p class="my-new-style accordion">चलत महाधुनि गर्जेसि भारी। <br>गर्भ स्त्रवहिं सुनि निसिचर नारी।।</p>
+        <div class="panel">चलते समय उन्होंने महाध्वनि से भारी गर्जन किया,<br>ग जिसे सुनकर राक्षसों की स्त्रियों के गर्भ गिरने लगे।</div>
+        <p class="my-new-style accordion">नाघि सिंधु एहि पारहि आवा। <br>सबद किलकिला कपिन्ह सुनावा।।</p>
+        <div class="panel">समुद्र लाँघकर वे इस पार आए <br>और उन्होंने वानरों को किलकिला शब्द (हर्षध्वनि) सुनाया॥</div>
+        <p class="my-new-style accordion">हरषे सब बिलोकि हनुमाना। <br>नूतन जन्म कपिन्ह तब जाना।।</p>
+        <div class="panel">हनुमान्‌जी को देखकर सब हर्षित हो गए <br>और तब वानरों ने अपना नया जन्म समझा। </div>
+        <p class="my-new-style accordion">मुख प्रसन्न तन तेज बिराजा। <br>कीन्हेसि रामचन्द्र कर काजा।।</p>
+        <div class="panel">हनुमान्‌जी का मुख प्रसन्न है और शरीर में तेज विराजमान है, <br>(जिससे उन्होंने समझ लिया कि) ये श्री रामचंद्रजी का कार्य कर आए हैं॥ </div>
+        <p class="my-new-style accordion">मिले सकल अति भए सुखारी। <br>तलफत मीन पाव जिमि बारी।।</p>
+        <div class="panel">सब हनुमान्‌जी से मिले और बहुत ही सुखी हुए, <br>जैसे तड़पती हुई मछली को जल मिल गया हो।</div>
+        <p class="my-new-style accordion">चले हरषि रघुनायक पासा। <br>पूँछत कहत नवल इतिहासा।।</p>
+        <div class="panel">सब हर्षित होकर नए-नए इतिहास (वृत्तांत) पूछते-<br> कहते हुए श्री रघुनाथजी के पास चले॥</div>
+        <p class="my-new-style accordion">तब मधुबन भीतर सब आए। <br>अंगद संमत मधु फल खाए।।</p>
+        <div class="panel">तब सब लोग मधुवन के भीतर आए<br> और अंगद की सम्मति से सबने मधुर फल (या मधु और फल) खाए।</div>
+        <p class="my-new-style accordion">रखवारे जब बरजन लागे। <br>मुष्टि प्रहार हनत सब भागे।।</p>
+        <div class="panel">जब रखवाले बरजने लगे,<br> तब घूँसों की मार मारते ही सब रखवाले भाग छूटे॥</div>
+        <span class="anchor" id="d28"></span>
+        <p class="shloka"><b>[ दोहा २८ ]</b></p>
+        <p class="shloka accordion">जाइ पुकारे ते सब बन उजार जुबराज।<br>सुनि सुग्रीव हरष कपि करि आए प्रभु काज।।</p>
+        <div class="panel">उन सबने जाकर पुकारा कि युवराज अंगद वन उजाड़ रहे हैं।<br> यह सुनकर सुग्रीव हर्षित हुए कि वानर प्रभु का कार्य कर आए हैं॥</div>
+        <p class="my-new-style accordion">जौं न होति सीता सुधि पाई। <br>मधुबन के फल सकहिं कि खाई।।</p>
+        <div class="panel">यदि सीताजी की खबर न पाई होती <br>तो क्या वे मधुवन के फल खा सकते थे?</div>
+        <p class="my-new-style accordion">एहि बिधि मन बिचार कर राजा। <br>आइ गए कपि सहित समाजा।।</p>
+        <div class="panel">इस प्रकार राजा सुग्रीव मन में विचार कर ही रहे थे <br>कि समाज सहित वानर आ गए॥</div>
+        <p class="my-new-style accordion">आइ सबन्हि नावा पद सीसा। <br>मिलेउ सबन्हि अति प्रेम कपीसा।।</p>
+        <div class="panel">सबने आकर सुग्रीव के चरणों में सिर नवाया।  <br>कपिराज सुग्रीव सभी से बड़े प्रेम के साथ मिले। </div>
+        <p class="my-new-style accordion">पूँछी कुसल कुसल पद देखी। <br>राम कृपाँ भा काजु बिसेषी।।</p>
+        <div class="panel"><span>उन्होंने कुशल पूछी, (तब वानरों ने उत्तर दिया-)</span>आपके चरणों के दर्शन से सब कुशल है। <br>श्री रामजी की कृपा से विशेष कार्य हुआ (कार्य में विशेष सफलता हुई है)॥ </div>
+        <p class="my-new-style accordion">नाथ काजु कीन्हेउ हनुमाना। <br>राखे सकल कपिन्ह के प्राना।।</p>
+        <div class="panel">हे नाथ! हनुमान ने सब कार्य किया<br> और सब वानरों के प्राण बचा लिए॥</div>
+        <p class="my-new-style accordion">सुनि सुग्रीव बहुरि तेहि मिलेऊ। <br>कपिन्ह सहित रघुपति पहिं चलेऊ।।</p>
+        <div class="panel">यह सुनकर सुग्रीवजी हनुमान्‌जी से फिर मिले <br>और सब वानरों समेत श्री रघुनाथजी के पास चले॥</div>
+        <p class="my-new-style accordion">राम कपिन्ह जब आवत देखा। <br>किएँ काजु मन हरष बिसेषा।।</p>
+        <div class="panel">श्री रामजी ने जब वानरों को कार्य किए हुए आते देखा<br> तब उनके मन में विशेष हर्ष हुआ॥ </div>
+        <p class="my-new-style accordion">फटिक सिला बैठे द्वौ भाई। <br>परे सकल कपि चरनन्हि जाई।।</p>
+        <div class="panel">दोनों भाई स्फटिक शिला पर बैठे थे।<br> सब वानर जाकर उनके चरणों पर गिर पड़े॥</div>
+        <span class="anchor" id="d29"></span>
+        <p class="shloka"><b>[ दोहा २९ ]</b></p>
+        <p class="shloka accordion">प्रीति सहित सब भेटे रघुपति करुना पुंज।<br>पूँछी कुसल नाथ अब कुसल देखि पद कंज।।</p>
+        <div class="panel">दया की राशि श्री रघुनाथजी सबसे प्रेम सहित गले लगकर मिले और कुशल पूछी।<br><span> वानरों ने कहा-</span> हे नाथ! आपके चरण कमलों के दर्शन पाने से अब कुशल है॥</div>
+        <p class="my-new-style accordion">जामवंत कह सुनु रघुराया। <br>जा पर नाथ करहु तुम्ह दाया।।</p>
+        <div class="panel"><span> जाम्बवान्‌ ने कहा-</span> हे रघुनाथजी! सुनिए। <br>हे नाथ! जिस पर आप दया करते हैं, </div>
+        <p class="my-new-style accordion">ताहि सदा सुभ कुसल निरंतर। <br>सुर नर मुनि प्रसन्न ता ऊपर।।</p>
+        <div class="panel">उसे सदा कल्याण और निरंतर कुशल है।<br> देवता, मनुष्य और मुनि सभी उस पर प्रसन्न रहते हैं॥</div>
+        <p class="my-new-style accordion">सोइ बिजई बिनई गुन सागर। <br>तासु सुजसु त्रेलोक उजागर।।</p>
+        <div class="panel">वही विजयी है, वही विनयी है और वही गुणों का समुद्र बन जाता है।<br> उसी का सुंदर यश तीनों लोकों में प्रकाशित होता है॥</div>
+        <p class="my-new-style accordion">प्रभु कीं कृपा भयउ सबु काजू। <br>जन्म हमार सुफल भा आजू।।</p>
+        <div class="panel">प्रभु की कृपा से सब कार्य हुआ।<br> आज हमारा जन्म सफल हो गया॥</div>
+        <p class="my-new-style accordion">नाथ पवनसुत कीन्हि जो करनी। <br>सहसहुँ मुख न जाइ सो बरनी।।</p>
+        <div class="panel">हे नाथ! पवनपुत्र हनुमान्‌ ने जो करनी की,<br> उसका हजार मुखों से भी वर्णन नहीं किया जा सकता॥</div>
+        <p class="my-new-style accordion">पवनतनय के चरित सुहाए। <br>जामवंत रघुपतिहि सुनाए।।</p>
+        <div class="panel">तब जाम्बवान्‌ ने हनुमान्‌जी के सुंदर चरित्र (कार्य) <br>श्री रघुनाथजी को सुनाए॥</div>
+        <p class="my-new-style accordion">सुनत कृपानिधि मन अति भाए। <br>पुनि हनुमान हरषि हियँ लाए।।</p>
+        <div class="panel">-(वे चरित्र) सुनने पर कृपानिधि श्री रामचंदजी के मन को बहुत ही अच्छे लगे।<br> <span>उन्होंने हर्षित होकर हनुमान्‌जी को फिर हृदय से लगा लिया</span>॥</div>
+        <p class="my-new-style accordion">कहहु तात केहि भाँति जानकी। <br>रहति करति रच्छा स्वप्रान की।।</p>
+        <div class="panel"><span>और कहा-</span> हे तात! कहो, सीता किस प्रकार रहती <br>और अपने प्राणों की रक्षा करती हैं?॥</div>
+        <span class="anchor" id="d30"></span>
+        <p class="shloka"><b>[ दोहा ३० ]</b></p>
+        <p class="shloka accordion">नाम पाहरु दिवस निसि ध्यान तुम्हार कपाट।<br>लोचन निज पद जंत्रित जाहिं प्रान केहिं बाट।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>आपका नाम रात-दिन पहरा देने वाला है, आपका ध्यान ही किंवाड़ है।<br> नेत्रों को अपने चरणों में लगाए रहती हैं, यही ताला लगा है, फिर प्राण जाएँ तो किस मार्ग से?॥</div>
+        <p class="my-new-style accordion">चलत मोहि चूड़ामनि दीन्ही। <br>रघुपति हृदयँ लाइ सोइ लीन्ही।।</p>
+        <div class="panel">चलते समय उन्होंने मुझे चूड़ामणि (उतारकर) दी।<br> श्री रघुनाथजी ने उसे लेकर हृदय से लगा लिया॥</div>
+        <p class="my-new-style accordion">नाथ जुगल लोचन भरि बारी। <br>बचन कहे कछु जनककुमारी।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने फिर कहा-</span> हे नाथ! दोनों नेत्रों में जल भरकर<br> जानकीजी ने मुझसे कुछ वचन कहे-॥</div>
+        <p class="my-new-style accordion">अनुज समेत गहेहु प्रभु चरना। <br>दीन बंधु प्रनतारति हरना।।</p>
+        <div class="panel">छोटे भाई समेत प्रभु के चरण पकड़ना (और कहना कि) <br>आप दीनबंधु हैं, शरणागत के दुःखों को हरने वाले हैं ॥</div>
+        <p class="my-new-style accordion">मन क्रम बचन चरन अनुरागी। <br>केहि अपराध नाथ हौं त्यागी।।</p>
+        <div class="panel">और मैं मन, वचन और कर्म से आपके चरणों की अनुरागिणी हूँ।<br> फिर स्वामी (आप) ने मुझे किस अपराध से त्याग दिया?॥</div>
+        <p class="my-new-style accordion">अवगुन एक मोर मैं माना। <br>बिछुरत प्रान न कीन्ह पयाना।।</p>
+        <div class="panel">(हाँ) एक दोष मैं अपना (अवश्य) मानती हूँ<br> कि आपका वियोग होते ही मेरे प्राण नहीं चले गए ॥</div>
+        <p class="my-new-style accordion">नाथ सो नयनन्हि को अपराधा। <br>निसरत प्रान करिहिं हठि बाधा।।</p>
+        <div class="panel">किंतु हे नाथ! यह तो नेत्रों का अपराध है <br>जो प्राणों के निकलने में हठपूर्वक बाधा देते हैं॥</div>
+        <p class="my-new-style accordion">बिरह अगिनि तनु तूल समीरा। <br>स्वास जरइ छन माहिं सरीरा।।</p>
+        <div class="panel">विरह अग्नि है, शरीर रूई है और श्वास पवन है, <br>इस प्रकार (अग्नि और पवन का संयोग होने से) यह शरीर क्षणमात्र में जल सकता है॥ </div>
+        <p class="my-new-style accordion">नयन स्त्रवहि जलु निज हित लागी। <br>जरैं न पाव देह बिरहागी।</p>
+        <div class="panel">परंतु नेत्र अपने हित के लिए प्रभु का स्वरूप देखकर (सुखी होने के लिए) जल (आँसू) बरसाते हैं,<br> जिससे विरह की आग से भी देह जलने नहीं पाती॥</div>
+        <p class="my-new-style accordion">सीता के अति बिपति बिसाला। <br>बिनहिं कहें भलि दीनदयाला।।</p>
+        <div class="panel">सीताजी की विपत्ति बहुत बड़ी है। <br>हे दीनदयालु! वह बिना कही ही अच्छी है (कहने से आपको बड़ा क्लेश होगा)॥</div>
+        <span class="anchor" id="d31"></span>
+        <p class="shloka"><b>[ दोहा ३१ ]</b></p>
+        <p class="shloka accordion">निमिष निमिष करुनानिधि जाहिं कलप सम बीति।<br>बेगि चलिय प्रभु आनिअ भुज बल खल दल जीति।।</p>
+        <div class="panel">हे करुणानिधान! उनका एक-एक पल कल्प के समान बीतता है। <br>अतः हे प्रभु! तुरंत चलिए और अपनी भुजाओं के बल से दुष्टों के दल को जीतकर सीताजी को ले आइए॥</div>
+        <p class="my-new-style accordion">सुनि सीता दुख प्रभु सुख अयना। <br>भरि आए जल राजिव नयना।।</p>
+        <div class="panel">सीताजी का दुःख सुनकर सुख के धाम  <br>प्रभु के कमल नेत्रों में जल भर आया॥ </div>
+        <p class="my-new-style accordion">बचन काँय मन मम गति जाही। <br>सपनेहुँ बूझिअ बिपति कि ताही।।</p>
+        <div class="panel"><span>और वे बोले-</span> मन, वचन और शरीर से जिसे मेरी ही गति (मेरा ही आश्रय) है, <br> उसे क्या स्वप्न में भी विपत्ति हो सकती है?॥</div>
+        <p class="my-new-style accordion">कह हनुमंत बिपति प्रभु सोई। <br>जब तव सुमिरन भजन न होई।।</p>
+        <div class="panel"><span>हनुमान्‌जी ने कहा-</span>  हे प्रभु! विपत्ति तो वही (तभी) है <br>जब आपका भजन-स्मरण न हो॥</div>
+        <p class="my-new-style accordion">केतिक बात प्रभु जातुधान की। <br>रिपुहि जीति आनिबी जानकी।।</p>
+        <div class="panel">हे प्रभो! राक्षसों की बात ही कितनी है?<br> आप शत्रु को जीतकर जानकीजी को ले आवेंगे॥</div>
+        <p class="my-new-style accordion">सुनु कपि तोहि समान उपकारी। <br>नहिं कोउ सुर नर मुनि तनुधारी।।</p>
+        <div class="panel"><span>भगवान्‌ कहने लगे-</span>  हे हनुमान्‌! सुन, तेरे समान मेरा उपकारी <br>देवता, मनुष्य अथवा मुनि कोई भी शरीरधारी नहीं है॥</div>
+        <p class="my-new-style accordion">प्रति उपकार करौं का तोरा। <br>सनमुख होइ न सकत मन मोरा।।</p>
+        <div class="panel">मैं तेरा प्रत्युपकार (बदले में उपकार) तो क्या करूँ, <br>मेरा मन भी तेरे सामने नहीं हो सकता॥</div>
+        <p class="my-new-style accordion">सुनु सुत उरिन मैं नाहीं। <br>देखेउँ करि बिचार मन माहीं।।</p>
+        <div class="panel"> पुत्र! सुन, मैंने मन में (खूब) विचार करके देख लिया कि<br> मैं तुझसे उऋण नहीं हो सकता॥</div>
+        <p class="my-new-style accordion">पुनि पुनि कपिहि चितव सुरत्राता। <br>लोचन नीर पुलक अति गाता।।</p>
+        <div class="panel">देवताओं के रक्षक प्रभु बार-बार हनुमान्‌जी को देख रहे हैं।<br> नेत्रों में प्रेमाश्रुओं का जल भरा है और शरीर अत्यंत पुलकित है॥</div>
+        <span class="anchor" id="d32"></span>
+        <p class="shloka"><b>[ दोहा ३२ ]</b></p>
+        <p class="shloka accordion">सुनि प्रभु बचन बिलोकि मुख गात हरषि हनुमंत।<br>चरन परेउ प्रेमाकुल त्राहि त्राहि भगवंत।।</p>
+        <div class="panel">प्रभु के वचन सुनकर और उनके (प्रसन्न) मुख तथा (पुलकित) अंगों को देखकर हनुमान्‌जी हर्षित हो गए<br> और प्रेम में विकल होकर 'हे भगवन्‌! मेरी रक्षा करो, रक्षा करो' कहते हुए श्री रामजी के चरणों में गिर पड़े॥</div>
+        <p class="my-new-style accordion">बार बार प्रभु चहइ उठावा। <br>प्रेम मगन तेहि उठब न भावा।।</p>
+        <div class="panel">प्रभु उनको बार-बार उठाना चाहते हैं,<br> परंतु प्रेम में डूबे हुए हनुमान्‌जी को चरणों से उठना सुहाता नहीं॥</div>
+        <p class="my-new-style accordion">प्रभु कर पंकज कपि कें सीसा। <br>सुमिरि सो दसा मगन गौरीसा।।</p>
+        <div class="panel">प्रभु का करकमल हनुमान्‌जी के सिर पर है।<br> उस स्थिति का स्मरण करके शिवजी प्रेममग्न हो गए॥</div>
+        <p class="my-new-style accordion">सावधान मन करि पुनि संकर। <br>लागे कहन कथा अति सुंदर।।</p>
+        <div class="panel">फिर मन को सावधान करके<br> <span>शंकरजी अत्यंत सुंदर कथा कहने लगे-</span></div>
+        <p class="my-new-style accordion">कपि उठाइ प्रभु हृदयँ लगावा। <br>कर गहि परम निकट बैठावा।।</p>
+        <div class="panel">हनुमान्‌जी को उठाकर प्रभु ने हृदय से लगाया <br> और हाथ पकड़कर अत्यंत निकट बैठा लिया॥</div>
+        <p class="my-new-style accordion">कहु कपि रावन पालित लंका। <br>केहि बिधि दहेउ दुर्ग अति बंका।।</p>
+        <div class="panel">हे हनुमान्‌! बताओ तो, रावण के द्वारा सुरक्षित लंका <br>और उसके बड़े बाँके किले को तुमने किस तरह जलाया?</div>
+        <p class="my-new-style accordion">प्रभु प्रसन्न जाना हनुमाना। <br>बोला बचन बिगत अभिमाना।।</p>
+        <div class="panel">हनुमान्‌जी ने प्रभु को प्रसन्न जाना <br>और वे <span>अभिमानरहित वचन बोले- </span>॥</div>
+        <p class="my-new-style accordion">साखामृग के बड़ि मनुसाई। <br>साखा तें साखा पर जाई।।</p>
+        <div class="panel">बंदर का बस, यही बड़ा पुरुषार्थ है कि<br> वह एक डाल से दूसरी डाल पर चला जाता है॥</div>
+        <p class="my-new-style accordion">नाघि सिंधु हाटकपुर जारा। <br>निसिचर गन बिधि बिपिन उजारा।।</p>
+        <div class="panel">मैंने जो समुद्र लाँघकर सोने का नगर जलाया<br> और राक्षसगण को मारकर अशोक वन को उजाड़ डाला॥</div>
+        <p class="my-new-style accordion">सो सब तव प्रताप रघुराई। <br>नाथ न कछू मोरि प्रभुताई।।</p>
+        <div class="panel">यह सब तो हे श्री रघुनाथजी! आप ही का प्रताप है।<br> हे नाथ! इसमें मेरी प्रभुता (बड़ाई) कुछ भी नहीं है॥</div>
+        <span class="anchor" id="d33"></span>
+        <p class="shloka"><b>[ दोहा ३३ ]</b></p>
+        <p class="shloka accordion">ता कहुँ प्रभु कछु अगम नहिं जा पर तुम्ह अनुकुल।<br>तब प्रभावँ बड़वानलहिं जारि सकइ खलु तूल।।</p>
+        <div class="panel">हे प्रभु! जिस पर आप प्रसन्न हों, उसके लिए कुछ भी कठिन नहीं है।<br> आपके प्रभाव से रूई (जो स्वयं बहुत जल्दी जल जाने वाली वस्तु है) <br>बड़वानल को निश्चय ही जला सकती है (अर्थात्‌ असंभव भी संभव हो सकता है)॥</div>
+        <p class="my-new-style accordion">नाथ भगति अति सुखदायनी। <br>देहु कृपा करि अनपायनी।।</p>
+        <div class="panel">हे नाथ! मुझे अत्यंत सुख देने वाली <br> अपनी निश्चल भक्ति कृपा करके दीजिए॥</div>
+        <p class="my-new-style accordion">सुनि प्रभु परम सरल कपि बानी। <br>एवमस्तु तब कहेउ भवानी।।</p>
+        <div class="panel">हनुमान्‌जी की अत्यंत सरल वाणी सुनकर, <br>हे भवानी! तब प्रभु श्री रामचंद्रजी ने 'एवमस्तु' (ऐसा ही हो) कहा॥</div>
+        <p class="my-new-style accordion">उमा राम सुभाउ जेहिं जाना। <br>ताहि भजनु तजि भाव न आना।।</p>
+        <div class="panel">हे उमा! जिसने श्री रामजी का स्वभाव जान लिया,<br> उसे भजन छोड़कर दूसरी बात ही नहीं सुहाती॥</div>
+        <p class="my-new-style accordion">यह संवाद जासु उर आवा। <br>रघुपति चरन भगति सोइ पावा।।</p>
+        <div class="panel">यह स्वामी-सेवक का संवाद जिसके हृदय में आ गया,<br> वही श्री रघुनाथजी के चरणों की भक्ति पा गया॥</div>
+        <p class="my-new-style accordion">सुनि प्रभु बचन कहहिं कपिबृंदा। <br>जय जय जय कृपाल सुखकंदा।।</p>
+        <div class="panel"><span>प्रभु के वचन सुनकर वानरगण कहने लगे-</span><br>कृपालु आनंदकंद श्री रामजी की जय हो जय हो, जय हो! </div>
+        <p class="my-new-style accordion">तब रघुपति कपिपतिहि बोलावा। <br>कहा चलैं कर करहु बनावा।।</p>
+        <div class="panel"><span>तब श्री रघुनाथजी ने कपिराज सुग्रीव को बुलाया और कहा- </span><br>चलने की तैयारी करो॥</div>
+        <p class="my-new-style accordion">अब बिलंबु केहि कारन कीजे। <br>तुरत कपिन्ह कहुँ आयसु दीजे।।</p>
+        <div class="panel">अब विलंब किस कारण किया जाए।<br> वानरों को तुरंत आज्ञा दो॥</div>
+        <p class="my-new-style accordion">कौतुक देखि सुमन बहु बरषी। <br>नभ तें भवन चले सुर हरषी।।</p>
+        <div class="panel">(भगवान्‌ की) यह लीला (रावणवध की तैयारी) देखकर, बहुत से फूल बरसाकर<br> और हर्षित होकर देवता आकाश से अपने-अपने लोक को चले॥</div>
+        <span class="anchor" id="d34"></span>
+        <p class="shloka"><b>[ दोहा ३४ ]</b></p>
+        <p class="shloka accordion">कपिपति बेगि बोलाए आए जूथप जूथ।<br>नाना बरन अतुल बल बानर भालु बरूथ।।</p>
+        <div class="panel">वानरराज सुग्रीव ने शीघ्र ही वानरों को बुलाया, सेनापतियों के समूह आ गए। <br>वानर-भालुओं के झुंड अनेक रंगों के हैं और उनमें अतुलनीय बल है॥</div>
+        <p class="my-new-style accordion">प्रभु पद पंकज नावहिं सीसा। <br>गरजहिं भालु महाबल कीसा।।</p>
+        <div class="panel">वे प्रभु के चरण कमलों में सिर नवाते हैं।<br> महान्‌ बलवान्‌ रीछ और वानर गरज रहे हैं॥</div>
+        <p class="my-new-style accordion">देखी राम सकल कपि सेना। <br>चितइ कृपा करि राजिव नैना।।</p>
+        <div class="panel">श्री रामजी ने वानरों की सारी सेना देखी।<br> तब कमल नेत्रों से कृपापूर्वक उनकी ओर दृष्टि डाली॥</div>
+        <p class="my-new-style accordion">राम कृपा बल पाइ कपिंदा। <br>भए पच्छजुत मनहुँ गिरिंदा।।</p>
+        <div class="panel">राम कृपा का बल पाकर श्रेष्ठ वानर <br>मानो पंखवाले बड़े पर्वत हो गए॥</div>
+        <p class="my-new-style accordion">हरषि राम तब कीन्ह पयाना। <br>सगुन भए सुंदर सुभ नाना।।</p>
+        <div class="panel">तब श्री रामजी ने हर्षित होकर प्रस्थान (कूच) किया।<br> अनेक सुंदर और शुभ शकुन हुए॥</div>
+        <p class="my-new-style accordion">जासु सकल मंगलमय कीती। <br>तासु पयान सगुन यह नीती।।</p>
+        <div class="panel">-जिनकी कीर्ति सब मंगलों से पूर्ण है,<br> उनके प्रस्थान के समय शकुन होना, यह नीति है (लीला की मर्यादा है)॥</div>
+        <p class="my-new-style accordion">प्रभु पयान जाना बैदेहीं। <br>फरकि बाम अँग जनु कहि देहीं।।</p>
+        <div class="panel">प्रभु का प्रस्थान जानकीजी ने भी जान लिया।<br> उनके बाएँ अंग फड़क-फड़ककर मानो कहे देते थे (कि श्री रामजी आ रहे हैं)॥</div>
+        <p class="my-new-style accordion">जोइ जोइ सगुन जानकिहि होई। <br>असगुन भयउ रावनहि सोई।।</p>
+        <div class="panel">जानकीजी को जो-जो शकुन होते थे,<br> वही-वही रावण के लिए अपशकुन हुए ॥</div>
+        <p class="my-new-style accordion">चला कटकु को बरनैं पारा। <br>गर्जहि बानर भालु अपारा।।</p>
+        <div class="panel"> सेना चली, उसका वर्णन कौन कर सकता है? <br>असंख्य वानर और भालू गर्जना कर रहे हैं॥</div>
+        <p class="my-new-style accordion">नख आयुध गिरि पादपधारी। <br>चले गगन महि इच्छाचारी।।</p>
+        <div class="panel">नख ही जिनके शस्त्र हैं, वे इच्छानुसार (सर्वत्र बेरोक-टोक) चलने वाले रीछ-वानर <br>पर्वतों और वृक्षों को धारण किए कोई आकाश मार्ग से और कोई पृथ्वी पर चले जा रहे हैं॥</div>
+        <p class="my-new-style accordion">केहरिनाद भालु कपि करहीं। <br>डगमगाहिं दिग्गज चिक्करहीं।।</p>
+        <div class="panel">वे सिंह के समान गर्जना कर रहे हैं।<br> (उनके चलने और गर्जने से) दिशाओं के हाथी विचलित होकर चिंग्घाड़ रहे हैं॥</div>
+        <p class="shloka accordion"><b>छं० –</b> चिक्करहिं दिग्गज डोल महि गिरि <br>लोल सागर खरभरे।</p>
+        <div class="panel">दिशाओं के हाथी चिंग्घाड़ने लगे, पृथ्वी डोलने लगी, पर्वत चंचल हो गए (काँपने लगे) <br>और समुद्र खलबला उठे॥</div>
+        <p class="shloka accordion">मन हरष सभ गंधर्ब सुर मुनि <br>नाग किन्नर दुख टरे।।</p>
+        <div class="panel">गंधर्व, देवता, मुनि, नाग, किन्नर सब के सब<br> मन में हर्षित हुए' कि (अब) हमारे दुःख टल गए॥</div>
+        <p class="shloka accordion">कटकटहिं मर्कट बिकट भट <br>बहु कोटि कोटिन्ह धावहीं।</p>
+        <div class="panel"> अनेकों करोड़ भयानक वानर योद्धा कटकटा रहे हैं<br> और करोड़ों ही दौड़ रहे हैं॥</div>
+        <p class="shloka accordion">जय राम प्रबल प्रताप कोसल–<br>नाथ गुन गन गावहीं।।1।।</p>
+        <div class="panel">'प्रबल प्रताप कोसलनाथ श्री रामचंद्रजी की जय हो' <br>ऐसा पुकारते हुए वे उनके गुणसमूहों को गा रहे हैं॥</div>
+        <p class="shloka accordion">सहि सक न भार उदार अहिपति <br>बार बारहिं मोहई।</p>
+        <div class="panel">उदार (परम श्रेष्ठ एवं महान्‌) सर्पराज शेषजी भी सेना का बोझ नहीं सह सकते, <br>वे बार-बार मोहित हो जाते (घबड़ा जाते) हैं॥</div>
+        <p class="shloka accordion">गह दसन पुनि पुनि कमठ पृष्ट <br>कठोर सो किमि सोहई।।</p>
+        <div class="panel">और पुनः-पुनः कच्छप की कठोर पीठ को दाँतों से पकड़ते हैं। <br>ऐसा करते (अर्थात्‌ बार-बार दाँतों को गड़ाकर कच्छप की पीठ पर लकीर सी खींचते हुए) ॥</div>
+        <p class="shloka accordion">रघुबीर रुचिर प्रयान प्रस्थिति <br>जानि परम सुहावनी।</p>
+        <div class="panel"> वे कैसे शोभा दे रहे हैं मानो श्री रामचंद्रजी की<br> सुंदर प्रस्थान यात्रा को परम सुहावनी।</div>
+        <p class="shloka accordion">जनु कमठ खर्पर सर्पराज सो <br>लिखत अबिचल पावनी।।2।।</p>
+        <div class="panel">जानकर उसकी अचल पवित्र कथा को सर्पराज शेषजी<br> कच्छप की पीठ पर लिख रहे हों।।2।।</div>
+        <span class="anchor" id="d35"></span>
+        <p class="shloka"><b>[ दोहा ३५ ]</b></p>
+        <p class="shloka accordion">एहि बिधि जाइ कृपानिधि उतरे सागर तीर।<br>जहँ तहँ लागे खान फल भालु बिपुल कपि बीर।।</p>
+        <div class="panel">इस प्रकार कृपानिधान श्री रामजी समुद्र तट पर जा उतरे। <br>अनेकों रीछ-वानर वीर जहाँ-तहाँ फल खाने लगे॥</div>
+        <p class="my-new-style accordion">उहाँ निसाचर रहहिं ससंका। <br>जब ते जारि गयउ कपि लंका।।</p>
+        <div class="panel">वहाँ (लंका में) जब से हनुमान्‌जी लंका को जलाकर गए, <br>तब से राक्षस भयभीत रहने लगे॥</div>
+        <p class="my-new-style accordion">निज निज गृहँ सब करहिं बिचारा। <br>नहिं निसिचर कुल केर उबारा।।</p>
+        <div class="panel">अपने-अपने घरों में सब विचार करते हैं कि<br> अब राक्षस कुल की रक्षा (का कोई उपाय) नहीं है॥</div>
+        <p class="my-new-style accordion">जासु दूत बल बरनि न जाई। <br>तेहि आएँ पुर कवन भलाई।।</p>
+        <div class="panel">जिसके दूत का बल वर्णन नहीं किया जा सकता,<br> उसके स्वयं नगर में आने पर कौन भलाई है (हम लोगों की बड़ी बुरी दशा होगी)? </div>
+        <p class="my-new-style accordion">दूतन्हि सन सुनि पुरजन बानी। <br>मंदोदरी अधिक अकुलानी।।</p>
+        <div class="panel">दूतियों से नगरवासियों के वचन सुनकर<br> मंदोदरी बहुत ही व्याकुल हो गई॥</div>
+        <p class="my-new-style accordion">रहसि जोरि कर पति पग लागी। <br>बोली बचन नीति रस पागी।।</p>
+        <div class="panel">वह एकांत में हाथ जोड़कर पति (रावण) के चरणों लगी<br> और नीतिरस में पगी हुई वाणी बोली- </div>
+        <p class="my-new-style accordion">कंत करष हरि सन परिहरहू। <br>मोर कहा अति हित हियँ धरहु।।</p>
+        <div class="panel">हे प्रियतम! श्री हरि से विरोध छोड़ दीजिए।<br> मेरे कहने को अत्यंत ही हितकर जानकर हृदय में धारण कीजिए॥</div>
+        <p class="my-new-style accordion">समुझत जासु दूत कइ करनी। <br>स्त्रवहीं गर्भ रजनीचर घरनी।।</p>
+        <div class="panel">जिनके दूत की करनी का विचार करते ही (स्मरण आते ही) <br>राक्षसों की स्त्रियों के गर्भ गिर जाते हैं,</div>
+        <p class="my-new-style accordion">तासु नारि निज सचिव बोलाई। <br>पठवहु कंत जो चहहु भलाई।।</p>
+        <div class="panel">हे प्यारे स्वामी! यदि भला चाहते हैं, तो अपने मंत्री को बुलाकर  <br>उसके साथ उनकी स्त्री को भेज दीजिए॥</div>
+        <p class="my-new-style accordion">तब कुल कमल बिपिन दुखदाई। <br>सीता सीत निसा सम आई।।</p>
+        <div class="panel">सीता आपके कुल रूपी कमलों के वन को दुःख देने वाली <br>जाड़े की रात्रि के समान आई है॥</div>
+        <p class="my-new-style accordion">सुनहु नाथ सीता बिनु दीन्हें। <br>हित न तुम्हार संभु अज कीन्हें।।</p>
+        <div class="panel">हे नाथ। सुनिए, सीता को दिए (लौटाए) बिना  <br>शम्भु और ब्रह्मा के किए भी आपका भला नहीं हो सकता॥</div>
+        <span class="anchor" id="d36"></span>
+        <p class="shloka"><b>[ दोहा ३६ ]</b></p>
+        <p class="shloka accordion">राम बान अहि गन सरिस निकर निसाचर भेक।<br>जब लगि ग्रसत न तब लगि जतनु करहु तजि टेक।।</p>
+        <div class="panel">श्री रामजी के बाण सर्पों के समूह के समान हैं और राक्षसों के समूह मेंढक के समान।<br> जब तक वे इन्हें ग्रस नहीं लेते (निगल नहीं जाते) तब तक हठ छोड़कर उपाय कर लीजिए॥</div>
+        <p class="my-new-style accordion">श्रवन सुनी सठ ता करि बानी। <br>बिहसा जगत बिदित अभिमानी।।</p>
+        <div class="panel">मूर्ख और जगत प्रसिद्ध अभिमानी रावण <br><span>कानों से उसकी वाणी सुनकर खूब हँसा (और बोला-)</span></div>
+        <p class="my-new-style accordion">सभय सुभाउ नारि कर साचा। <br>मंगल महुँ भय मन अति काचा।।</p>
+        <div class="panel">स्त्रियों का स्वभाव सचमुच ही बहुत डरपोक होता है। <br>मंगल में भी भय करती हो। तुम्हारा मन (हृदय) बहुत ही कच्चा (कमजोर) है॥</div>
+        <p class="my-new-style accordion">जौं आवइ मर्कट कटकाई। <br>जिअहिं बिचारे निसिचर खाई।।</p>
+        <div class="panel">यदि वानरों की सेना आवेगी <br>तो बेचारे राक्षस उसे खाकर अपना जीवन निर्वाह करेंगे॥ </div>
+        <p class="my-new-style accordion">कंपहिं लोकप जाकी त्रासा। <br>तासु नारि सभीत बड़ि हासा।।</p>
+        <div class="panel">लोकपाल भी जिसके डर से काँपते हैं, <br>उसकी स्त्री डरती हो, यह बड़ी हँसी की बात है॥</div>
+        <p class="my-new-style accordion">अस कहि बिहसि ताहि उर लाई। <br>चलेउ सभाँ ममता अधिकाई।।</p>
+        <div class="panel">रावण ने ऐसा कहकर हँसकर उसे हृदय से लगा लिया<br> और ममता बढ़ाकर (अधिक स्नेह दर्शाकर) वह सभा में चला गया॥</div>
+        <p class="my-new-style accordion">मंदोदरी हृदयँ कर चिंता। <br>भयउ कंत पर बिधि बिपरीता।।</p>
+        <div class="panel">मंदोदरी हृदय में चिंता करने लगी <br>कि पति पर विधाता प्रतिकूल हो गए॥</div>
+        <p class="my-new-style accordion">बैठेउ सभाँ खबरि असि पाई। <br>सिंधु पार सेना सब आई।।</p>
+        <div class="panel">ज्यों ही वह सभा में जाकर बैठा, <br>उसने ऐसी खबर पाई कि शत्रु की सारी सेना समुद्र के उस पार आ गई है॥</div>
+        <p class="my-new-style accordion">बूझेसि सचिव उचित मत कहहू। <br>ते सब हँसे मष्ट करि रहहू।।</p>
+        <div class="panel">उसने मंत्रियों से पूछा कि उचित सलाह कहिए (अब क्या करना चाहिए?)।<br> तब वे सब हँसे और बोले कि चुप किए रहिए (इसमें सलाह की कौन सी बात है?)॥</div>
+        <p class="my-new-style accordion">जितेहु सुरासुर तब श्रम नाहीं। <br>नर बानर केहि लेखे माही।।</p>
+        <div class="panel">आपने देवताओं और राक्षसों को जीत लिया, तब तो कुछ श्रम ही नहीं हुआ।<br> फिर मनुष्य और वानर किस गिनती में हैं?</div>
+        <span class="anchor" id="d37"></span>
+        <p class="shloka"><b>[ दोहा ३७ ]</b></p>
+        <p class="shloka accordion">सचिव बैद गुर तीनि जौं प्रिय बोलहिं भय आस।<br>राज धर्म तन तीनि कर होइ बेगिहीं नास।।</p>
+        <div class="panel">मंत्री, वैद्य और गुरु- ये तीन यदि (अप्रसन्नता के) भय या (लाभ की) आशा से (हित की बात न कहकर)<br> प्रिय बोलते हैं (ठकुर सुहाती कहने लगते हैं),<br> तो (क्रमशः) राज्य, शरीर और धर्म- इन तीन का शीघ्र ही नाश हो जाता है॥</div>
+        <p class="my-new-style accordion">सोइ रावन कहुँ बनि सहाई। <br>अस्तुति करहिं सुनाइ सुनाई।।</p>
+        <div class="panel">रावण के लिए भी वही सहायता (संयोग) आ बनी है।<br> मंत्री उसे सुना-सुनाकर (मुँह पर) स्तुति करते हैं।</div>
+        <p class="my-new-style accordion">अवसर जानि बिभीषनु आवा। <br>भ्राता चरन सीसु तेहिं नावा।।</p>
+        <div class="panel">(इसी समय) अवसर जानकर विभीषणजी आए।<br> उन्होंने बड़े भाई के चरणों में सिर नवाया॥</div>
+        <p class="my-new-style accordion">पुनि सिरु नाइ बैठ निज आसन। <br>बोला बचन पाइ अनुसासन।।</p>
+        <div class="panel">फिर से सिर नवाकर अपने आसन पर बैठ गए<br> और <span>आज्ञा पाकर ये वचन बोले-</span></div>
+        <p class="my-new-style accordion">जौ कृपाल पूँछिहु मोहि बाता। <br>मति अनुरुप कहउँ हित ताता।।</p>
+        <div class="panel">हे कृपाल जब आपने मुझसे बात (राय) पूछी ही है,<br> तो हे तात! मैं अपनी बुद्धि के अनुसार आपके हित की बात कहता हूँ-॥</div>
+        <p class="my-new-style accordion">जो आपन चाहै कल्याना। <br>सुजसु सुमति सुभ गति सुख नाना।।</p>
+        <div class="panel">जो मनुष्य अपना कल्याण,<br> सुंदर यश, सुबुद्धि, शुभ गति और नाना प्रकार के सुख चाहता हो॥ </div>
+        <p class="my-new-style accordion">सो परनारि लिलार गोसाईं। <br>तजउ चउथि के चंद कि नाई।।</p>
+        <div class="panel">वह हे स्वामी! परस्त्री के ललाट को <br>चौथ के चंद्रमा की तरह त्याग दे (अर्थात्‌ जैसे लोग चौथ के चंद्रमा को नहीं देखते, उसी प्रकार परस्त्री का मुख ही न देखे)॥</div>
+        <p class="my-new-style accordion">चौदह भुवन एक पति होई। <br>भूतद्रोह तिष्टइ नहिं सोई।।</p>
+        <div class="panel">चौदहों भुवनों का एक ही स्वामी हो, <br>वह भी जीवों से वैर करके ठहर नहीं सकता (नष्ट हो जाता है) ॥</div>
+        <p class="my-new-style accordion">गुन सागर नागर नर जोऊ। <br>अलप लोभ भल कहइ न कोऊ।।</p>
+        <div class="panel"> जो मनुष्य गुणों का समुद्र और चतुर हो,<br> उसे चाहे थोड़ा भी लोभ क्यों न हो, तो भी कोई भला नहीं कहता॥</div>
+        <span class="anchor" id="d38"></span>
+        <p class="shloka"><b>[ दोहा ३८ ]</b></p>
+        <p class="shloka accordion">काम क्रोध मद लोभ सब नाथ नरक के पंथ।<br>सब परिहरि रघुबीरहि भजहु भजहिं जेहि संत।।</p>
+        <div class="panel">हे नाथ! काम, क्रोध, मद और लोभ- ये सब नरक के रास्ते हैं,<br> इन सबको छोड़कर श्री रामचंद्रजी को भजिए, जिन्हें संत (सत्पुरुष) भजते हैं॥</div>
+        <p class="my-new-style accordion">तात राम नहिं नर भूपाला। <br>भुवनेस्वर कालहु कर काला।।</p>
+        <div class="panel">हे तात! राम मनुष्यों के ही राजा नहीं हैं। <br>वे समस्त लोकों के स्वामी और काल के भी काल हैं॥</div>
+        <p class="my-new-style accordion">ब्रह्म अनामय अज भगवंता। <br>ब्यापक अजित अनादि अनंता।।</p>
+        <div class="panel">वे (संपूर्ण ऐश्वर्य, यश, श्री, धर्म, वैराग्य एवं ज्ञान के भंडार) भगवान्‌ हैं, <br>वे निरामय (विकाररहित), अजन्मे, व्यापक, अजेय, अनादि और अनंत ब्रह्म हैं॥</div>
+        <p class="my-new-style accordion">गो द्विज धेनु देव हितकारी। <br>कृपासिंधु मानुष तनुधारी।।</p>
+        <div class="panel">उन कृपा के समुद्र भगवान्‌ ने पृथ्वी, ब्राह्मण, गो और देवताओं का हित करने के लिए<br> ही मनुष्य शरीर धारण किया है॥</div>
+        <p class="my-new-style accordion">जन रंजन भंजन खल ब्राता। <br>बेद धर्म रच्छक सुनु भ्राता।।</p>
+        <div class="panel">हे भाई! सुनिए, वे सेवकों को आनंद देने वाले, दुष्टों के समूह का नाश करने वाले <br>और वेद तथा धर्म की रक्षा करने वाले हैं॥</div>
+        <p class="my-new-style accordion">ताहि बयरु तजि नाइअ माथा। <br>प्रनतारति भंजन रघुनाथा।।</p>
+        <div class="panel">वैर त्यागकर उन्हें मस्तक नवाइए।<br> वे श्री रघुनाथजी शरणागत का दुःख नाश करने वाले हैं॥ </div>
+        <p class="my-new-style accordion">देहु नाथ प्रभु कहुँ बैदेही। <br>भजहु राम बिनु हेतु सनेही।।</p>
+        <div class="panel">हे नाथ! उन प्रभु (सर्वेश्वर) को जानकीजी दे दीजिए <br>और बिना ही कारण स्नेह करने वाले श्री रामजी को भजिए॥</div>
+        <p class="my-new-style accordion">सरन गएँ प्रभु ताहु न त्यागा। <br>बिस्व द्रोह कृत अघ जेहि लागा।।</p>
+        <div class="panel">जिसे संपूर्ण जगत्‌ से द्रोह करने का पाप लगा है,<br> शरण जाने पर प्रभु उसका भी त्याग नहीं करते॥ </div>
+        <p class="my-new-style accordion">जासु नाम त्रय ताप नसावन। <br>सोइ प्रभु प्रगट समुझु जियँ रावन।।</p>
+        <div class="panel">जिनका नाम तीनों तापों का नाश करने वाला है,<br> वे ही प्रभु (भगवान्‌) मनुष्य रूप में प्रकट हुए हैं। हे रावण! हृदय में यह समझ लीजिए॥</div>
+        <span class="anchor" id="d39"></span>
+        <p class="shloka"><b>[ दोहा ३९ (क), (ख) ]</b></p>
+        <p class="shloka accordion">बार बार पद लागउँ बिनय करउँ दससीस।<br>परिहरि मान मोह मद भजहु कोसलाधीस।।</p>
+        <div class="panel">हे दशशीश! मैं बार-बार आपके चरणों लगता हूँ और विनती करता हूँ कि <br>मान, मोह और मद को त्यागकर आप कोसलपति श्री रामजी का भजन कीजिए॥</div>
+        <p class="shloka accordion">मुनि पुलस्ति निज सिष्य सन कहि पठई यह बात।<br>तुरत सो मैं प्रभु सन कही पाइ सुअवसरु तात।।</p>
+        <div class="panel">मुनि पुलस्त्यजी ने अपने शिष्य के हाथ यह बात कहला भेजी है।<br> हे तात! सुंदर अवसर पाकर मैंने तुरंत ही वह बात प्रभु (आप) से कह दी॥</div>
+        <p class="my-new-style accordion">माल्यवंत अति सचिव सयाना। <br>तासु बचन सुनि अति सुख माना।।</p>
+        <div class="panel">माल्यवान्‌ नाम का एक बहुत ही बुद्धिमान मंत्री था।<br> उसने <span>उन (विभीषण) के वचन सुनकर बहुत सुख माना (और कहा-) </span>॥</div>
+        <p class="my-new-style accordion">तात अनुज तव नीति बिभूषन। <br>सो उर धरहु जो कहत बिभीषन।।</p>
+        <div class="panel">हे तात! आपके छोटे भाई नीति विभूषण (नीति को भूषण रूप में धारण करने वाले अर्थात्‌ नीतिमान्‌) हैं। <br>विभीषण जो कुछ कह रहे हैं उसे हृदय में धारण कर लीजिए॥</div>
+        <p class="my-new-style accordion">रिपु उतकरष कहत सठ दोऊ। <br>दूरि न करहु इहाँ हइ कोऊ।।</p>
+        <div class="panel"><span>रावन ने कहा-</span>ये दोनों मूर्ख शत्रु की महिमा बखान रहे हैं।<br> यहाँ कोई है? इन्हें दूर करो न! </div>
+        <p class="my-new-style accordion">माल्यवंत गृह गयउ बहोरी। <br>कहइ बिभीषनु पुनि कर जोरी।।</p>
+        <div class="panel">तब माल्यवान्‌ तो घर लौट गया <br>और <span>विभीषणजी हाथ जोड़कर फिर कहने लगे-</span>॥</div>
+        <p class="my-new-style accordion">सुमति कुमति सब कें उर रहहीं। <br>नाथ पुरान निगम अस कहहीं।।</p>
+        <div class="panel">हे नाथ! पुराण और वेद ऐसा कहते हैं कि<br> सुबुद्धि (अच्छी बुद्धि) और कुबुद्धि (खोटी बुद्धि) सबके हृदय में रहती है॥</div>
+        <p class="my-new-style accordion">जहाँ सुमति तहँ संपति नाना। <br>जहाँ कुमति तहँ बिपति निदाना।।</p>
+        <div class="panel">जहाँ सुबुद्धि है, वहाँ नाना प्रकार की संपदाएँ (सुख की स्थिति) रहती हैं <br>और जहाँ कुबुद्धि है वहाँ परिणाम में विपत्ति (दुःख) रहती है॥</div>
+        <p class="my-new-style accordion">तव उर कुमति बसी बिपरीता। <br>हित अनहित मानहु रिपु प्रीता।।</p>
+        <div class="panel">आपके हृदय में उलटी बुद्धि आ बसी है।<br> इसी से आप हित को अहित और शत्रु को मित्र मान रहे हैं॥</div>
+        <p class="my-new-style accordion">कालराति निसिचर कुल केरी। <br>तेहि सीता पर प्रीति घनेरी।।</p>
+        <div class="panel">जो राक्षस कुल के लिए कालरात्रि (के समान) हैं,<br> उन सीता पर आपकी बड़ी प्रीति है॥</div>
+        <span class="anchor" id="d40"></span>
+        <p class="shloka"><b>[ दोहा ४० ]</b></p>
+        <p class="shloka accordion">तात चरन गहि मागउँ राखहु मोर दुलार।<br>सीत देहु राम कहुँ अहित न होइ तुम्हार।।</p>
+        <div class="panel">हे तात! मैं चरण पकड़कर आपसे भीख माँगता हूँ (विनती करता हूँ)।<br> कि आप मेरा दुलार रखिए (मुझ बालक के आग्रह को स्नेहपूर्वक स्वीकार कीजिए) <br>श्री रामजी को सीताजी दे दीजिए, जिसमें आपका अहित न हो॥</div>
+        <p class="my-new-style accordion">बुध पुरान श्रुति संमत बानी। <br>कही बिभीषन नीति बखानी।।</p>
+        <div class="panel">विभीषण ने पंडितों, पुराणों और वेदों द्वारा सम्मत (अनुमोदित) <br>वाणी से नीति बखानकर कही॥</div>
+        <p class="my-new-style accordion">सुनत दसानन उठा रिसाई। <br>खल तोहि निकट मुत्यु अब आई।।</p>
+        <div class="panel">पर उसे सुनते ही रावण क्रोधित होकर उठा<br> और बोला कि रे दुष्ट! अब मृत्यु तेरे निकट आ गई है!॥</div>
+        <p class="my-new-style accordion">जिअसि सदा सठ मोर जिआवा। <br>रिपु कर पच्छ मूढ़ तोहि भावा।।</p>
+        <div class="panel">अरे मूर्ख! तू जीता तो है सदा मेरा जिलाया हुआ (अर्थात्‌ मेरे ही अन्न से पल रहा है),<br> पर हे मूढ़! पक्ष तुझे शत्रु का ही अच्छा लगता है॥</div>
+        <p class="my-new-style accordion">कहसि न खल अस को जग माहीं। <br>भुज बल जाहि जिता मैं नाही।।</p>
+        <div class="panel">अरे दुष्ट! बता न, जगत्‌ में ऐसा कौन है <br>जिसे मैंने अपनी भुजाओं के बल से न जीता हो?॥</div>
+        <p class="my-new-style accordion">मम पुर बसि तपसिन्ह पर प्रीती। <br>सठ मिलु जाइ तिन्हहि कहु नीती।।</p>
+        <div class="panel">मेरे नगर में रहकर प्रेम करता है तपस्वियों पर।<br> मूर्ख! उन्हीं से जा मिल और उन्हीं को नीति बता। </div>
+        <p class="my-new-style accordion">अस कहि कीन्हेसि चरन प्रहारा। <br>अनुज गहे पद बारहिं बारा।।</p>
+        <div class="panel">ऐसा कहकर रावण ने उन्हें लात मारी,<br> परंतु छोटे भाई विभीषण ने (मारने पर भी) बार-बार उसके चरण ही पकड़े॥</div>
+        <p class="my-new-style accordion">उमा संत कइ इहइ बड़ाई। <br>मंद करत जो करइ भलाई।।</p>
+        <div class="panel"><span>शिवजी कहते हैं-</span>हे उमा! संत की यही बड़ाई (महिमा) है कि <br>वे बुराई करने पर भी (बुराई करने वाले की) भलाई ही करते हैं॥</div>
+        <p class="my-new-style accordion">तुम्ह पितु सरिस भलेहिं मोहि मारा। <br>रामु भजें हित नाथ तुम्हारा।।</p>
+        <div class="panel"><span>विभीषणजी ने कहा-</span>आप मेरे पिता के समान हैं, मुझे मारा सो तो अच्छा ही किया, <br>परंतु हे नाथ! आपका भला श्री रामजी को भजने में ही है॥</div>
+        <p class="my-new-style accordion">सचिव संग लै नभ पथ गयऊ। <br>सबहि सुनाइ कहत अस भयऊ।।</p>
+        <div class="panel">(इतना कहकर) विभीषण अपने मंत्रियों को साथ लेकर आकाश मार्ग में गए <br><span>और सबको सुनाकर वे ऐसा कहने लगे-</span>॥</div>
+        <span class="anchor" id="d41"></span>
+        <p class="shloka"><b>[ दोहा ४१ ]</b></p>
+        <p class="shloka accordion">रामु सत्यसंकल्प प्रभु सभा कालबस तोरि।<br>मै रघुबीर सरन अब जाउँ देहु जनि खोरि।।</p>
+        <div class="panel">श्री रामजी सत्य संकल्प एवं (सर्वसमर्थ) प्रभु हैं और (हे रावण) तुम्हारी सभा काल के वश है।<br> अतः मैं अब श्री रघुवीर की शरण जाता हूँ, मुझे दोष न देना॥</div>
+        <p class="my-new-style accordion">अस कहि चला बिभीषनु जबहीं। <br>आयूहीन भए सब तबहीं।।</p>
+        <div class="panel">ऐसा कहकर विभीषणजी ज्यों ही चले,<br> त्यों ही सब राक्षस आयुहीन हो गए। (उनकी मृत्यु निश्चित हो गई)।</div>
+        <p class="my-new-style accordion">साधु अवग्या तुरत भवानी। <br>कर कल्यान अखिल कै हानी।।</p>
+        <div class="panel"><span>शिवजी कहते हैं-</span> हे भवानी! साधु का अपमान <br>तुरंत ही संपूर्ण कल्याण की हानि (नाश) कर देता है॥</div>
+        <p class="my-new-style accordion">रावन जबहिं बिभीषन त्यागा। <br>भयउ बिभव बिनु तबहिं अभागा।।</p>
+        <div class="panel">रावण ने जिस क्षण विभीषण को त्यागा, <br>उसी क्षण वह अभागा वैभव (ऐश्वर्य) से हीन हो गया। </div>
+        <p class="my-new-style accordion">चलेउ हरषि रघुनायक पाहीं। <br>करत मनोरथ बहु मन माहीं।।</p>
+        <div class="panel">विभीषणजी हर्षित होकर <br>मन में अनेकों मनोरथ करते हुए श्री रघुनाथजी के पास चले॥ </div>
+        <p class="my-new-style accordion">देखिहउँ जाइ चरन जलजाता। <br>अरुन मृदुल सेवक सुखदाता।।</p>
+        <div class="panel"><span>वे सोचते जाते थे-</span> मैं जाकर भगवान्‌ के कोमल और लाल वर्ण के सुंदर चरण कमलों के दर्शन करूँगा,<br> जो सेवकों को सुख देने वाले हैं॥</div>
+        <p class="my-new-style accordion">जे पद परसि तरी रिषिनारी। <br>दंडक कानन पावनकारी।।</p>
+        <div class="panel">जिन चरणों का स्पर्श पाकर ऋषि पत्नी अहल्या तर गईं <br>और जो दंडकवन को पवित्र करने वाले हैं॥</div>
+        <p class="my-new-style accordion">जे पद जनकसुताँ उर लाए। <br>कपट कुरंग संग धर धाए।।</p>
+        <div class="panel">जिन चरणों को जानकीजी ने हृदय में धारण कर रखा है, <br>जो कपटमृग के साथ पृथ्वी पर (उसे पकड़ने को) दौड़े थे॥ </div>
+        <p class="my-new-style accordion">हर उर सर सरोज पद जेई। <br>अहोभाग्य मै देखिहउँ तेई।।</p>
+        <div class="panel">और जो चरणकमल साक्षात्‌ शिवजी के हृदय रूपी सरोवर में विराजते हैं, <br>मेरा अहोभाग्य है कि उन्हीं को आज मैं देखूँगा॥</div>
+        <span class="anchor" id="d42"></span>
+        <p class="shloka"><b>[ दोहा ४२ ]</b></p>
+        <p class="shloka accordion">जिन्ह पायन्ह के पादुकन्हि भरतु रहे मन लाइ।<br>ते पद आजु बिलोकिहउँ इन्ह नयनन्हि अब जाइ।।</p>
+        <div class="panel">जिन चरणों की पादुकाओं में भरतजी ने अपना मन लगा रखा है,<br> अहा! आज मैं उन्हीं चरणों को अभी जाकर इन नेत्रों से देखूँगा॥</div>
+        <p class="my-new-style accordion">एहि बिधि करत सप्रेम बिचारा। <br>आयउ सपदि सिंधु एहिं पारा।।</p>
+        <div class="panel">इस प्रकार प्रेमसहित विचार करते हुए <br>वे शीघ्र ही समुद्र के इस पार (जिधर श्री रामचंद्रजी की सेना थी) आ गए।</div>
+        <p class="my-new-style accordion">कपिन्ह बिभीषनु आवत देखा। <br>जाना कोउ रिपु दूत बिसेषा।।</p>
+        <div class="panel">वानरों ने विभीषण को आते देखा <br>तो उन्होंने जाना कि शत्रु का कोई खास दूत है॥</div>
+        <p class="my-new-style accordion">ताहि राखि कपीस पहिं आए। <br>समाचार सब ताहि सुनाए।।</p>
+        <div class="panel">उन्हें (पहरे पर) ठहराकर वे सुग्रीव के पास आए <br>और उनको सब समाचार कह सुनाए।</div>
+        <p class="my-new-style accordion">कह सुग्रीव सुनहु रघुराई। <br>आवा मिलन दसानन भाई।।</p>
+        <div class="panel"><span>सुग्रीव ने (श्री रामजी के पास जाकर) कहा-</span> हे रघुनाथजी! सुनिए,<br> रावण का भाई (आप से) मिलने आया है॥</div>
+        <p class="my-new-style accordion">कह प्रभु सखा बूझिऐ काहा। <br>कहइ कपीस सुनहु नरनाहा।।</p>
+        <div class="panel"><span>प्रभु श्री रामजी ने कहा- </span>हे मित्र!<br> तुम क्या समझते हो (तुम्हारी क्या राय है)?</div>
+        <p class="my-new-style accordion">जानि न जाइ निसाचर माया। <br>कामरूप केहि कारन आया।।</p>
+        <div class="panel"><span>वानरराज सुग्रीव ने कहा- </span>हे महाराज! सुनिए, राक्षसों की माया जानी नहीं जाती।<br> यह इच्छानुसार रूप बदलने वाला (छली) न जाने किस कारण आया है॥</div>
+        <p class="my-new-style accordion">भेद हमार लेन सठ आवा। <br>राखिअ बाँधि मोहि अस भावा।।</p>
+        <div class="panel">(जान पड़ता है) यह मूर्ख हमारा भेद लेने आया है, <br>इसलिए मुझे तो यही अच्छा लगता है कि इसे बाँध रखा जाए। </div>
+        <p class="my-new-style accordion">सखा नीति तुम्ह नीकि बिचारी। <br>मम पन सरनागत भयहारी।।</p>
+        <div class="panel"><span>श्री रामजी ने कहा-</span>हे मित्र! तुमने नीति तो अच्छी विचारी, <br>परंतु मेरा प्रण तो है शरणागत के भय को हर लेना!॥</div>
+        <p class="my-new-style accordion">सुनि प्रभु बचन हरष हनुमाना। <br>सरनागत बच्छल भगवाना।।</p>
+        <div class="panel">प्रभु के वचन सुनकर हनुमान्‌जी हर्षित हुए (और मन ही मन कहने लगे कि) <br>भगवान्‌ कैसे शरणागतवत्सल (शरण में आए हुए पर पिता की भाँति प्रेम करने वाले) हैं॥</div>
+        <span class="anchor" id="d43"></span>
+        <p class="shloka"><b>[ दोहा ४३ ]</b></p>
+        <p class="shloka accordion">सरनागत कहुँ जे तजहिं निज अनहित अनुमानि।<br>ते नर पावँर पापमय तिन्हहि बिलोकत हानि।।</p>
+        <div class="panel"><span>श्री रामजी फिर बोले- </span>जो मनुष्य अपने अहित का अनुमान करके शरण में आए हुए का त्याग कर देते हैं,<br> वे पामर (क्षुद्र) हैं, पापमय हैं, उन्हें देखने में भी हानि है (पाप लगता है)॥</div>
+        <p class="my-new-style accordion">कोटि बिप्र बध लागहिं जाहू। <br>आएँ सरन तजउँ नहिं ताहू।।</p>
+        <div class="panel">जिसे करोड़ों ब्राह्मणों की हत्या लगी हो,<br> शरण में आने पर मैं उसे भी नहीं त्यागता।</div> 
+        <p class="my-new-style accordion">सनमुख होइ जीव मोहि जबहीं। <br>जन्म कोटि अघ नासहिं तबहीं।।</p>
+        <div class="panel">जीव ज्यों ही मेरे सम्मुख होता है,<br> त्यों ही उसके करोड़ों जन्मों के पाप नष्ट हो जाते हैं॥</div> 
+        <p class="my-new-style accordion">पापवंत कर सहज सुभाऊ। <br>भजनु मोर तेहि भाव न काऊ।।</p>
+        <div class="panel">पापी का यह सहज स्वभाव होता है कि <br>मेरा भजन उसे कभी नहीं सुहाता।</div> 
+        <p class="my-new-style accordion">जौं पै दुष्टहदय सोइ होई। <br>मोरें सनमुख आव कि सोई।।</p>
+        <div class="panel">यदि वह (रावण का भाई) निश्चय ही दुष्ट हृदय का होता<br> तो क्या वह मेरे सम्मुख आ सकता था?॥</div> 
+        <p class="my-new-style accordion">निर्मल मन जन सो मोहि पावा। <br>मोहि कपट छल छिद्र न भावा।।</p>
+        <div class="panel">जो मनुष्य निर्मल मन का होता है, वही मुझे पाता है।<br> मुझे कपट और छल-छिद्र नहीं सुहाते।</div>
+        <p class="my-new-style accordion">भेद लेन पठवा दससीसा। <br>तबहुँ न कछु भय हानि कपीसा।।</p>
+        <div class="panel">यदि उसे रावण ने भेद लेने को भेजा है, <br>तब भी हे सुग्रीव! अपने को कुछ भी भय या हानि नहीं है॥</div>
+        <p class="my-new-style accordion">जग महुँ सखा निसाचर जेते। <br>लछिमनु हनइ निमिष महुँ तेते।।</p>
+        <div class="panel">क्योंकि हे सखे! जगत में जितने भी राक्षस हैं,<br> लक्ष्मण क्षणभर में उन सबको मार सकते हैं॥ </div>
+        <p class="my-new-style accordion">जौं सभीत आवा सरनाई। <br>रखिहउँ ताहि प्रान की नाई।।</p>
+        <div class="panel">और यदि वह भयभीत होकर मेरी शरण आया है <br> तो मैं तो उसे प्राणों की तरह रखूँगा॥</div>
+        <span class="anchor" id="d44"></span>
+        <p class="shloka"><b>[ दोहा ४४ ]</b></p>
+        <p class="shloka accordion">उभय भाँति तेहि आनहु हँसि कह कृपानिकेत।<br>जय कृपाल कहि चले अंगद हनू समेत।।</p>
+        <div class="panel"><span>कृपा के धाम श्री रामजी ने हँसकर कहा-</span> दोनों ही स्थितियों में उसे ले आओ।<br> तब अंगद और हनुमान्‌ सहित सुग्रीवजी 'कपालु श्री रामजी की जय हो' कहते हुए चले॥</div>
+        <p class="my-new-style accordion">सादर तेहि आगें करि बानर। <br>चले जहाँ रघुपति करुनाकर।।</p>
+        <div class="panel">विभीषणजी को आदर सहित आगे करके वानर फिर वहाँ चले, <br>जहाँ करुणा की खान श्री रघुनाथजी थे।</div>
+        <p class="my-new-style accordion">दूरिहि ते देखे द्वौ भ्राता। <br>नयनानंद दान के दाता।।</p>
+        <div class="panel">नेत्रों को आनंद का दान देने वाले (अत्यंत सुखद)  <br>दोनों भाइयों को विभीषणजी ने दूर ही से देखा॥</div>
+        <p class="my-new-style accordion">बहुरि राम छबिधाम बिलोकी। <br>रहेउ ठटुकि एकटक पल रोकी।।</p>
+        <div class="panel">फिर शोभा के धाम श्री रामजी को देखकर वे पलक (मारना) <br>रोककर ठिठककर (स्तब्ध होकर) एकटक देखते ही रह गए।</div>
+        <p class="my-new-style accordion">भुज प्रलंब कंजारुन लोचन। <br>स्यामल गात प्रनत भय मोचन।।</p>
+        <div class="panel">भगवान्‌ की विशाल भुजाएँ हैं लाल कमल के समान नेत्र हैं <br>और शरणागत के भय का नाश करने वाला साँवला शरीर है॥</div>
+        <p class="my-new-style accordion">सिंघ कंध आयत उर सोहा। <br>आनन अमित मदन मन मोहा।।</p>
+        <div class="panel">सिंह के से कंधे हैं, विशाल वक्षःस्थल (चौड़ी छाती) अत्यंत शोभा दे रहा है।<br> असंख्य कामदेवों के मन को मोहित करने वाला मुख है। </div>
+        <p class="my-new-style accordion">नयन नीर पुलकित अति गाता। <br>मन धरि धीर कही मृदु बाता।।</p>
+        <div class="panel">भगवान्‌ के स्वरूप को देखकर विभीषणजी के नेत्रों में (प्रेमाश्रुओं का) जल भर आया और शरीर अत्यंत पुलकित हो गया।<br> फिर मन में धीरज धरकर उन्होंने कोमल वचन कहे॥</div>
+        <p class="my-new-style accordion">नाथ दसानन कर मैं भ्राता। <br>निसिचर बंस जनम सुरत्राता।।</p>
+        <div class="panel">हे नाथ! मैं दशमुख रावण का भाई हूँ। <br>हे देवताओं के रक्षक! मेरा जन्म राक्षस कुल में हुआ है।</div>
+        <p class="my-new-style accordion">सहज पापप्रिय तामस देहा। <br>जथा उलूकहि तम पर नेहा।।</p>
+        <div class="panel">मेरा तामसी शरीर है, स्वभाव से ही मुझे पाप प्रिय हैं,<br> जैसे उल्लू को अंधकार पर सहज स्नेह होता है॥</div>
+        <span class="anchor" id="d45"></span>
+        <p class="shloka"><b>[ दोहा ४५ ]</b></p>
+        <p class="shloka accordion">श्रवन सुजसु सुनि आयउँ प्रभु भंजन भव भीर।<br>त्राहि त्राहि आरति हरन सरन सुखद रघुबीर।।</p>
+        <div class="panel">मैं कानों से आपका सुयश सुनकर आया हूँ कि प्रभु भव (जन्म-मरण) के भय का नाश करने वाले हैं।<br> हे दुखियों के दुःख दूर करने वाले और शरणागत को सुख देने वाले श्री रघुवीर! मेरी रक्षा कीजिए, रक्षा कीजिए॥</div>
+        <p class="my-new-style accordion">अस कहि करत दंडवत देखा। <br>तुरत उठे प्रभु हरष बिसेषा।।</p>
+        <div class="panel">प्रभु ने उन्हें ऐसा कहकर दंडवत्‌ करते देखा<br> तो वे अत्यंत हर्षित होकर तुरंत उठे।</div>
+        <p class="my-new-style accordion">दीन बचन सुनि प्रभु मन भावा। <br>भुज बिसाल गहि हृदयँ लगावा।।</p>
+        <div class="panel">विभीषणजी के दीन वचन सुनने पर प्रभु के मन को बहुत ही भाए। <br>उन्होंने अपनी विशाल भुजाओं से पकड़कर उनको हृदय से लगा लिया॥</div>
+        <p class="my-new-style accordion">अनुज सहित मिलि ढिग बैठारी। <br>बोले बचन भगत भयहारी।।</p>
+        <div class="panel">छोटे भाई लक्ष्मणजी सहित गले मिलकर उनको अपने पास बैठाकर<br> <span>श्री रामजी भक्तों के भय को हरने वाले वचन बोले-</span>॥</div>
+        <p class="my-new-style accordion">कहु लंकेस सहित परिवारा। <br>कुसल कुठाहर बास तुम्हारा।।</p>
+        <div class="panel">हे लंकेश! परिवार सहित अपनी कुशल कहो। <br>तुम्हारा निवास बुरी जगह पर है॥</div>
+        <p class="my-new-style accordion">खल मंडलीं बसहु दिनु राती। <br>सखा धरम निबहइ केहि भाँती।।</p>
+        <div class="panel">-दिन-रात दुष्टों की मंडली में बसते हो।<br> (ऐसी दशा में) हे सखे! तुम्हारा धर्म किस प्रकार निभता है?</div>
+        <p class="my-new-style accordion">मैं जानउँ तुम्हारि सब रीती। <br>अति नय निपुन न भाव अनीती।।</p>
+        <div class="panel">मैं तुम्हारी सब रीति (आचार-व्यवहार) जानता हूँ।<br> तुम अत्यंत नीतिनिपुण हो, तुम्हें अनीति नहीं सुहाती॥</div>
+        <p class="my-new-style accordion">बरु भल बास नरक कर ताता। <br>दुष्ट संग जनि देइ बिधाता।।</p>
+        <div class="panel">हे तात! नरक में रहना वरन्‌ अच्छा है, <br> परंतु विधाता दुष्ट का संग (कभी) न दे। </div>
+        <p class="my-new-style accordion">अब पद देखि कुसल रघुराया। <br>जौं तुम्ह कीन्ह जानि जन दाया।।</p>
+        <div class="panel"><span>विभीषणजी ने कहा- </span>हे रघुनाथजी! अब आपके चरणों का दर्शन कर कुशल से हूँ, <br>जो आपने अपना सेवक जानकर मुझ पर दया की है॥</div>
+        <span class="anchor" id="d46"></span>
+        <p class="shloka"><b>[ दोहा ४६ ]</b></p>
+        <p class="shloka accordion">तब लगि कुसल न जीव कहुँ सपनेहुँ मन बिश्राम।<br>जब लगि भजत न राम कहुँ सोक धाम तजि काम।।</p>
+        <div class="panel">-तब तक जीव की कुशल नहीं और न स्वप्न में भी उसके मन को शांति है,<br> जब तक वह शोक के घर काम (विषय-कामना) को छोड़कर श्री रामजी को नहीं भजता॥</div>
+        <p class="my-new-style accordion">तब लगि हृदयँ बसत खल नाना। <br>लोभ मोह मच्छर मद माना।।</p>
+        <div class="panel">लोभ, मोह, मत्सर (डाह), मद और मान आदि<br> अनेकों दुष्ट तभी तक हृदय में बसते हैं॥</div>
+        <p class="my-new-style accordion">जब लगि उर न बसत रघुनाथा। <br>धरें चाप सायक कटि भाथा।।</p>
+        <div class="panel">जब तक कि धनुष-बाण और कमर में तरकस धारण किए हुए<br> श्री रघुनाथजी हृदय में नहीं बसते॥</div>
+        <p class="my-new-style accordion">ममता तरुन तमी अँधिआरी। <br>राग द्वेष उलूक सुखकारी।।</p>
+        <div class="panel">ममता पूर्ण अँधेरी रात है, <br>जो राग-द्वेष रूपी उल्लुओं को सुख देने वाली है।</div>
+        <p class="my-new-style accordion">तब लगि बसति जीव मन माहीं। <br>जब लगि प्रभु प्रताप रबि नाहीं।।</p>
+        <div class="panel">वह (ममता रूपी रात्रि) तभी तक जीव के मन में बसती है,<br> जब तक प्रभु (आप) का प्रताप रूपी सूर्य उदय नहीं होता॥</div>
+        <p class="my-new-style accordion">अब मैं कुसल मिटे भय भारे। <br>देखि राम पद कमल तुम्हारे।।</p>
+        <div class="panel">हे श्री रामजी! आपके चरणारविन्द के दर्शन कर अब मैं कुशल से हूँ,<br> मेरे भारी भय मिट गए।</div>
+        <p class="my-new-style accordion">तुम्ह कृपाल जा पर अनुकूला। <br>ताहि न ब्याप त्रिबिध भव सूला।।</p>
+        <div class="panel">हे कृपालु! आप जिस पर अनुकूल होते हैं, <br>उसे तीनों प्रकार के भवशूल (आध्यात्मिक, आधिदैविक और आधिभौतिक ताप) नहीं व्यापते॥</div>
+        <p class="my-new-style accordion">मैं निसिचर अति अधम सुभाऊ। <br>सुभ आचरनु कीन्ह नहिं काऊ।।</p>
+        <div class="panel">मैं अत्यंत नीच स्वभाव का राक्षस हूँ।<br> मैंने कभी शुभ आचरण नहीं किया।</div>
+        <p class="my-new-style accordion">जासु रूप मुनि ध्यान न आवा। <br>तेहिं प्रभु हरषि हृदयँ मोहि लावा।।</p>
+        <div class="panel">जिनका रूप मुनियों के भी ध्यान में नहीं आता, <br>उन प्रभु ने स्वयं हर्षित होकर मुझे हृदय से लगा लिया॥</div>
+        <span class="anchor" id="d47"></span>
+        <p class="shloka"><b>[ दोहा ४७ ]</b></p>
+        <p class="shloka accordion">अहोभाग्य मम अमित अति राम कृपा सुख पुंज।<br>देखेउँ नयन बिरंचि सिब सेब्य जुगल पद कंज।।</p>
+        <div class="panel">हे कृपा और सुख के पुंज श्री रामजी! मेरा अत्यंत असीम सौभाग्य है,<br> जो मैंने ब्रह्मा और शिवजी के द्वारा सेवित युगल चरण कमलों को अपने नेत्रों से देखा॥</div>
+        <p class="my-new-style accordion">सुनहु सखा निज कहउँ सुभाऊ। <br>जान भुसुंडि संभु गिरिजाऊ।।</p>
+        <div class="panel"><span>श्री रामजी ने कहा-</span>हे सखा! सुनो, मैं तुम्हें अपना स्वभाव कहता हूँ, <br>जिसे काकभुशुण्डि, शिवजी और पार्वतीजी भी जानती हैं।</div>
+        <p class="my-new-style accordion">जौं नर होइ चराचर द्रोही। <br>आवे सभय सरन तकि मोही।।</p>
+        <div class="panel">कोई मनुष्य (संपूर्ण) जड़-चेतन जगत्‌ का द्रोही हो,  <br>यदि वह भी भयभीत होकर मेरी शरण तक कर आ जाए,॥</div>
+        <p class="my-new-style accordion">तजि मद मोह कपट छल नाना। <br>करउँ सद्य तेहि साधु समाना।।</p>
+        <div class="panel">और मद, मोह तथा नाना प्रकार के छल-कपट त्याग दे तो<br> मैं उसे बहुत शीघ्र साधु के समान कर देता हूँ।</div>
+        <p class="my-new-style accordion">जननी जनक बंधु सुत दारा। <br>तनु धनु भवन सुह्रद परिवारा।।</p>
+        <div class="panel">माता, पिता, भाई, पुत्र, स्त्री, <br>शरीर, धन, घर, मित्र और परिवार॥</div>
+        <p class="my-new-style accordion">सब कै ममता ताग बटोरी। <br>मम पद मनहि बाँध बरि डोरी।।</p>
+        <div class="panel">इन सबके ममत्व रूपी तागों को बटोरकर और<br> उन सबकी एक डोरी बनाकर उसके द्वारा जो अपने मन को मेरे चरणों में बाँध देता है।</div>
+        <p class="my-new-style accordion">समदरसी इच्छा कछु नाहीं। <br>हरष सोक भय नहिं मन माहीं।।</p>
+        <div class="panel">(सारे सांसारिक संबंधों का केंद्र मुझे बना लेता है), जो समदर्शी है, जिसे कुछ इच्छा नहीं है और<br> जिसके मन में हर्ष, शोक और भय नहीं है॥</div>
+        <p class="my-new-style accordion">अस सज्जन मम उर बस कैसें। <br>लोभी हृदयँ बसइ धनु जैसें।।</p>
+        <div class="panel">ऐसा सज्जन मेरे हृदय में कैसे बसता है, <br> जैसे लोभी के हृदय में धन बसा करता है॥</div>
+        <p class="my-new-style accordion">तुम्ह सारिखे संत प्रिय मोरें। <br>धरउँ देह नहिं आन निहोरें।।</p>
+        <div class="panel">तुम सरीखे संत ही मुझे प्रिय हैं।<br> मैं और किसी के निहोरे से (कृतज्ञतावश) देह धारण नहीं करता॥</div>
+        <span class="anchor" id="d48"></span>
+        <p class="shloka"><b>[ दोहा ४८ ]</b></p>
+        <p class="shloka accordion">सगुन उपासक परहित निरत नीति दृढ़ नेम।<br>ते नर प्रान समान मम जिन्ह कें द्विज पद प्रेम।।</p>
+        <div class="panel">जो सगुण (साकार) भगवान्‌ के उपासक हैं, दूसरे के हित में लगे रहते हैं, <br>नीति और नियमों में दृढ़ हैं और जिन्हें ब्राह्मणों के चरणों में प्रेम है, वे मनुष्य मेरे प्राणों के समान हैं॥</div>
+        <p class="my-new-style accordion">सुनु लंकेस सकल गुन तोरें। <br>तातें तुम्ह अतिसय प्रिय मोरें।।</p>
+        <div class="panel">हे लंकापति! सुनो, तुम्हारे अंदर उपर्युक्त सब गुण हैं। <br>इससे तुम मुझे अत्यंत ही प्रिय हो। </div>
+        <p class="my-new-style accordion">राम बचन सुनि बानर जूथा। <br>सकल कहहिं जय कृपा बरूथा।।</p>
+        <div class="panel">श्री रामजी के वचन सुनकर सब वानरों के समूह कहने लगे-<br> कृपा के समूह श्री रामजी की जय हो॥</div>
+        <p class="my-new-style accordion">सुनत बिभीषनु प्रभु कै बानी। <br>नहिं अघात श्रवनामृत जानी।।</p>
+        <div class="panel">प्रभु की वाणी सुनते हैं और <br>उसे कानों के लिए अमृत जानकर विभीषणजी अघाते नहीं हैं।</div>
+        <p class="my-new-style accordion">पद अंबुज गहि बारहिं बारा। <br>हृदयँ समात न प्रेमु अपारा।।</p>
+        <div class="panel">वे बार-बार श्री रामजी के चरण कमलों को पकड़ते हैं<br> अपार प्रेम है, हृदय में समाता नहीं है॥</div>
+        <p class="my-new-style accordion">सुनहु देव सचराचर स्वामी। <br>प्रनतपाल उर अंतरजामी।।</p>
+        <div class="panel"><span>विभीषणजी ने कहा-</span>हे देव! हे चराचर जगत्‌ के स्वामी! हे शरणागत के रक्षक! <br>हे सबके हृदय के भीतर की जानने वाले! </div>
+        <p class="my-new-style accordion">उर कछु प्रथम बासना रही। <br>प्रभु पद प्रीति सरित सो बही।।</p>
+        <div class="panel">सुनिए, मेरे हृदय में पहले कुछ वासना थी।<br> वह प्रभु के चरणों की प्रीति रूपी नदी में बह गई॥</div>
+        <p class="my-new-style accordion">अब कृपाल निज भगति पावनी। <br>देहु सदा सिव मन भावनी।।</p>
+        <div class="panel">अब तो हे कृपालु! शिवजी के मन को सदैव प्रिय लगने वाली <br>अपनी पवित्र भक्ति मुझे दीजिए। </div>
+        <p class="my-new-style accordion">एवमस्तु कहि प्रभु रनधीरा। <br>मागा तुरत सिंधु कर नीरा।।</p>
+        <div class="panel">'एवमस्तु' (ऐसा ही हो) कहकर रणधीर प्रभु श्री रामजी ने<br> तुरंत ही समुद्र का जल माँगा॥</div>
+        <p class="my-new-style accordion">जदपि सखा तव इच्छा नाहीं। <br>मोर दरसु अमोघ जग माहीं।।</p>
+        <div class="panel"><span>और कहा-</span>हे सखा! यद्यपि तुम्हारी इच्छा नहीं है, <br>पर जगत्‌ में मेरा दर्शन अमोघ है (वह निष्फल नहीं जाता)।</div>
+        <p class="my-new-style accordion">अस कहि राम तिलक तेहि सारा। <br>सुमन बृष्टि नभ भई अपारा।।</p>
+        <div class="panel">ऐसा कहकर श्री रामजी ने उनको राजतिलक कर दिया।<br> आकाश से पुष्पों की अपार वृष्टि हुई॥</div>
+        <span class="anchor" id="d49"></span>
+        <p class="shloka"><b>[ दोहा ४९ (क), (ख) ]</b></p>
+        <p class="shloka accordion">रावन क्रोध अनल निज स्वास समीर प्रचंड।<br>जरत बिभीषनु राखेउ दीन्हेहु राजु अखंड।।</p>
+        <div class="panel">श्री रामजी ने रावण की क्रोध रूपी अग्नि में, जो अपनी (विभीषण की) श्वास (वचन) रूपी पवन से प्रचंड हो रही थी, <br>जलते हुए विभीषण को बचा लिया और उसे अखंड राज्य दिया॥</div>
+        <p class="my-new-style accordion">जो संपति सिव रावनहि दीन्हि दिएँ दस माथ।<br>सोइ संपदा बिभीषनहि सकुचि दीन्ह रघुनाथ।।</p>
+        <div class="panel">शिवजी ने जो संपत्ति रावण को दसों सिरों की बलि देने पर दी थी,<br> वही संपत्ति श्री रघुनाथजी ने विभीषण को बहुत सकुचते हुए दी॥</div>
+        <p class="my-new-style accordion">अस प्रभु छाड़ि भजहिं जे आना। <br>ते नर पसु बिनु पूँछ बिषाना।।</p>
+        <div class="panel">ऐसे परम कृपालु प्रभु को छोड़कर जो मनुष्य दूसरे को भजते हैं, <br>वे बिना सींग-पूँछ के पशु हैं।</div>
+        <p class="my-new-style accordion">निज जन जानि ताहि अपनावा। <br>प्रभु सुभाव कपि कुल मन भावा।।</p>
+        <div class="panel">अपना सेवक जानकर विभीषण को श्री रामजी ने अपना लिया। <br>प्रभु का स्वभाव वानरकुल के मन को (बहुत) भाया॥</div>
+        <p class="my-new-style accordion">पुनि सर्बग्य सर्ब उर बासी। <br>सर्बरूप सब रहित उदासी।।</p>
+        <div class="panel">फिर सब कुछ जानने वाले, सबके हृदय में बसने वाले, <br>सर्वरूप (सब रूपों में प्रकट), सबसे रहित, उदासीन॥ </div>
+        <p class="my-new-style accordion">बोले बचन नीति प्रतिपालक। <br>कारन मनुज दनुज कुल घालक।।</p>
+        <div class="panel">कारण से (भक्तों पर कृपा करने के लिए) मनुष्य बने हुए तथा राक्षसों के कुल का नाश करने वाले<br> श्री रामजी नीति की रक्षा करने वाले वचन बोले-॥</div>
+        <p class="my-new-style accordion">सुनु कपीस लंकापति बीरा। <br>केहि बिधि तरिअ जलधि गंभीरा।।</p>
+        <div class="panel">हे वीर वानरराज सुग्रीव और लंकापति विभीषण! सुनो,<br> इस गहरे समुद्र को किस प्रकार पार किया जाए?</div>
+        <p class="my-new-style accordion">संकुल मकर उरग झष जाती। <br>अति अगाध दुस्तर सब भाँती।।</p>
+        <div class="panel">अनेक जाति के मगर, साँप और मछलियों से भरा हुआ <br>यह अत्यंत अथाह समुद्र पार करने में सब प्रकार से कठिन है॥</div>
+        <p class="my-new-style accordion">कह लंकेस सुनहु रघुनायक। <br>कोटि सिंधु सोषक तव सायक।।</p>
+        <div class="panel"><span>विभीषणजी ने कहा-</span> हे रघुनाथजी! सुनिए, यद्यपि आपका एक बाण ही <br>करोड़ों समुद्रों को सोखने वाला है (सोख सकता है)॥</div>
+        <p class="my-new-style accordion">जद्यपि तदपि नीति असि गाई। <br>बिनय करिअ सागर सन जाई।।</p>
+        <div class="panel">थापि नीति ऐसी कही गई है (उचित यह होगा) कि<br> (पहले) जाकर समुद्र से प्रार्थना की जाए॥</div>
+        <span class="anchor" id="d50"></span>
+        <p class="shloka"><b>[ दोहा ५० ]</b></p>
+        <p class="shloka accordion">प्रभु तुम्हार कुलगुर जलधि कहिहि उपाय बिचारि।<br>बिनु प्रयास सागर तरिहि सकल भालु कपि धारि।।</p>
+        <div class="panel">हे प्रभु! समुद्र आपके कुल में बड़े (पूर्वज) हैं, वे विचारकर उपाय बतला देंगे।<br> तब रीछ और वानरों की सारी सेना बिना ही परिश्रम के समुद्र के पार उतर जाएगी॥</div>
+        <p class="my-new-style accordion">सखा कही तुम्ह नीकि उपाई। <br>करिअ दैव जौं होइ सहाई।।</p>
+        <div class="panel"><span>श्री रामजी ने कहा-</span> हे सखा! तुमने अच्छा उपाय बताया। <br>यही किया जाए, यदि दैव सहायक हों।</div>
+        <p class="my-new-style accordion">मंत्र न यह लछिमन मन भावा। <br>राम बचन सुनि अति दुख पावा।।</p>
+        <div class="panel"> यह सलाह लक्ष्मणजी के मन को अच्छी नहीं लगी। <br>श्री रामजी के वचन सुनकर तो उन्होंने बहुत ही दुःख पाया॥</div>
+        <p class="my-new-style accordion">नाथ दैव कर कवन भरोसा। <br>सोषिअ सिंधु करिअ मन रोसा।।</p>
+        <div class="panel"><span>लक्ष्मणजी ने कहा-</span>  हे नाथ! दैव का कौन भरोसा! <br>मन में क्रोध कीजिए (ले आइए) और समुद्र को सुखा डालिए। </div>
+        <p class="my-new-style accordion">कादर मन कहुँ एक अधारा। <br>दैव दैव आलसी पुकारा।।</p>
+        <div class="panel">यह दैव तो कायर के मन का एक आधार (तसल्ली देने का उपाय) है।<br> आलसी लोग ही दैव-दैव पुकारा करते हैं॥</div>
+        <p class="my-new-style accordion">सुनत बिहसि बोले रघुबीरा। <br>ऐसेहिं करब धरहु मन धीरा।।</p>
+        <div class="panel"><span>यह सुनकर श्री रघुवीर हँसकर बोले-</span><br> ऐसे ही करेंगे, मन में धीरज रखो। </div>
+        <p class="my-new-style accordion">अस कहि प्रभु अनुजहि समुझाई। <br>सिंधु समीप गए रघुराई।।</p>
+        <div class="panel">ऐसा कहकर छोटे भाई को समझाकर<br> प्रभु श्री रघुनाथजी समुद्र के समीप गए॥</div>
+        <p class="my-new-style accordion">प्रथम प्रनाम कीन्ह सिरु नाई। <br>बैठे पुनि तट दर्भ डसाई।।</p>
+        <div class="panel">उन्होंने पहले सिर नवाकर प्रणाम किया। <br>फिर किनारे पर कुश बिछाकर बैठ गए।</div>
+        <p class="my-new-style accordion">जबहिं बिभीषन प्रभु पहिं आए। <br>पाछें रावन दूत पठाए।।</p>
+        <div class="panel">इधर ज्यों ही विभीषणजी प्रभु के पास आए थे, <br>त्यों ही रावण ने उनके पीछे दूत भेजे थे॥</div>
+        <span class="anchor" id="d51"></span>
+        <p class="shloka"><b>[ दोहा ५१ ]</b></p>
+        <p class="shloka accordion">सकल चरित तिन्ह देखे धरें कपट कपि देह।<br>प्रभु गुन हृदयँ सराहहिं सरनागत पर नेह।।</p>
+        <div class="panel">कपट से वानर का शरीर धारण कर उन्होंने सब लीलाएँ देखीं।<br> वे अपने हृदय में प्रभु के गुणों की और शरणागत पर उनके स्नेह की सराहना करने लगे॥</div>
+        <p class="my-new-style accordion">प्रगट बखानहिं राम सुभाऊ। <br>अति सप्रेम गा बिसरि दुराऊ।।</p>
+        <div class="panel">फिर वे प्रकट रूप में भी अत्यंत प्रेम के साथ <br>श्री रामजी के स्वभाव की बड़ाई करने लगे उन्हें दुराव (कपट वेश) भूल गया।</div>
+        <p class="my-new-style accordion">रिपु के दूत कपिन्ह तब जाने। <br>सकल बाँधि कपीस पहिं आने।।</p>
+        <div class="panel">सब वानरों ने जाना कि ये शत्रु के दूत हैं<br> और वे उन सबको बाँधकर सुग्रीव के पास ले आए॥</div>
+        <p class="my-new-style accordion">कह सुग्रीव सुनहु सब बानर। <br>अंग भंग करि पठवहु निसिचर।।</p>
+        <div class="panel"><span>सुग्रीव ने कहा- </span>सब वानरों!<br> सुनो, राक्षसों के अंग-भंग करके भेज दो। </div>
+        <p class="my-new-style accordion">सुनि सुग्रीव बचन कपि धाए। <br>बाँधि कटक चहु पास फिराए।।</p>
+        <div class="panel">ग्रीव के वचन सुनकर वानर दौड़े। <br>दूतों को बाँधकर उन्होंने सेना के चारों ओर घुमाया॥</div>
+        <p class="my-new-style accordion">बहु प्रकार मारन कपि लागे। <br>दीन पुकारत तदपि न त्यागे।।</p>
+        <div class="panel">वानर उन्हें बहुत तरह से मारने लगे।<br> वे दीन होकर पुकारते थे, फिर भी वानरों ने उन्हें नहीं छोड़ा।</div>
+        <p class="my-new-style accordion">जो हमार हर नासा काना। <br>तेहि कोसलाधीस कै आना।।</p>
+        <div class="panel"><span>तब दूतों ने पुकारकर कहा-</span> जो हमारे नाक-कान काटेगा,<br> उसे कोसलाधीश श्री रामजी की सौगंध है॥</div> 
+        <p class="my-new-style accordion">सुनि लछिमन सब निकट बोलाए। <br>दया लागि हँसि तुरत छोडाए।।</p>
+        <div class="panel">यह सुनकर लक्ष्मणजी ने सबको निकट बुलाया।<br> उन्हें बड़ी दया लगी, इससे हँसकर उन्होंने राक्षसों को तुरंत ही छुड़ा दिया।</div> 
+        <p class="my-new-style accordion">रावन कर दीजहु यह पाती। <br>लछिमन बचन बाचु कुलघाती।।</p>
+        <div class="panel"><span>और उनसे कहा-</span>रावण के हाथ में यह चिट्ठी देना (और कहना-) <br>हे कुलघातक! लक्ष्मण के शब्दों (संदेसे) को बाँचो॥</div>
+        <span class="anchor" id="d52"></span>
+        <p class="shloka"><b>[ दोहा ५२ ]</b></p>
+        <p class="shloka accordion">कहेहु मुखागर मूढ़ सन मम संदेसु उदार।<br>सीता देइ मिलेहु न त आवा काल तुम्हार।।</p>
+        <div class="panel">फिर उस मूर्ख से जबानी यह मेरा उदार (कृपा से भरा हुआ) संदेश कहना कि <br>सीताजी को देकर उनसे (श्री रामजी से) मिलो, नहीं तो तुम्हारा काल आ गया (समझो)॥</div>
+        <p class="my-new-style accordion">तुरत नाइ लछिमन पद माथा। <br>चले दूत बरनत गुन गाथा।।</p>
+        <div class="panel">लक्ष्मणजी के चरणों में मस्तक नवाकर,<br> श्री रामजी के गुणों की कथा वर्णन करते हुए दूत तुरंत ही चल दिए। </div>
+        <p class="my-new-style accordion">कहत राम जसु लंकाँ आए। <br>रावन चरन सीस तिन्ह नाए।।</p>
+        <div class="panel">श्री रामजी का यश कहते हुए वे लंका में आए <br>और उन्होंने रावण के चरणों में सिर नवाए॥</div>
+        <p class="my-new-style accordion">बिहसि दसानन पूँछी बाता। <br>कहसि न सुक आपनि कुसलाता।।</p>
+        <div class="panel"><span>दशमुख रावण ने हँसकर बात पूछी-</span> अरे शुक<br>! अपनी कुशल क्यों नहीं कहता?</div>
+        <p class="my-new-style accordion">पुनि कहु खबरि बिभीषन केरी। <br>जाहि मृत्यु आई अति नेरी।।</p>
+        <div class="panel">फिर उस विभीषण का समाचार सुना,<br> मृत्यु जिसके अत्यंत निकट आ गई है॥</div>
+        <p class="my-new-style accordion">करत राज लंका सठ त्यागी। <br>होइहि जब कर कीट अभागी।।</p>
+        <div class="panel">मूर्ख ने राज्य करते हुए लंका को त्याग दिया। <br>अभागा अब जौ का कीड़ा (घुन) बनेगा (जौ के साथ जैसे घुन भी पिस जाता है, <br>वैसे ही नर वानरों के साथ वह भी मारा जाएगा)॥</div>
+        <p class="my-new-style accordion">पुनि कहु भालु कीस कटकाई। <br>कठिन काल प्रेरित चलि आई।।</p>
+        <div class="panel">फिर भालु और वानरों की सेना का हाल कह, <br>जो कठिन काल की प्रेरणा से यहाँ चली आई है॥</div>
+        <p class="my-new-style accordion">जिन्ह के जीवन कर रखवारा। <br>भयउ मृदुल चित सिंधु बिचारा।।</p>
+        <div class="panel">और जिनके जीवन का रक्षक कोमल चित्त वाला बेचारा समुद्र बन गया है (अर्थात्‌) <br>उनके और राक्षसों के बीच में यदि समुद्र न होता तो अब तक राक्षस उन्हें मारकर खा गए होते। </div>
+        <p class="my-new-style accordion">कहु तपसिन्ह कै बात बहोरी। <br>जिन्ह के हृदयँ त्रास अति मोरी।।</p>
+        <div class="panel">फिर उन तपस्वियों की बात बता, <br>जिनके हृदय में मेरा बड़ा डर है॥</div>
+        <span class="anchor" id="d53"></span>
+        <p class="shloka"><b>[ दोहा ५३ ]</b></p>
+        <p class="shloka accordion">की भइ भेंट कि फिरि गए श्रवन सुजसु सुनि मोर।<br>कहसि न रिपु दल तेज बल बहुत चकित चित तोर।।</p>
+        <div class="panel">उनसे तेरी भेंट हुई या वे कानों से मेरा सुयश सुनकर ही लौट गए? <br>शत्रु सेना का तेज और बल बताता क्यों नहीं? तेरा चित्त बहुत ही चकित (भौंचक्का सा) हो रहा है॥</div>
+        <p class="my-new-style accordion">नाथ कृपा करि पूँछेहु जैसें। <br>मानहु कहा क्रोध तजि तैसें।।</p>
+        <div class="panel"><span>दूत ने कहा-</span> हे नाथ! आपने जैसे कृपा करके पूछा है, <br>वैसे ही क्रोध छोड़कर मेरा कहना मानिए (मेरी बात पर विश्वास कीजिए)।</div>
+        <p class="my-new-style accordion">मिला जाइ जब अनुज तुम्हारा। <br>जातहिं राम तिलक तेहि सारा।।</p>
+        <div class="panel">जब आपका छोटा भाई श्री रामजी से जाकर मिला<br>, तब उसके पहुँचते ही श्री रामजी ने उसको राजतिलक कर दिया॥</div>
+        <p class="my-new-style accordion">रावन दूत हमहि सुनि काना। <br>कपिन्ह बाँधि दीन्हे दुख नाना।।</p>
+        <div class="panel">हम रावण के दूत हैं, यह कानों से सुनकर <br>वानरों ने हमें बाँधकर बहुत कष्ट दिए॥</div>
+        <p class="my-new-style accordion">श्रवन नासिका काटै लागे। <br>राम सपथ दीन्हे हम त्यागे।।</p>
+        <div class="panel">यहाँ तक कि वे हमारे नाक-कान काटने लगे।<br> श्री रामजी की शपथ दिलाने पर कहीं उन्होंने हमको छोड़ा॥</div>
+        <p class="my-new-style accordion">पूँछिहु नाथ राम कटकाई। <br>बदन कोटि सत बरनि न जाई।।</p>
+        <div class="panel">हे नाथ! आपने श्री रामजी की सेना पूछी,<br> सो वह तो सौ करोड़ मुखों से भी वर्णन नहीं की जा सकती। </div>
+        <p class="my-new-style accordion">नाना बरन भालु कपि धारी। <br>बिकटानन बिसाल भयकारी।।</p>
+        <div class="panel">अनेकों रंगों के भालु और वानरों की सेना है, <br>जो भयंकर मुख वाले, विशाल शरीर वाले और भयानक हैं॥</div>
+        <p class="my-new-style accordion">जेहिं पुर दहेउ हतेउ सुत तोरा। <br>सकल कपिन्ह महँ तेहि बलु थोरा।।</p>
+        <div class="panel">जिसने नगर को जलाया और आपके पुत्र अक्षय कुमार को मारा,<br> उसका बल तो सब वानरों में थोड़ा है।</div>
+        <p class="my-new-style accordion">अमित नाम भट कठिन कराला। <br>अमित नाग बल बिपुल बिसाला।।</p>
+        <div class="panel">असंख्य नामों वाले बड़े ही कठोर और भयंकर योद्धा हैं।<br> उनमें असंख्य हाथियों का बल है और वे बड़े ही विशाल हैं॥</div>
+        <span class="anchor" id="d54"></span>
+        <p class="shloka"><b>[ दोहा ५४ ]</b></p>
+        <p class="shloka accordion">द्विबिद मयंद नील नल अंगद गद बिकटासि। <br>दधिमुख केहरि निसठ सठ जामवंत बलरासि।।</p>
+        <div class="panel">द्विविद, मयंद, नील, नल, अंगद, गद, विकटास्य,<br> दधिमुख, केसरी, निशठ, शठ और जाम्बवान्‌ ये सभी बल की राशि हैं॥</div>
+        <p class="my-new-style accordion">ए कपि सब सुग्रीव समाना। <br>इन्ह सम कोटिन्ह गनइ को नाना।।</p>
+        <div class="panel">ये सब वानर बल में सुग्रीव के समान हैं <br>और इनके जैसे (एक-दो नहीं) करोड़ों हैं, उन बहुत सो को गिन ही कौन सकता है।</div>
+        <p class="my-new-style accordion">राम कृपाँ अतुलित बल तिन्हहीं। <br>तृन समान त्रेलोकहि गनहीं।।</p>
+        <div class="panel">श्री रामजी की कृपा से उनमें अतुलनीय बल है। <br>वे तीनों लोकों को तृण के समान (तुच्छ) समझते हैं॥</div>
+        <p class="my-new-style accordion">अस मैं सुना श्रवन दसकंधर। <br>पदुम अठारह जूथप बंदर।।</p>
+        <div class="panel">हे दशग्रीव! मैंने कानों से ऐसा सुना है कि<br> अठारह पद्म तो अकेले वानरों के सेनापति हैं।</div>
+        <p class="my-new-style accordion">नाथ कटक महँ सो कपि नाहीं। <br>जो न तुम्हहि जीतै रन माहीं।।</p>
+        <div class="panel">हे नाथ! उस सेना में ऐसा कोई वानर नहीं है, <br>जो आपको रण में न जीत सके॥</div>
+        <p class="my-new-style accordion">परम क्रोध मीजहिं सब हाथा। <br>आयसु पै न देहिं रघुनाथा।।</p>
+        <div class="panel">सब के सब अत्यंत क्रोध से हाथ मीजते हैं।<br> पर श्री रघुनाथजी उन्हें आज्ञा नहीं देते। </div>
+        <p class="my-new-style accordion">सोषहिं सिंधु सहित झष ब्याला। <br>पूरहीं न त भरि कुधर बिसाला।।</p>
+        <div class="panel">हम मछलियों और साँपों सहित समुद्र को सोख लेंगे।<br> नहीं तो बड़े-बड़े पर्वतों से उसे भरकर पूर (पाट) देंगे॥</div>
+        <p class="my-new-style accordion">मर्दि गर्द मिलवहिं दससीसा। <br>ऐसेइ बचन कहहिं सब कीसा।।</p>
+        <div class="panel">और रावण को मसलकर धूल में मिला देंगे।<br> सब वानर ऐसे ही वचन कह रहे हैं।</div>
+        <p class="my-new-style accordion">गर्जहिं तर्जहिं सहज असंका। <br>मानहु ग्रसन चहत हहिं लंका।।</p>
+        <div class="panel">सब सहज ही निडर हैं, इस प्रकार गरजते और डपटते हैं <br>मानो लंका को निगल ही जाना चाहते हैं॥</div>
+        <span class="anchor" id="d55"></span>
+        <p class="shloka"><b>[ दोहा ५५ ]</b></p>
+        <p class="shloka accordion">सहज सूर कपि भालु सब पुनि सिर पर प्रभु राम।<br>रावन काल कोटि कहु जीति सकहिं संग्राम।।</p>
+        <div class="panel">सब वानर-भालू सहज ही शूरवीर हैं फिर उनके सिर पर प्रभु (सर्वेश्वर) श्री रामजी हैं। <br>हे रावण! वे संग्राम में करोड़ों कालों को जीत सकते हैं॥</div>
+        <p class="my-new-style accordion">राम तेज बल बुधि बिपुलाई। <br>सेष सहस सत सकहिं न गाई।।</p>
+        <div class="panel">श्री रामचंद्रजी के तेज (सामर्थ्य), बल और बुद्धि की <br>अधिकता को लाखों शेष भी नहीं गा सकते।</div>
+        <p class="my-new-style accordion">सक सर एक सोषि सत सागर।<br> तव भ्रातहि पूँछेउ नय नागर</p>
+        <div class="panel">वे एक ही बाण से सैकड़ों समुद्रों को सोख सकते हैं,<br>  परंतु नीति निपुण श्री रामजी ने (नीति की रक्षा के लिए) आपके भाई से उपाय पूछा॥</div>
+        <p class="my-new-style accordion">तासु बचन सुनि सागर पाहीं। <br>मागत पंथ कृपा मन माहीं।।</p>
+        <div class="panel">उनके (आपके भाई के) वचन सुनकर वे (श्री रामजी) समुद्र से राह माँग रहे हैं, <br>उनके मन में कृपा भी है (इसलिए वे उसे सोखते नहीं)।</div>
+        <p class="my-new-style accordion">सुनत बचन बिहसा दससीसा। <br>जौं असि मति सहाय कृत कीसा।।</p>
+        <div class="panel">दूत के ये वचन सुनते ही रावण खूब हँसा (और बोला-)  <br>जब ऐसी बुद्धि है, तभी तो वानरों को सहायक बनाया है!</div>
+        <p class="my-new-style accordion">सहज भीरु कर बचन दृढ़ाई। <br>सागर सन ठानी मचलाई।।</p>
+        <div class="panel">स्वाभाविक ही डरपोक विभीषण के वचन को प्रमाण करके<br> उन्होंने समुद्र से मचलना (बालहठ) ठाना है।</div>
+        <p class="my-new-style accordion">मूढ़ मृषा का करसि बड़ाई। <br>रिपु बल बुद्धि थाह मैं पाई।।</p>
+        <div class="panel">अरे मूर्ख! झूठी बड़ाई क्या करता है?<br> बस, मैंने शत्रु (राम) के बल और बुद्धि की थाह पा ली॥</div>
+        <p class="my-new-style accordion">सचिव सभीत बिभीषन जाकें। <br>बिजय बिभूति कहाँ जग ताकें।।</p>
+        <div class="panel">जिसके विभीषण-जैसा डरपोक मन्त्री हो,<br>उसे जगतमें विजय और विभूति (ऐश्वर्य) कहाँ?</div>
+        <p class="my-new-style accordion">सुनि खल बचन दूत रिस बाढ़ी। <br>समय बिचारि पत्रिका काढ़ी।।</p>
+        <div class="panel">दुष्ट रावणके वचन सुनकर दूतको क्रोध बढ़ आया |<br>उसने मौका समझकर पत्रिका निकाली॥</div>
+        <p class="my-new-style accordion">रामानुज दीन्ही यह पाती। <br>नाथ बचाइ जुड़ावहु छाती।।</p>
+        <div class="panel"><span>और कहा-</span>श्री रामजी के छोटे भाई लक्ष्मण ने यह पत्रिका दी है। <br>हे नाथ! इसे बचवाकर छाती ठंडी कीजिए।</div>
+        <p class="my-new-style accordion">बिहसि बाम कर लीन्ही रावन। <br>सचिव बोलि सठ लाग बचावन।।</p>
+        <div class="panel">रावण ने हँसकर उसे बाएँ हाथ से लिया <br>और मंत्री को बुलवाकर वह मूर्ख उसे बँचाने लगा॥</div>
+        <span class="anchor" id="d56"></span>
+        <p class="shloka"><b>[ दोहा ५६ (क), (ख) ]</b></p>
+        <p class="shloka accordion">बातन्ह मनहि रिझाइ सठ जनि घालसि कुल खीस।<br>राम बिरोध न उबरसि सरन बिष्नु अज ईस।।</p>
+        <div class="panel"><span>पत्रिका में लिखा था- </span>अरे मूर्ख! केवल बातों से ही मन को रिझाकर अपने कुल को नष्ट-भ्रष्ट न कर।<br> श्री रामजी से विरोध करके तू विष्णु, ब्रह्मा और महेश की शरण जाने पर भी नहीं बचेगा॥</div>
+        <p class="shloka accordion">की तजि मान अनुज इव प्रभु पद पंकज भृंग।<br>होहि कि राम सरानल खल कुल सहित पतंग।।</p>
+        <div class="panel">या तो अभिमान छोड़कर अपने छोटे भाई विभीषण की भाँति प्रभु के चरण कमलों का भ्रमर बन जा। <br>अथवा रे दुष्ट! श्री रामजी के बाण रूपी अग्नि में परिवार सहित पतिंगा हो जा (दोनों में से जो अच्छा लगे सो कर)॥</div>
+        <p class="my-new-style accordion">सुनत सभय मन मुख मुसुकाई। <br>कहत दसानन सबहि सुनाई।।</p>
+        <div class="panel">पत्रिका सुनते ही रावण मन में भयभीत हो गया,<br><span> परंतु मुख से (ऊपर से) मुस्कुराता हुआ वह सबको सुनाकर कहने लगा-</span>॥ </div>
+        <p class="my-new-style accordion">भूमि परा कर गहत अकासा। <br>लघु तापस कर बाग बिलासा।।</p>
+        <div class="panel">जैसे कोई पृथ्वी पर पड़ा हुआ हाथ से आकाश को पकड़ने की चेष्टा करता हो, <br>वैसे ही यह छोटा तपस्वी (लक्ष्मण) वाग्विलास करता है (डींग हाँकता है)॥</div>
+        <p class="my-new-style accordion">कह सुक नाथ सत्य सब बानी। <br>समुझहु छाड़ि प्रकृति अभिमानी।।</p>
+        <div class="panel"><span>शुक (दूत) ने कहा-</span> हे नाथ! अभिमानी स्वभाव को छोड़कर <br>(इस पत्र में लिखी) सब बातों को सत्य समझिए। </div>
+        <p class="my-new-style accordion">सुनहु बचन मम परिहरि क्रोधा। <br>नाथ राम सन तजहु बिरोधा।।</p>
+        <div class="panel">क्रोध छोड़कर मेरा वचन सुनिए। <br>हे नाथ! श्री रामजी से वैर त्याग दीजिए॥ </div>
+        <p class="my-new-style accordion">अति कोमल रघुबीर सुभाऊ। <br>जद्यपि अखिल लोक कर राऊ।।</p>
+        <div class="panel">यद्यपि श्री रघुवीर समस्त लोकों के स्वामी हैं,<br> पर उनका स्वभाव अत्यंत ही कोमल है।</div> 
+        <p class="my-new-style accordion">मिलत कृपा तुम्ह पर प्रभु करिही। <br>उर अपराध न एकउ धरिही।।</p>
+        <div class="panel"> मिलते ही प्रभु आप पर कृपा करेंगे और<br> आपका एक भी अपराध वे हृदय में नहीं रखेंगे॥</div> 
+        <p class="my-new-style accordion">जनकसुता रघुनाथहि दीजे। <br>एतना कहा मोर प्रभु कीजे।।</p>
+        <div class="panel">जानकीजी श्री रघुनाथजी को दे दीजिए। <br>हे प्रभु! इतना कहना मेरा कीजिए।</div> 
+        <p class="my-new-style accordion">जब तेहिं कहा देन बैदेही। <br>चरन प्रहार कीन्ह सठ तेही।।</p>
+        <div class="panel">जब उस (दूत) ने जानकीजी को देने के लिए कहा,<br> तब दुष्ट रावण ने उसको लात मारी॥</div> 
+        <p class="my-new-style accordion">नाइ चरन सिरु चला सो तहाँ। <br>कृपासिंधु रघुनायक जहाँ।।</p>
+        <div class="panel">वह भी (विभीषण की भाँति) चरणों में सिर नवाकर वहीं चला,<br> जहाँ कृपासागर श्री रघुनाथजी थे।</div>
+        <p class="my-new-style accordion">करि प्रनामु निज कथा सुनाई। <br>राम कृपाँ आपनि गति पाई।।</p>
+        <div class="panel"> प्रणाम करके उसने अपनी कथा सुनाई और<br> श्री रामजी की कृपा से अपनी गति (मुनि का स्वरूप) पाई॥</div>
+        <p class="my-new-style accordion">रिषि अगस्ति कीं साप भवानी। <br>राछस भयउ रहा मुनि ग्यानी।।</p>
+        <div class="panel"><span>शिवजी कहते हैं-</span> हे भवानी! वह ज्ञानी मुनि था, <br>अगस्त्य ऋषि के शाप से राक्षस हो गया था।</div>
+        <p class="my-new-style accordion">बंदि राम पद बारहिं बारा। <br>मुनि निज आश्रम कहुँ पगु धारा।।</p>
+        <div class="panel">बार-बार श्री रामजी के चरणों की वंदना करके<br> वह मुनि अपने आश्रम को चला गया॥</div>
+        <span class="anchor" id="d57"></span>
+        <p class="shloka"><b>[ दोहा ५७]</b></p>
+        <p class="shloka accordion">बिनय न मानत जलधि जड़ गए तीन दिन बीति।<br>बोले राम सकोप तब भय बिनु होइ न प्रीति।।</p>
+        <div class="panel">इधर तीन दिन बीत गए, किंतु जड़ समुद्र विनय नहीं मानता। <br>तब श्री रामजी क्रोध सहित बोले- बिना भय के प्रीति नहीं होती!</div>
+        <p class="my-new-style accordion">लछिमन बान सरासन आनू। <br>सोषौं बारिधि बिसिख कृसानू।।</p>
+        <div class="panel">हे लक्ष्मण! धनुष-बाण लाओ, <br>मैं अग्निबाण से समुद्र को सोख डालूँ।</div>
+        <p class="my-new-style accordion">सठ सन बिनय कुटिल सन प्रीती। <br>सहज कृपन सन सुंदर नीती।।</p>
+        <div class="panel">मूर्ख से विनय, कुटिल के साथ प्रीति, <br>स्वाभाविक ही कंजूस से सुंदर नीति (उदारता का उपदेश)॥</div>
+        <p class="my-new-style accordion">ममता रत सन ग्यान कहानी। <br>अति लोभी सन बिरति बखानी।।</p>
+        <div class="panel">ममता में फँसे हुए मनुष्य से ज्ञान की कथा,<br> अत्यंत लोभी से वैराग्य का वर्णन॥</div>
+        <p class="my-new-style accordion">क्रोधिहि सम कामिहि हरि कथा। <br>ऊसर बीज बएँ फल जथा।।</p>
+        <div class="panel">क्रोधी से शम (शांति) की बात और कामी से भगवान्‌ की कथा, इनका वैसा ही फल होता है <br>जैसा ऊसर में बीज बोने से होता है (अर्थात्‌ ऊसर में बीज बोने की भाँति यह सब व्यर्थ जाता है)॥</div>
+        <p class="my-new-style accordion">अस कहि रघुपति चाप चढ़ावा। <br>यह मत लछिमन के मन भावा।।</p>
+        <div class="panel">ऐसा कहकर श्री रघुनाथजी ने धनुष चढ़ाया।<br> यह मत लक्ष्मणजी के मन को बहुत अच्छा लगा।</div>
+        <p class="my-new-style accordion">संघानेउ प्रभु बिसिख कराला। <br>उठी उदधि उर अंतर ज्वाला।।</p>
+        <div class="panel"> प्रभु ने भयानक (अग्नि) बाण संधान किया, <br>जिससे समुद्र के हृदय के अंदर अग्नि की ज्वाला उठी॥</div>
+        <p class="my-new-style accordion">मकर उरग झष गन अकुलाने। <br>जरत जंतु जलनिधि जब जाने।।</p>
+        <div class="panel">मगर, साँप तथा मछलियों के समूह व्याकुल हो गए।<br> जब समुद्र ने जीवों को जलते जाना॥</div>
+        <p class="my-new-style accordion">कनक थार भरि मनि गन नाना। <br>बिप्र रूप आयउ तजि माना।।</p>
+        <div class="panel">तब सोने के थाल में अनेक मणियों (रत्नों) को भरकर<br> अभिमान छोड़कर वह ब्राह्मण के रूप में आया॥</div>
+        <span class="anchor" id="d58"></span>
+        <p class="shloka"><b>[ दोहा ५८ ]</b></p>
+        <p class="shloka accordion">काटेहिं पइ कदरी फरइ कोटि जतन कोउ सींच।<br>बिनय न मान खगेस सुनु डाटेहिं पइ नव नीच।।</p>
+        <div class="panel"><span>काकभुशुण्डिजी कहते हैं-</span>हे गरुड़जी! सुनिए, चाहे कोई करोड़ों उपाय करके सींचे, पर केला तो काटने पर ही फलता है।<br> नीच विनय से नहीं मानता, वह डाँटने पर ही झुकता है (रास्ते पर आता है)॥</div>
+        <p class="my-new-style accordion">सभय सिंधु गहि पद प्रभु केरे। <br>छमहु नाथ सब अवगुन मेरे।।</p>
+        <div class="panel"><span>समुद्र ने भयभीत होकर प्रभु के चरण पकड़कर कहा- </span><br>हे नाथ! मेरे सब अवगुण (दोष) क्षमा कीजिए। </div>
+        <p class="my-new-style accordion">गगन समीर अनल जल धरनी। <br>इन्ह कइ नाथ सहज जड़ करनी।।</p>
+        <div class="panel">हे नाथ! आकाश, वायु, अग्नि, जल और पृथ्वी- <br>इन सबकी करनी स्वभाव से ही जड़ है॥</div>
+        <p class="my-new-style accordion">तव प्रेरित मायाँ उपजाए। <br>सृष्टि हेतु सब ग्रंथनि गाए।।</p>
+        <div class="panel">आपकी प्रेरणा से माया ने इन्हें सृष्टि के लिए उत्पन्न किया है, <br>सब ग्रंथों ने यही गाया है।</div>
+        <p class="my-new-style accordion">प्रभु आयसु जेहि कहँ जस अहई। <br>सो तेहि भाँति रहे सुख लहई।।</p>
+        <div class="panel">जिसके लिए स्वामी की जैसी आज्ञा है, <br>वह उसी प्रकार से रहने में सुख पाता है॥</div>
+        <p class="my-new-style accordion">प्रभु भल कीन्ही मोहि सिख दीन्ही। <br>मरजादा पुनि तुम्हरी कीन्ही।।</p>
+        <div class="panel">प्रभु ने अच्छा किया जो मुझे शिक्षा (दंड) दी, <br>किंतु मर्यादा (जीवों का स्वभाव) भी आपकी ही बनाई हुई है। </div>
+        <p class="my-new-style accordion">ढोल गवाँर सूद्र पसु नारी। <br>सकल ताड़ना के अधिकारी।।</p>
+        <div class="panel"> ढोल, गँवार, शूद्र, पशु और स्त्री-<br> ये सब शिक्षा के अधिकारी हैं॥</div>
+        <p class="my-new-style accordion">प्रभु प्रताप मैं जाब सुखाई। <br>उतरिहि कटकु न मोरि बड़ाई।।</p>
+        <div class="panel">प्रभु के प्रताप से मैं सूख जाऊँगा और सेना पार उतर जाएगी,<br> इसमें मेरी बड़ाई नहीं है (मेरी मर्यादा नहीं रहेगी)।</div>
+        <p class="my-new-style accordion">प्रभु अग्या अपेल श्रुति गाई। <br>करौं सो बेगि जौ तुम्हहि सोहाई।।</p>
+        <div class="panel">तथापि प्रभु की आज्ञा अपेल है (अर्थात्‌ आपकी आज्ञा का उल्लंघन नहीं हो सकता) ऐसा वेद गाते हैं।<br> अब आपको जो अच्छा लगे, मैं तुरंत वही करूँ॥</div>
+        <span class="anchor" id="d59"></span>
+        <p class="shloka"><b>[ दोहा ५९]</b></p>
+        <p class="shloka accordion">सुनत बिनीत बचन अति कह कृपाल मुसुकाइ।<br>जेहि बिधि उतरै कपि कटकु तात सो कहहु उपाइ।।</p>
+        <div class="panel"><span> के अत्यंत विनीत वचन सुनकर कृपालु श्री रामजी ने मुस्कुराकर कहा-</span> <br>हे तात! जिस प्रकार वानरों की सेना पार उतर जाए, वह उपाय बताओ॥</div>
+        <p class="my-new-style accordion">नाथ नील नल कपि द्वौ भाई। <br>लरिकाई रिषि आसिष पाई।।</p>
+        <div class="panel"><span>समुद्र ने कहा-</span> हे नाथ! नील और नल दो वानर भाई हैं। <br>उन्होंने लड़कपन में ऋषि से आशीर्वाद पाया था। </div>
+        <p class="my-new-style accordion">तिन्ह के परस किएँ गिरि भारे। <br>तरिहहिं जलधि प्रताप तुम्हारे।।</p>
+        <div class="panel"> उनके स्पर्श कर लेने से ही भारी-भारी पहाड़ भी<br> आपके प्रताप से समुद्र पर तैर जाएँगे॥</div>
+        <p class="my-new-style accordion">मैं पुनि उर धरि प्रभुताई। <br>करिहउँ बल अनुमान सहाई।।</p>
+        <div class="panel">मैं भी प्रभु की प्रभुता को हृदय में धारण कर<br> अपने बल के अनुसार (जहाँ तक मुझसे बन पड़ेगा) सहायता करूँगा।</div>
+        <p class="my-new-style accordion">एहि बिधि नाथ पयोधि बँधाइअ। <br>जेहिं यह सुजसु लोक तिहुँ गाइअ।।</p>
+        <div class="panel">हे नाथ! इस प्रकार समुद्र को बँधाइए,<br> जिससे तीनों लोकों में आपका सुंदर यश गाया जाए॥</div>
+        <p class="my-new-style accordion">एहि सर मम उत्तर तट बासी। <br>हतहु नाथ खल नर अघ रासी।।</p>
+        <div class="panel">इस बाण से मेरे उत्तर तट पर रहने वाले <br>पाप के राशि दुष्ट मनुष्यों का वध कीजिए। </div>
+        <p class="my-new-style accordion">सुनि कृपाल सागर मन पीरा। <br>तुरतहिं हरी राम रनधीरा।।</p>
+        <div class="panel">कृपालु और रणधीर श्री रामजी ने समुद्र के मन की पीड़ा सुनकर<br> उसे तुरंत ही हर लिया (अर्थात्‌ बाण से उन दुष्टों का वध कर दिया)॥</div>
+        <p class="my-new-style accordion">देखि राम बल पौरुष भारी। <br>हरषि पयोनिधि भयउ सुखारी।।</p>
+        <div class="panel">श्री रामजी का भारी बल और पौरुष देखकर<br> समुद्र हर्षित होकर सुखी हो गया। </div>
+        <p class="my-new-style accordion">सकल चरित कहि प्रभुहि सुनावा। <br>चरन बंदि पाथोधि सिधावा।।</p>
+        <div class="panel">उसने उन दुष्टों का सारा चरित्र प्रभु को कह सुनाया। <br>फिर चरणों की वंदना करके समुद्र चला गया॥</div>
+        <p class="shloka accordion"><b>छं० –</b> निज भवन गवनेउ सिंधु<br>श्रीरघुपतिहि यह मत भायऊ।</p>
+        <div class="panel">समुद्र अपने घर चला गया,<br> श्री रघुनाथजी को यह मत (उसकी सलाह) अच्छा लगा॥</div>
+        <p class="shloka accordion">यह चरित कलि मलहर जथामति<br>दास तुलसी गायऊ।।</p>
+        <div class="panel">यह चरित्र कलियुग के पापों को हरने वाला है,<br> इसे तुलसीदास ने अपनी बुद्धि के अनुसार गाया है॥</div>
+        <p class="shloka accordion">सुख भवन संसय समन दवन <br>बिषाद रघुपति गुन गना।।</p>
+        <div class="panel">श्री रघुनाथजी के गुण समूह सुख के धाम, संदेह का नाश करने वाले <br>और विषाद का दमन करने वाले हैं॥</div>
+        <p class="shloka accordion">तजि सकल आस भरोस गावहि <br>सुनहि संतत सठ मना।।</p>
+        <div class="panel">अरे मूर्ख मन! तू संसार का सब आशा-भरोसा त्यागकर<br> निरंतर इन्हें गा और सुन॥</div>
+        <span class="anchor" id="d60"></span>
+        <br>
+        <p class="shloka"><b>[ दोहा ६० ]</b></p>
+        <p class="shloka accordion">सकल सुमंगल दायक रघुनायक गुन गान।<br>सादर सुनहिं ते तरहिं भव सिंधु बिना जलजान।।</p>
+        <div class="panel">श्री रघुनाथजी का गुणगान संपूर्ण सुंदर मंगलों का देने वाला है। <br>जो इसे आदर सहित सुनेंगे, वे बिना किसी जहाज (अन्य साधन) के ही भवसागर को तर जाएँगे॥</div>
+        <hr class="divider">
+        <h3 class="h3">मासपारायण, चौबीसवाँ विश्राम</h3>
+        <p class="my-new-style accordion">इति श्रीमद्रामचरितमानसे<br>सकलकलिकलुषविध्वंसने<br>पञ्चमः सोपानः समाप्तः ।</p>
+        <div class="panel">कलियुग के समस्त पापो का नाश करने वाले <br>श्री रामचरित मानस का यह पाँचवाँ सोपान समाप्त हुआ।</div>
+        </break></div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="container">
+                <p>श्री हनुमत धाम परिवार</p>
+            </div>
+        </footer>
+        <script>
+            const accordions = document.querySelectorAll('.accordion');
+            
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', () => {
+                    accordion.classList.toggle('active');
+                });
+            });
+        </script>
+</body>
+</html>
+

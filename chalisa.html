@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री हनुमान चालीसा</title>
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+    <link rel="stylesheet" href="assets/css/chalisa.css">
+</head>
+
+<style>
+
+/* Style for the overall container */
+
+/*.footer-logo*/
+/* Style for the footer logo container */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the circular image */
+.circle-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    border: 3px solid #007bff; /* Optional: adds a border around the image */
+}
+
+.play {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the audio player */
+#audioPlayer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Style for the switch button */
+#switchButton {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the switch button */
+#switchButton:hover {
+    background-color: #ea3700;
+}
+
+/* Styling for the error message when audio is not supported */
+audio {
+    color: #888;
+    font-style: italic;
+}
+
+p{
+    color: #CA2325;
+}
+
+</style>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="image-container">
+                    <img src="assets/logo/favicon.png" alt="Profile Picture" class="circle-image">
+                </div>
+            </div>
+            <h1>Hanuman Chalisa</h1>
+            <p style="color: white;">The powerful prayer of Lord Hanuman</p>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="play">
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="assets/music/Hanuman Chalisa Original By T-Series.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <button id="switchButton" onclick="switchAudio()">Switch to Lo-Fi Version</button>
+        
+        <script>
+            function switchAudio() {
+                var audioPlayer = document.getElementById("audioPlayer");
+                var audioSource = document.getElementById("audioSource");
+                var switchButton = document.getElementById("switchButton");
+        
+                // Decode the URL and get the file name part of the src
+                var currentAudio = decodeURIComponent(audioSource.src.split('/').pop()); // Decode %20 to space
+        
+                if (currentAudio === "Hanuman Chalisa Original By T-Series.mp3") {
+                    // Switch to Lo-Fi Version
+                    audioSource.src = "assets/music/Hanuman Chalisa Lo-Fi Version.mp3";
+                    switchButton.textContent = "Switch to Original Version"; // Change button text
+                } else {
+                    // Switch back to Original Version
+                    audioSource.src = "assets/music/Hanuman Chalisa Original By T-Series.mp3";
+                    switchButton.textContent = "Switch to Lo-Fi Version"; // Change button text
+                }
+        
+                // Reload the audio player to apply the new source
+                audioPlayer.load();
+        
+                // Play the new audio
+                // audioPlayer.play();
+            }
+        </script>
+    </div>
+    
+    
+
+    <!-- Hanuman Chalisa Text -->
+    <section class="chalisa">
+        <div class="container">
+            <h2>श्री हनुमान चालीसा</h2>
+            <h3>दोहा</h3><br>
+            <p>श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि |<br>
+            बरनउँ रघुबर बिमल जसु, जो दायकु फल चारि || 1 ||</p>
+
+            <p>बुद्धिहीन तनु जानिके, सुमिरौं पवन कुमार |<br>
+            बल बुधि विद्या देहु मोहि, हरहु कलेश विकार || 2 ||</p>
+
+            <h3>चौपाई</h3><br>
+            
+            <p>जय हनुमान ज्ञान गुन सागर |<br>
+            जय कपीस तिहुँ लोक उजागर || 1 ||</p>
+            
+            <p>राम दूत अतुलित बल धामा |<br>
+            अंजनि पुत्र पवनसुत नामा || 2 ||</p>
+            
+            <p>महाबीर विक्रम बजरंगी |<br>
+            कुमति निवार सुमति के संगी || 3 ||</p>
+            
+            <p>कंचन वरन विराज सुवेसा |<br>
+            कानन कुंडल कुण्डल केसा || 4 ||</p>
+            
+            <p>हाथ बज्र अरु ध्वजा बिराजे |<br>
+            काँधे मूँज जनेऊ साजे  || 5 ||</p>
+                
+            <p>शंकर सुवन केसरी नंदन |<br>
+            तेज प्रताप महा जगवंदन || 6 ||</p>
+                
+            <p>विद्यावान गुनी अति चातुर |<br>
+            राम काज करिबे को आतुर || 7 ||</p>
+                
+            <p>प्रभु चरित्र सुनिबे को रसिया |<br>
+            राम लखन सीता मनबसिया || 8 ||</p>
+                
+            <p>सूक्ष्म रूप धरि सियहि दिखावा |<br>
+            विकट रूप धरि लंक जरावा || 9 ||</p>
+                
+            <p>भीम रूप धरि असुर सँहारे |<br>
+            रामचंद्र के काज सवाँरे || 10 ||</p>
+                
+            <p>लाय सजीवन लखन जियाए |<br>
+            श्री रघुबीर हरषि उर लाए || 11 ||</p>
+                
+            <p>रघुपति कीन्ही बहुत बड़ाई |<br>
+            तुम मम प्रिय भरत-हि सम भाई || 12 ||</p>
+                
+            <p>सहस बदन तुम्हरो जस गावै |<br>
+            अस कहि श्रीपति कंठ लगावै || 13 ||</p>
+                
+            <p>सनकादिक ब्रह्मादि मुनीसा |<br>
+            नारद सारद सहित अहीसा || 14 ||</p>
+                
+            <p>जम कुबेर दिगपाल जहाँ ते |<br>
+            कवि कोविद कहि सके कहाँ ते || 15 ||</p>
+                
+            <p>तुम उपकार सुग्रीवहि कीन्हा |<br>
+            राम मिलाय राज पद दीन्हा || 16 ||</p>
+                
+            <p>तुम्हरो मंत्र बिभीषण माना |<br>
+            लंकेश्वर भये सब जग जाना || 17 ||</p>
+                
+            <p>जुग सहस्त्र जोजन पर भानू |<br>
+            लिल्यो ताहि मधुर फ़ल जानू || 18 ||</p>
+                
+            <p>प्रभु मुद्रिका मेलि मुख माही |<br>
+            जलधि लाँघि गए अचरज नाही || 19 ||</p>
+                
+            <p>दुर्गम काज जगत के जेते |<br>
+            सुगम अनुग्रह तुम्हरे तेते || 20 ||</p>
+                
+            <p>राम दुआरे तुम रखवारे |<br>
+            होत ना आज्ञा बिनु पैसारे || 21 ||</p>
+                
+            <p>सब सुख लहैं तुम्हारी सरना |<br>
+            तुम रक्षक काहु को डरना || 22 ||</p>
+                
+            <p>आपन तेज सम्हारो आपै |<br>
+            तीनों लोक हाँक तै कापै || 23 ||</p>
+                
+            <p>भूत पिशाच निकट नहि आवै |<br>
+            महावीर जब नाम सुनावै || 24 ||</p>
+                
+            <p>नासै रोग हरे सब पीरा |<br>
+            जपत निरंतर हनुमत बीरा || 25 ||</p>
+                
+            <p>संकट तै हनुमान छुडावै |<br>
+            मन क्रम वचन ध्यान जो लावै || 26 ||</p>
+                
+            <p>सब पर राम तपस्वी राजा |<br>
+            तिनके काज सकल तुम साजा || 27 ||</p>
+                
+            <p>और मनोरथ जो कोई लावै |<br>
+            सोई अमित जीवन फल पावै || 28 ||</p>
+                
+            <p>चारों जुग परताप तुम्हारा |<br>
+            है परसिद्ध जगत उजियारा || 29 ||</p>
+                
+            <p>साधु संत के तुम रखवारे |<br>
+            असुर निकंदन राम दुलारे || 30 ||</p>
+                
+            <p>अष्ट सिद्धि नौ निधि के दाता |<br>
+            अस बर दीन जानकी माता || 31 ||</p>
+                
+            <p>राम रसायन तुम्हरे पासा |<br>
+            सदा रहो रघुपति के दासा || 32 ||</p>
+                
+            <p>तुम्हरे भजन राम को पावै |<br>
+            जनम जनम के दुख बिसरावै || 33 ||</p>
+                
+            <p>अंतकाल रघुवरपुर जाई |<br>
+            जहाँ जन्म हरिभक्त कहाई || 34 ||</p>
+                
+            <p>और देवता चित्त ना धरई |<br>
+            हनुमत सेई सर्व सुख करई || 35 ||</p>
+                
+            <p>संकट कटै मिटै सब पीरा |<br>
+            जो सुमिरै हनुमत बलबीरा || 36 ||</p>
+                
+            <p>जै जै जै हनुमान गुसाईँ |<br>
+            कृपा करहु गुरु देव की नाई || 37 ||</p>
+                
+            <p>जो सत बार पाठ कर कोई |<br>
+            छूटहि बंदि महा सुख होई || 38 ||</p>
+                
+            <p>जो यह पढ़े हनुमान चालीसा |<br>
+            होय सिद्ध साखी गौरीसा || 39 ||</p>
+                
+            <p>तुलसीदास सदा हरि चेरा |<br>
+            कीजै नाथ हृदय मह डेरा || 40 ||</p>
+            
+            <h3>दोहा</h3><br>
+
+            <p>पवन तनय संकट हरन, मंगल मूरति रूप ।<br>
+            राम लखन सीता सहित, हृदय बसहु सुर भूप ॥</p>
+            
+            <b><p>॥ सियावर रामचन्द्र की जय ॥<br>
+            ॥ पवनसुत हनुमान की जय ॥<br>
+            ॥ उमापति महादेव की जय ॥<br>
+            ॥ बोलो रे भई सब सन्तन की जय ॥</p></b>
+            
+            <!-- Add other verses upto 40 here -->
+            
+        </div>
+    </section>
+
+    <!-- Significance of Hanuman Chalisa -->
+    <section class="significance">
+        <div class="container">
+            <h2>Significance of Hanuman Chalisa</h2>
+            <p>
+                The Hanuman Chalisa is a devotional hymn dedicated to Lord Hanuman. It consists of 40 verses that describe his strength, wisdom, and devotion to Lord Rama. Reciting or listening to this hymn is believed to invoke Lord Hanuman’s blessings, provide strength, and help overcome challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            श्री हनुमत धाम परिवार
+        </div>
+    </footer>
+
+</body>
+</html>
